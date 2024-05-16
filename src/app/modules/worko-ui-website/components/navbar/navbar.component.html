@@ -13,86 +13,17 @@
                 <a href="/faq">FAQ's</a>
             </li>
             <li><a href="/corporate">Corporate</a></li>
-            <!-- <li class="icon-lg " *ngIf="userLoggedIn">
-            <div class="circle" (mouseover)="showOptions = true" >
-                <span class="letter">{{ letter }}</span>
-                <div *ngIf="showOptions" class="option" (mouseleave)="showOptions = false" (mouseover)="showOptions = true">
-                  <button class="dropdown-item d-flex justify-content-right " type="button" (click)="dashboard()">
-                    
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                      <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                      <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                    </svg>
-                  &nbsp;  Dashboard</button>
-                    <button class="dropdown-item d-flex justify-content-right" type="button" (click)="logout()">
-                     
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-                        <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                      </svg> &nbsp; 
-                      
-                      Logout
-                    </button>
-                </div>
-            </div>
-            </li>
-            <li class="icon-lg" *ngIf="!userLoggedIn" >
-                <div class="d-flex -pointer user-icon-container" *ngIf="!userLoggedIn" (click)="openLogin()">
-                  <img class="user-icon" _ngcontent-ng-c280476550="" alt=""
-                    src="assets/public/iconamoonprofilecirclefill.svg">
-                </div>
-              </li>
-      
-              <li class="text-sm" *ngIf="userLoggedIn">
-               
-               <a (click)="dashboard()" style="cursor: pointer;">Dashboard</a></li>
-               <li class="text-sm" *ngIf="userLoggedIn">
-               
-                <a (click)="logout()" style="cursor: pointer;">logout </a>
-                </li>
-                
-      
-                <li class="text-sm" *ngIf="!userLoggedIn">
-                  <a (click)="openLogin()" style="cursor: pointer;">Signin</a>
-                </li> 
-      
-      
-               <li class="text-sm" *ngIf="userLoggedIn">
-                <a style="cursor: pointer;" (click)="logout()">Log Out</a>
-              </li> 
-            </ul> -->
             <li class="icon-lg">
-                <div class="circle">
-                    <span class="letter">A</span>
-                    <div class="option">
-                        <button class="dropdown-item d-flex justify-content-right" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                                <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
-                                <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
-                            </svg>
-                            &nbsp; Dashboard
-                        </button>
-                        <button class="dropdown-item d-flex justify-content-right" type="button">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
-                                <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"/>
-                                <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"/>
-                            </svg>
-                            &nbsp; Logout
-                        </button>
-                    </div>
-                </div>
-            </li>
-            <li class="icon-lg">
-                <div class="d-flex -pointer user-icon-container">
-                    <img class="user-icon" alt="" src="assets/public/iconamoonprofilecirclefill.svg">
+                <div class="d-flex -pointer user-icon-container"  (click)="navigateToApp()">
+                    <img class="user-icon" alt="" src="assets/images/iconamoonprofilecirclefill.svg">
                 </div>
             </li>
             <li class="text-sm">
                 <a style="cursor: pointer;">Dashboard</a>
             </li>
-            <li class="text-sm">
+            <!-- <li class="text-sm">
                 <a style="cursor: pointer;">Logout</a>
-            </li>
+            </li> -->
             <li class="text-sm">
                 <a style="cursor: pointer;">Signin</a>
             </li>
@@ -100,7 +31,6 @@
             <a class="navbar-brand" href="/"><img class="worko-logo-ai-2-icon" alt=""
                 src="assets/images/worko_logo.png" />
             </a>
-
           </div>
         </nav>
       

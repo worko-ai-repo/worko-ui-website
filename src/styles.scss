@@ -17,6 +17,11 @@ body {
     background-color: rgba(var(--bs-black-rgb), var(--bs-bg-opacity)) !important;
   }
 
+.-pointer{
+    cursor:pointer;
+}
+
+
 .individual-page .top-header-bg {
     position: absolute;
     top: 0;
