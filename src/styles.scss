@@ -1,8 +1,16 @@
-
-
 body {
     background: #000;
     color: #fff !important;
+    font-family: var(--font-poppins) !important;
+}
+
+:root {
+    --color-darkslategray-300: rgba(24, 43, 69, 0.99);
+    --font-poppins: Poppins;
+}
+
+.fa-heart {
+    color: #ff0018 !important;
 }
 
 .bg-black{
@@ -220,4 +228,69 @@ body {
     }
 
 
+}
+
+
+
+footer {
+    overflow: hidden;
+    position: relative;
+
+    // Edited by KA
+    
+    // padding-top: 180px;
+
+    //End of edit: Commented out the padding 
+
+    .footer-content {
+        background-color: #fff;
+    }
+
+    .footer-text {
+        .footer-head-text {
+            font-weight: 700;
+            color: var(--color-darkslategray-300);
+        }
+
+        p {
+            font-size: 20px;
+            color: rgba(113, 113, 113, 0.99);
+        }
+    }
+
+    .copy-rights {
+        font-weight: 500;
+        color: rgba(24, 43, 69, 0.99);
+    }
+
+    .list-head {
+        font-size: 26px;
+        font-weight: 500;
+        color: rgba(24, 43, 69, 0.99);
+    }
+
+    .footer-links {
+        li {
+            a {
+                display: block;
+                padding: 5px 0;
+                font-size: 20px;
+                color: #57E1FF;
+            }
+        }
+    }
+}
+
+.footer-contact{
+    padding-left: 30% !important;
+}
+.footer-container{
+    max-width: 2200px;
+  margin: auto;
+}
+
+@media (max-width: 992px) {
+    .footer-contact{
+        padding-left: 0px;
+    }
 }
