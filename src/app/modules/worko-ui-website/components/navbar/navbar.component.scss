@@ -288,7 +288,7 @@ li{
     }
 
     .navbar-container.expanded {
-        height: 410px;
+        height: 410px !important;
     }
 
     .navbar-container input[type="checkbox"]:checked ~ .menu-items{
