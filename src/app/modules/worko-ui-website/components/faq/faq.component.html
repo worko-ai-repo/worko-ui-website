@@ -1,0 +1,309 @@
+<div class="all  bg-black individual-page">
+    <div class="gradient gradient-right1 position-absolute">
+        <img class="gradient-img" src="assets/images/gradient-right1.png" alt="Gradient Right 1">
+    </div>
+    <div class="top-header-bg">
+        <img src="assets/images/logo_bg.png" alt="">
+    </div>
+    <app-navbar></app-navbar>
+    <div class="section position-relative">
+        <div class="tabs position-absolute">
+            <button class="tab-link" (click)="selectTab('tab1')" [ngClass]="{'active': activeTab === 'tab1'}">Candidates</button>
+            <button class="tab-link" (click)="selectTab('tab2')" [ngClass]="{'active': activeTab === 'tab2'}">Referees</button>
+        </div>
+        
+        <div class="tab-content" *ngIf="activeTab === 'tab1'">
+            <div class="gradient gradient-left1 position-absolute">
+                <img class="gradient-img" src="assets/images/gradient-left1.png" alt="Gradient Left 1" style="opacity: 65%;">
+            </div>
+            <div class="gradient gradient-left3 position-absolute gradient-sm">
+                <img class="gradient-img" src="assets/images/gradient-left3.png" alt="Gradient Left 3">
+            </div>
+            <div class="gradient gradient-right3 position-absolute gradient-sm">
+                <img class="gradient-img" src="assets/images/gradient-right3.png" alt="Gradient Right 3">
+            </div>
+            <!-- <div class="section"> -->
+                    <h1>
+                        FAQ’s for Candidates
+                    </h1>
+                    <div class="text ">
+                        
+                            <div class="position-relative candidate-faq">
+                                
+                                <div class="section-head title2" (click)="toggleAccordion(1)" [class.open]="activeIndex === 1">
+                                    <span class="heading-content">1. How to request for a referral?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[1]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                    
+                                <ul class="accordion-content" [class.open]="activeIndex === 1">
+                                    <li>Look out for relevant openings at the company's career page you are interested in.</li>
+                                    <li>Share job URL and raise referral requests.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(2)" [class.open]="activeIndex === 2">
+                                    <span class="heading-content">2. How does matching work?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[2]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 2">
+                                    <li>Based on factors such as Worko assessment score, your designation, location, and role, we carefully match your information with a select group of referrers whom we believe are most suitable to validate your skills for a referral. We have found that this approach greatly enhances the likelihood of receiving a call-back and increases the effectiveness of the referral process.</li>
+                                    <li>Referrers hold the discretion to decline your application for a referral. In such cases, we gradually expand the scope of your candidacy to include individuals within the company who may not precisely match your current level, location, and role. However, they may still be willing to refer you, providing you with additional opportunities for consideration.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(3)" [class.open]="activeIndex === 3">
+                                    <span class="heading-content">3. Referral completion timeline?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[3]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 3">
+                                    <li>It can depend on the following factors:</li>
+                                    <li>Your profile and experience.</li>
+                                    <li>How aggressively the company is hiring.</li>
+                                    <li>Number of Available Referrers for Company.</li>
+                                    <li>Referrer Activity (weekends & Holidays tend to be slower).</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(4)" [class.open]="activeIndex === 4">
+                                    <span class="heading-content">4. Why do I have to pay the platform fee to Worko?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[4]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 4">
+                                    <li>A nominal user/platform fee safeguards against spam and ensures the quality and relevance of requests on our platform.</li>
+                                    <li>Also, it helps us keep the site up and running for candidates like you and onboard more referees.</li>
+                                </ul>
+                            </div>
+
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(5)" [class.open]="activeIndex === 5">
+                                    <span class="heading-content">5. What is a successful referral, and what should I expect after requesting one?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[5]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 5">
+                                    <li>A successful referral occurs when a referrer accepts and recommends your candidacy in his/her company after evaluating your profile.</li>
+                                    <li>You can chat with your referee after they accept your referral request from your dashboard.</li>
+                                    <li>The referee may guide you through the company's process, and upon profile shortlisting by the hiring team, expect an interview call.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(6)" [class.open]="activeIndex === 6">
+                                    <span class="heading-content">6. What should I do if the company of my choice is not added to the list?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[6]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 6">
+                                    <li>Please write to us at findreferral&#64;worko.ai & we will try to get the company and referees on board at the earliest.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(7)" [class.open]="activeIndex === 7">
+                                    <span class="heading-content">7. If Worko rejects my referral request, then what should I do?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[7]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 7">
+                                    <li>In an unforeseen scenario, if needed, raise a referral request for more relevant jobs, and we'll gladly connect you with the appropriate referee.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(8)" [class.open]="activeIndex === 8">
+                                    <span class="heading-content">8. Why did the referee reject my profile when Worko approved it?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[8]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 8">
+                                    <li>Referee decisions are independent and subjective. While Worko assesses profiles based on specific criteria, referees may have additional considerations aligned with their team's needs or preferences.</li>
+                                    <li>It's essential to recognize that approval from Worko guarantees a different outcome with referees.</li>
+                                    <li>We recommend considering alternative job opportunities more closely aligned with your profile.</li>
+                                </ul>
+                            </div>
+
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(9)" [class.open]="activeIndex === 9">
+                                    <span class="heading-content">9. Can I talk to any of the referees before making a request?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[9]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 9">
+                                    <li>As of now, direct communication with referees before making a request needs to be facilitated. You can initiate a chat with the referee once your referral request is accepted.</li>
+                                    <li>Feel free to contact our support team if you have specific queries or need assistance refining your referral request.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(10)" [class.open]="activeIndex === 10">
+                                    <span class="heading-content">10. What are different services available on Worko & how can I avail them?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[10]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 10">
+                                    <li>Worko provides various services such as job referrals, career guidance, interview handholding, mock interview, resume review & writing, and more.</li>
+                                    <li>To avail of these services, simply create a profile on our platform, navigate to the service section, and choose the ones that meet your needs.</li>
+                                    <li>Follow the prompts to initiate and complete the service request process.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(11)" [class.open]="activeIndex === 11">
+                                    <span class="heading-content">11. If my matching score is low, how can I improve it?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[11]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 11">
+                                    <li>To improve your matching score, consider updating your profile with detailed information about your skills, experiences, and achievements.</li>
+                                    <li>Stay active on the platform, explore relevant job opportunities, and seek feedback from our support team to maximize your chances of receiving a higher matching score.</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="position-relative candidate-faq">
+                                <div class="section-head title2" (click)="toggleAccordion(12)" [class.open]="activeIndex === 12">
+                                    <span class="heading-content">12. Can I request a referral if I've already applied for a role?</span>
+                                    <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[12]" src="assets/images/down-caret.png" alt=""></span>
+                                </div>
+                                <ul class="accordion-content" [class.open]="activeIndex === 12">
+                                    <li>Absolutely! Even if you've already applied, you can still request a referral through Worko.</li>
+                                    <li>Our platform aims to enhance your chances by connecting you with referees who can advocate for your application.</li>
+                                    <li>Simply submit a referral request for the specific job, and we'll take it from there.</li>
+                                </ul>
+                            </div>
+                    </div>
+                <!-- </div> -->
+            <!-- </div> -->
+        </div>
+        
+        <div class="tab-content" *ngIf="activeTab === 'tab2'">
+            <!-- <div class="all bg-black terms-of-service individual-page"> -->
+                <!-- <div class="section"> -->
+
+            <div class="gradient gradient-left1 position-absolute">
+                <img class="gradient-img" src="assets/images/gradient-left1.png" alt="Gradient Left 1" style="opacity: 65%;">
+            </div>
+            <!-- <div class="gradient gradient-right1 position-absolute">
+                <img class="gradient-img" src="assets/about-images-KA/gradient-right1.png" alt="Gradient Right 1">
+            </div> -->
+            <h1>
+                FAQ’s for Referees
+            </h1>
+            <div class="text position-relative">
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(1)" [class.open]="activeIndex === 1">
+                        <span class="heading-content">1. How does privacy work?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[1]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 1">
+                        <li>We do not share your data with anyone externally.</li>
+                        <li>Your information is not shared with candidates you decline.</li>
+                    </ul>
+
+                </div>
+
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(2)" [class.open]="activeIndex === 2">
+                        <span class="heading-content">2. Why did we collect your official mail ID?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[2]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 2">
+                        <li>To authorise your role as a Referee for the company you are joining, we utilise your work email. Please note that this is a one-time process, and we do not use your work email for any communication.</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(3)" [class.open]="activeIndex === 3">
+                        <span class="heading-content">3. Do I have to refer everyone?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[3]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 3">
+                        <li>Worko utilises a powerful AI algorithm to assess candidates, assigning a matching score for quick and informed referral decision.</li>
+                        <li>Please only refer individuals whom you genuinely believe would be well-suited for the role.</li>
+                    </ul>
+                    
+                </div>
+
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(4)" [class.open]="activeIndex === 4">
+                        <span class="heading-content">4. What other benefits do I get as a Referee?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[4]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 4">
+                        <li>Make the most of the rewards offered for Employee Referrals within your organisation.</li>
+                        <li>Earn reward points or coupons by introducing individuals from your network to Worko as Referees. T&C apply</li>
+                        <li>As a Referee, you are not subject to any charges when you seek referrals through Worko.</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(5)" [class.open]="activeIndex === 5">
+                        <span class="heading-content">5. Who can be a Referee?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[5]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 5">
+                        <li>At Worko, we value the importance of industry expertise and believe in connecting job seekers with experienced professionals who can make well-informed decisions. To ensure the highest level of credibility and relevant insights, we have designed our platform to exclusively onboard employees who have 2+ years of overall experience.</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(6)" [class.open]="activeIndex === 6">
+                        <span class="heading-content">6. How will I get paid for the Career Guidance / Mock Interview / Interview Consultation?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[6]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 6">
+                        <li>If a candidate chooses to opt for any of the above services, then you will get paid as per pre-decided consulting fee post the successful completion of the process.</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(7)" [class.open]="activeIndex === 7">
+                        <span class="heading-content">7. What are the services/expertise I can offer through Worko & how will I get paid for it?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[7]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 7">
+                        <li>On Worko, provide diverse counselling services, including resume writing, career guidance, interview handholding, mock interviews and many more.</li>
+                        <li>At Worko, set your own professional fee for services and get paid post-completion.</li>
+                    </ul>
+                    
+                </div>
+                
+                
+                <div class="position-relative faq">
+                    
+                    <div class="section-head title2" (click)="toggleAccordion(8)" [class.open]="activeIndex === 8">
+                        <span class="heading-content">8. I have some unpublished jobs in my company, how can I notify Worko for the same to find a good referral?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[8]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 8">
+                        <li>We are launching this feature soon to help you find the best referral for internal openings, till then, please write to us at findreferral&#64;worko.ai & we will help you.</li>
+                    </ul>
+                    
+                </div>
+                
+                <div class="position-relative faq">
+                    <div class="section-head title2" (click)="toggleAccordion(9)" [class.open]="activeIndex === 9">
+                        <span class="heading-content">9. My company doesn't have a referral policy. How can I benefit by referring candidates?</span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[9]" src="assets/images/down-caret.png" alt=""></span>
+                    </div>
+                    <ul class="accordion-content" [class.open]="activeIndex === 9">
+                        <li>Collaborate on a referral strategy for mutual benefits! Connect us with your HR head, and we'll reciprocate by offering benefits for candidate referrals and rewarding you when your company joins us.</li>
+                        <li>Create a profile, share/offer your expertise on our platform, help others, and earn extra income.</li>
+                    </ul>
+                </div>
+            </div>
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+    </div>
+    </div>
+    <app-footer></app-footer>
+</div>

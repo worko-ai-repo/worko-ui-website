@@ -1,0 +1,321 @@
+<!-- Edited by KA -->
+
+<div class="index-section">
+
+    <div class="all-sections">
+        <div class="grad grad-right1">
+            <img src="assets/images/gradient-right1.png" alt="">
+        </div>
+        <div class="top-header-bg">
+            <img src="assets/images/logo_bg.png" alt="">
+        </div>
+
+        <div class="timeline">
+            <div class="side-timeline side-timeline-sm position-absolute">
+                <img src="assets/images/index-side-timelinesm.png" alt="">
+            </div>
+
+            <div class="side-timeline side-timeline-md position-absolute">
+                <img src="assets/images/index-side-timelinemd.png" alt="">
+            </div>
+
+            <div class="side-timeline side-timeline-lg position-absolute">
+                <img src="assets/images/index-side-timeline.png" alt="">
+            </div>
+        </div>    
+
+        <app-navbar></app-navbar>
+   
+        <div class="rows">
+            <div class="intro d-flex">
+                <div class="grad grad-left1"><img src="assets/images/gradient-left1.png" alt=""></div>
+                <div class="content get-content" *ngIf="getReferral">
+                    <div class="title title1">
+                        Supercharge your job search with Worko - Where Connection leads to Career
+                    </div>
+                    <ul class="intro-ul">
+                        <li class="para text">
+                            Stand out as a top candidate with employee referrals.
+                        </li>
+                        <li class="para text content2">
+                            Receive feedback on your candidature and support throughout the interview 
+                            process
+                        </li>
+                    </ul>
+                    <!-- <div class="buttons">
+                        <button  class="left-btn btn btn-dark font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button class="btn btn-light font-inria" (click)="openGetReferral()" > Give Referral </button>
+                    </div> -->
+                    <div class="buttons">
+                        <button  class="left-btn btn btn-dark font-inria"> Get Referral </button>
+                        <button class="btn btn-light font-inria"> Give Referral </button>
+                    </div>
+                </div>
+
+                <div class="content give-content" *ngIf="giveReferral">
+                    <div class="title title1">
+                        Discover success with Worko, where Referrals lead to rewarding outcomes
+                    </div>
+                    <ul class="intro-ul">
+                        <li class="para text">
+                            AI-powered P2P hiring platform for flawless matching and thorough
+                            vetting, boosting referral success rate.
+                        </li>
+                        <li class="para text content2">
+                            Help someone land their dream job
+                        </li>
+                    </ul>
+                    <!-- <div class="buttons">
+                        <button  class="left-btn btn btn-light font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
+                    </div> -->
+                    <div class="buttons">
+                        <button  class="left-btn btn btn-light font-inria"> Get Referral </button>
+                        <button  class="btn btn-dark font-inria"> Give Referral </button>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="/assets/images/globe-img.png" alt="">
+                </div>
+                
+            </div>
+           
+        </div> 
+
+        <!-- purpose section -->
+        
+        <div class="purpose-section position-relative">
+
+            <div class="purpose-header">
+                <div class="purpose-title title text-center">Our Purpose</div>
+                <div class="purpose-content para text-center" >
+                    We empower individuals and businesses by fostering 
+                    connections, improving the hiring process, and creating
+                    a thriving community for career growth
+                </div>
+            </div>
+
+            <div class="purpose-cards" *ngFor="let purpose of purposeList; let i =index;">
+                <div class="purpose-card">
+                    <div class="purpose-image">
+                        <img [src]="purpose?.image" alt="">
+                    </div>
+                    <div class="purpose-title" [ngClass]="{'last-card': i === 5}">{{ purpose?.title }}</div>
+                    <div class="purpose-text" [ngClass]="{'last-card-content': i === 5}">{{ purpose?.text }}</div>
+                </div>
+            </div>
+
+            
+        </div>
+
+        <div class="benefits-section position-relative">
+            <div class="grad grad-left2"><img src="assets/images/gradient-left2.png" alt=""></div>
+            <div class="benefits-title title text-center">Benefits for You</div>
+            <div class="benefits-content para para2 text-center" style="width: 65%; margin: auto; line-height: 140%;">
+                Worko is committed to addressing common challenges faced by candidates, 
+                ensuring a seamless and empowering job search journey:
+            </div>
+
+            <div class="referee-section ">
+                <div class="referee-title text-center title">REFEREE</div>
+                <div class="referee-subtitle text-center">I CAN REFER</div>
+                <div class="referee-cards">
+                    <div class="referee-card position-relative" *ngFor="let benefit of refereeBenefits; let i = index;">
+                        <div class="referee-image" >
+                            <img [src]="benefit?.image" alt="">
+                        </div>
+                        <div class="referee-text text-center para" >
+                            {{ benefit.text }}
+                        </div>
+                        <div [ngClass]="{'right-border': i === 0 || i === 1 || i === 3}"></div>
+                    </div>
+                </div>
+
+           </div>
+           <div class="section-border"></div>
+           <div class="grad grad-right2"><img src="assets/images/gradient-right2.png" alt=""></div>
+        </div>
+
+        <div class="candidate-section position-relative">
+
+            <div class="candidate-title text-center title referee-title">CANDIDATE</div>
+            <div class="candidate-subtitle text-center referee-subtitle">I'M LOOKING FOR JOB!</div>
+            <div class="candidate-cards">
+                <div class="bcandidate-card position-relative" *ngFor="let benefit of candidateBenefits; let i=index;">
+                    <div class="candidate-img referee-image">
+                        <img [src]="benefit?.image" alt="">
+                    </div>
+                    <div class="candidate-text text-center para referee-text">
+                        {{ benefit.text }}
+                    </div>
+                    <div [ngClass]="{'right-border': i === 0 || i === 1 || i === 3}"></div>
+                </div>
+            </div>
+            <div class="grad grad-right3"><img src="assets/images/gradient-right3.png" alt=""></div>
+       </div>
+
+
+        <div class="stats-section d-flex position-relative">
+            <div class="stat">
+                <div class="stat-title title">1000+</div>
+                <div class="stat-content para">Companies</div>
+                <div class="line-right line-right1"></div>
+            </div>
+
+            <div class="stat text-center">
+                <div class="stat-title title">5000+</div>
+                <div class="stat-content para">Employees ready to help</div>
+            </div>
+            <div class="line-right line-right2" style="align-self: center;"></div>
+            <div class="stat">
+                <div class="stat-title title">20K+</div>
+                <div class="stat-content para">Users Assisted</div>
+            </div>
+            <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
+        </div>
+
+
+        <div class="companies-section">
+             <div class="company-content">
+                <div class="title">Join Our Platform And Work</div>
+                <div class="para">Alongside Employees At Top Companies</div>
+            </div>
+            <div class="slide-container">
+                <div class="company-slides d-flex">
+                    <div class="company company1" tabindex="0">
+                        <img src="assets/company-logo/logo1.png" class="company-img" alt="Company Name 1">
+                        <div class="hover hover1">
+                            <div class="logo-container">
+                                <img src="assets/company-logo/logo1.png" alt="Company Name 1">
+                            </div>
+                            <button class="referral button">Request Referral</button>
+                            <button class="referral button">Request Guidance</button>
+                        </div>
+                    </div>
+                    <div class="company company1" tabindex="0">
+                        <img src="assets/company-logo/logo2.png" class="company-img" alt="Company Name 2">
+                        <div class="hover hover1">
+                            <div class="logo-container">
+                                <img src="assets/company-logo/logo2.png" alt="Company Name 2">
+                            </div>
+                            <button class="referral button">Request Referral</button>
+                            <button class="referral button">Request Guidance</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="button-container text-center" >
+                <!-- <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View More...</button> -->
+            </div>
+        </div>
+
+        <div class="info-section d-flex">
+            <div class="video-img video-img-lg" style="z-index: 100;">
+                <img src="/assets/images/video-area.png" alt="">
+            </div>
+
+            <div class="video-img video-img-md" style="z-index: 100;">
+                <img src="/assets/images/video-areamd.png" alt="">
+            </div>
+
+            <div class="info para" style="color: #e7e7e7">
+                <div class="info-title" style="color: #fff">Product Info</div>
+                <div class="info-subtitle">What this includes:</div>
+                <ul>
+                    <li class="info">Lorem ipsum dolor sit amet,  consectetur
+                        adipiscing elit. </li>
+                    <li class="info">Lorem ipsum dolor sit amet,  consectetur
+                        adipiscing elit. </li>
+                    <li class="info">Lorem ipsum dolor sit amet,  consectetur
+                        adipiscing elit. </li>
+                    <li class="info">Lorem ipsum dolor sit amet,  consectetur
+                        adipiscing elit. </li>
+                </ul>
+            </div>
+
+        </div>
+
+<!-- Review Section for the carousel -->
+
+    <div class="reviews-section  position-relative">
+        <div class="reviews-heading d-flex">
+            <div class="reviews-content">
+                <div class="sub-title">What Our Customer Says?</div>
+                <div class="text">
+                    Discover what our users have to say about their experience with 
+                    Worko and how Worko has transformed their job-search experiences. 
+                </div>
+            </div>
+            <div class="review-img">
+                <img src="/assets/images/review-img1.png" alt="reviews-img">
+            </div>
+        </div>
+        <div class="review-cards-container">
+            <div class="review-cards review-cards-lg" [style.marginLeft]="marginLeft + '%'">
+                <div class="review-card position-relative" *ngFor="let review of reviews">
+                    <div class="card-img position-absolute">
+                        <img [src]="review.image" alt="card-img">
+                    </div>
+                    <div class="card-content">
+                        {{ review.content }}
+                    </div>
+                    <div class="reviewer">
+                        <div class="name">{{ review.name }}</div>
+                        <div class="role">{{ review.company }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-cards review-cards-md" [style.marginLeft]="marginLeftmd + '%'">
+                <div class="review-card position-relative" *ngFor="let review of reviews">
+                    <div class="card-img position-absolute">
+                        <img [src]="review.image" alt="card-img">
+                    </div>
+                    <div class="card-content">
+                        {{ review.content }}
+                    </div>
+                    <div class="reviewer">
+                        <div class="name">{{ review.name }}</div>
+                        <div class="role">{{ review.company }}</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="review-cards review-cards-sm" [style.marginLeft]="marginLeftsm + '%'">
+                <div class="review-card position-relative" *ngFor="let review of reviews">
+                    <div class="card-img position-absolute">
+                        <img [src]="review.image" alt="card-img">
+                    </div>
+                    <div class="card-content">
+                        {{ review.content }}
+                    </div>
+                    <div class="reviewer">
+                        <div class="name">{{ review.name }}</div>
+                        <div class="role">{{ review.company }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="review-button">
+            <div class="arrow-button left" (click)="previousReview()" [class.disabled]="prevButtonDisabled"><img src="/assets/images/left-logo.png" alt="left"></div>
+            <div class="arrow-button right" (click)="nextReview()" [class.disabled]="nextButtonDisabled"><img src="/assets/images/right-logo.png" alt="right"></div>
+        </div>
+        <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
+    </div>
+    
+    <app-footer></app-footer>
+
+    <!-- <app-modal [theme]="'theme-k'" [centered]="true" [showHeader]="showModal === modalType.MESSAGE"
+[showClose]="true"
+  [showFooter]="showModal === modalType.MESSAGE" [title]="modalTitle" [message]="modalMessage"
+  [bodyClass]="modalMessage ? 'p-4' : 'p-0'">
+
+  <ng-container *ngIf="showModal === modalType.LOGIN_SIGNUP">
+    <app-login-page (onSuccess)="receiveDataFromChild($event)" [userType]="'employee'"></app-login-page>
+  </ng-container>
+
+</app-modal> -->
+    </div>
+
+</div>

@@ -8,16 +8,20 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactUsComponent } from './components/contact-us/contact-us.component';
 import { RefundPolicyComponent } from './components/refund-policy/refund-policy.component';
 import { TermsOfServiceComponent } from './components/terms-of-service/terms-of-service.component';
+import { FaqComponent } from './components/faq/faq.component';
+import { AboutUsComponent } from './components/about-us/about-us.component';
+import { CorporateComponent } from './components/corporate/corporate.component';
+import { IndexComponent } from './components/index/index.component';
 
 export const routes: Routes = [
   {
     path: '',
     component: WorkoUiWebsiteComponent,
     children: [
-      // {
-      //   path: 'index',
-      //   component: HomeComponent
-      // },
+      {
+        path: '',
+        component: IndexComponent
+      },
       {
         path: 'privacy-policy',
         component: PrivacyPolicyComponent
@@ -34,6 +38,18 @@ export const routes: Routes = [
         path: 'terms-of-service',
         component: TermsOfServiceComponent
       },
+      {
+        path : 'faq',
+        component: FaqComponent
+      },
+      {
+        path : 'corporate',
+        component: CorporateComponent
+      },
+      {
+        path : 'about-us',
+        component: AboutUsComponent
+      },
     ]
     }
   ]
@@ -46,7 +62,11 @@ export const routes: Routes = [
     FooterComponent,
     ContactUsComponent,
     RefundPolicyComponent,
-    TermsOfServiceComponent
+    TermsOfServiceComponent,
+    FaqComponent,
+    AboutUsComponent,
+    CorporateComponent,
+    IndexComponent
   ],
   imports: [
     CommonModule,

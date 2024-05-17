@@ -1,0 +1,1357 @@
+.form-button{
+    border-radius: 50px;
+    background-color: #57E1FF;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 42px;
+}
+
+.corporate-section{
+    position: relative;
+    // background-color: #000000;
+    background: linear-gradient(to bottom right, #000 30%, #1E2C3F 70%);
+}
+
+.top-header-bg{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 36%;
+    max-width: 500px;
+    img {
+        width: 100%;
+    }
+}
+
+.side-timeline {
+    left: 3%;
+    margin-top: 2rem;
+}
+.side-timeline-lg img {
+    // width: 311px;
+    width: calc(292px + 1vw);
+}
+
+.side-timeline-md {
+    display: none;
+}
+
+.side-timeline-sm {
+    display: none;
+}
+
+
+.content-heading{
+    font-size: 54px;
+    // padding-right: 10%;
+}
+
+.para{
+    // font-size: calc(13px + 1vw);
+    font-size: calc(1.3vw + 8px);
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.row-heading{
+    // font-size: 40px;
+    font-size: calc(1.5vw + 14px);
+}
+.head2{
+    font-size: 30px;
+    // line-height: 150%;
+}
+
+.timeline{
+    padding-right: 10%;
+    img{
+        width: calc(1.5vw + 56px);
+        width: 82px;
+    }
+}
+
+.timeline-md{
+    display: none;
+}
+
+.timeline-sm{
+    display: none;
+}
+
+.gradient-left1{
+    // top: 0; 
+    left: -6%;
+}
+
+.gradient-left2{
+    top: 0;
+    left: -5%;
+}
+
+.gradient-left3{
+    left: -16%;
+    top: 500px;
+}
+
+// .gradient-left4{
+//     left: 0;
+// }
+
+// .gradient-left5{
+//     bottom: 0;
+//     left: -9%;
+// }
+
+.gradient-left-md{
+    display: none;
+}
+
+.gradient-img{
+    opacity:70%;
+}
+
+.gradient-right1 {
+    right: -5.5%;
+    // top: 50px;
+
+}
+
+.gradient-right2 {
+    right: 0;
+    top: 584px;
+}
+
+.gradient-right3 {
+    right: -5.6%;
+    top: 0;
+}
+
+.gradient-right4 {
+    // display: none;
+    right: -20%;
+    top: 400px;
+}
+
+.gradient-rightmd{
+    display: none;
+    right: 0;
+    top: 0;
+    opacity: 75%;
+}
+
+
+.contents{
+    overflow: hidden;
+}
+
+
+.intro{
+    padding-top: 12rem;
+    display: flex;
+    width: 90%;
+    margin: auto;
+    padding-left: 10%;
+    .content{
+        width: 50%;
+        padding-left: 2%;
+    }
+    .img{
+        width: 45%;
+        margin-left: 5%;
+        img{
+            width: 100%;
+        }
+    }
+    
+}
+
+.works{
+    padding-top: 8rem;
+    .column{
+        flex-direction: column;
+        width: 87%;
+        margin-left: 13%;
+        align-items: center;
+        .content-heading{
+            padding-right: 10%;
+        }
+    }
+
+    .works-row{
+        display: flex;
+        justify-content: space-around;
+
+        .img{
+            width: 30%;
+            img{
+                width: 100%;
+            }
+        }
+        .content{
+            width: 40%;
+        }
+    }
+
+    .row1{
+        padding-top: 2rem;
+
+        .img{
+            padding-top: 6rem;
+            margin-left: 11%;
+            width: 26%;
+        }
+
+        .content{
+            padding-top: 9rem;
+            width: 48%;
+            margin-left: 8%;
+            p{
+                width: 95%;
+            }
+        }
+    }
+
+    .row2{
+        padding-top: 5rem;
+        flex-direction: row-reverse;
+
+        .content{
+            padding-top: 5rem;
+            margin-left: -3%;
+            p{
+                width: 80%;
+            }
+        }
+
+        .row2-img{
+            margin-right: 5%;
+        }
+    }
+
+    .row3{
+        padding-top: 12rem;
+        padding-left: 5%;
+        .content{
+            padding-top: 3rem;
+            margin-left: 10%;
+            width: 50%;
+            p{
+                width: 85%;
+            }
+        }
+        .row3-img{
+            margin-right: 6%;
+        }
+    }
+
+    .row4{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 85%;
+        margin: auto;
+        padding-top: 14rem;
+
+        
+        p{
+            text-align: center;
+        }
+    }
+}
+
+.benefits{
+    padding-top: 9rem;
+    .content-heading{
+        display: flex;
+        justify-content: center;
+    }
+
+    .filter{
+        margin-top: 4rem;
+        width: 62%;
+        margin: auto;
+        .section-head{
+            display: flex;
+            justify-content: center;
+            padding: 1rem;
+            .img{
+                padding-right: 0.7rem;
+            }
+        }
+        p{
+            text-align: center;
+        }
+    }
+    .row-section{
+        padding-top: 4rem;
+
+        .left-col{
+            width: 46%;
+            padding-left: 3%;
+            margin-left: 15%;
+            .benefit-row{
+                padding-bottom: 2rem;
+            }
+        }
+        .content{
+            padding-left: 5%;
+        }
+
+        .benefits-img{
+            padding-top: 7rem;
+            width: 37%;
+
+            img{
+                width: 100%;
+            }
+        }
+        .benefits-img-sm{
+            display: none;
+        }
+    }   
+}
+.benefits-icon{
+    padding-top: 3rem;
+}
+
+.charge{
+    padding-top: 4rem;
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 95%;
+        padding-left: 10%;
+        p{
+            padding-top: 1rem;
+            width: 85%;
+            text-align: center;
+        }
+    }
+
+    .cards{
+        padding-top: 5rem;
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+        margin-left: 17%;
+        .card{
+            // background-image: url("assets/corporate-images/card-gradient.png");
+            background-color: #EEEEEE;
+            width: 31.2%;
+            padding: 40px;
+            border-radius: 25px;
+            .bg-gradient{
+                width: 100%;
+                top: 0;
+                left: 0;
+            }
+
+            .inner-card{
+                border-radius: 30px;
+                // width: 92%;
+                // margin: auto;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                z-index: 1;
+                background-color: white;
+                // padding: 2rem 5%;
+                .img{
+                    width: 60%;
+                    padding-bottom: 0.8rem;
+                    img{
+                        width: 100%;
+                    }
+                }
+
+                .content{
+                    font-size: calc(1.3vw + 5px);
+                    width: 95%;
+                    padding-left: 0;
+                    color: #000;
+                }
+            }
+        }
+    }
+}
+
+.form{
+    margin: 9rem 3% 5rem auto;
+    padding: 2rem 0 1rem;
+    width: 80%;
+    height: 940px;
+    // background-image: url('../../../../../assets/corporate-images/form-bg.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    // height: 1000px;
+
+    
+    .form-md{
+        display: none;
+    }
+
+    .form-sm{
+        display: none;
+    }
+
+    .bg-img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    .form-content{
+        padding-top: 2rem;
+        z-index: 1;
+        position: absolute;
+        // height: 1000px;
+    }
+
+    .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        margin: auto;
+        
+        // padding-top: 3rem;
+        .content-heading{
+            -webkit-text-fill-color: black;
+            font-weight: 700;
+        }
+        .para{
+            color: black;
+            text-align: center;
+            font-size: 15px;
+        }
+    }
+    
+    .rows{
+        margin: 2rem auto;
+        width: 80%;
+        .left-col{
+            width: 45%;
+            margin-right: 4%;
+            margin-left: 4rem;
+            .input{
+                width: 88%;
+                height: 60px;
+                border-radius: 60px;
+                background-color: #f1f1f1;
+                border: none;
+                padding: 20px;
+                margin-bottom: 13px;
+            }
+            .email-container{
+                width: 88%;
+                position: relative;
+                .form-button{
+                    position: absolute;
+                    right: 0;
+                    width: 22%;
+                    height: 60px;
+                    padding: inherit;
+                }
+            }
+            .email-input{
+                width: 100%;
+            }
+            .verify{
+                width: 88%;
+                align-items: baseline;
+                // height: 51px;
+                display: flex;
+                justify-content: space-between;
+                .input{
+                    width: 37%;
+                    height: 50px;
+                }
+                button{
+                    // border-radius: 50px;
+                    // background-color: #57E1FF;
+                    // border: none;
+                    // color: #fff;
+                    // font-size: 18px;
+                    padding: 12px 42px;
+                    margin-left: 5%;
+                }
+                a{
+                    align-self: center;
+                    margin: 3px;
+                }
+            }
+            .input-area{
+                height: 150px;
+                border-radius: 40px;
+            }
+        }
+        .img{
+            width: 50%;
+            padding-top: 7rem;
+            img{
+                width: 100%;
+            }
+        }
+        .input.ng-invalid.ng-touched {
+            border: 1px solid red;
+          }
+    }
+   
+}
+
+@media (max-width: 1025px) and (min-width: 480px){
+
+    .para{
+        font-size: calc(5px + 1vw);
+        line-height: 160%;
+    }
+
+    .head1{
+        padding-right: .5rem;
+    }
+
+    .head2{
+        font-size: 20px;
+    }
+
+    .section-head{
+        font-size: 23px;
+        line-height: 150%;
+        padding-bottom: 0.5rem;
+        font-size: calc(1.5vw + 10px);
+    }
+    
+    .title-head{
+        font-size: 26px !important;
+        font-weight: 700;
+    }
+
+    .side-timeline {
+        left: 4%;
+        margin-top: 2rem;
+    }
+
+    .side-timeline-lg {
+        display: none;
+    }
+
+    
+    .side-timeline-md {
+        display: block;
+        img {
+            // width: 218px;
+            width: calc(6vw + 168px);
+            min-width: 206px;
+        }
+    }
+    
+    .side-timeline-sm {
+        display: none;
+    }
+
+    .timeline{
+        display: none;
+    }
+
+    .timeline-md{
+        display: block;
+        img{
+            width: calc(5vw + 11px);
+        }
+    }
+
+    .top-header-bg {
+        width: 50%;
+    }
+
+
+    .gradient-img{
+        opacity: 50%;
+        
+    }
+
+    .gradient{
+        img{
+            width: 75%;
+        }
+    }
+
+    // .gradient-right4{
+    //     display: block;
+
+    // }
+
+    .gradient-right1, .gradient-right2, .gradient-right3{
+        img{
+            margin-left: 25%;
+        }
+    }
+
+
+    .intro{
+        padding-top: 8rem;
+        width:92%;
+        padding-left: 12%;
+        .content{
+            width: 58%;
+            padding-left: 2%;
+        }
+        .img{
+            width: 60%;
+            margin-left: 3%;
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    .works{
+        padding-top: 4rem;
+        .column{
+            width: 82%;
+            // margin: 0 4%;
+            margin-left: 15%;
+            align-items: center;
+            .content-heading{
+                padding-right: 0;
+            }
+
+        }
+    
+        .works-row{
+
+    
+            .img{
+                width:40%;
+                img{
+                    width: 100%;
+                }
+            }
+            .content{
+                width: 40%;
+            }
+        }
+    
+        .row1{
+            padding-top: 1rem;
+    
+            .img{
+                padding-top: 2rem;
+                margin-left: 15%;
+                width: 28%;
+            }
+    
+            .content{
+                padding-top: 3rem;
+                width: 40%;
+                margin-left: 14%;
+            }
+        }
+    
+        .row2{
+            padding-top: 1cap;
+    
+            .content{
+                padding-top: 3rem;
+                margin-left: -3%;
+                width: 43%;
+                p{
+                    width: 100%;
+                }
+            }
+            .img{
+                width: 30%;
+                margin-right: 7%;
+            }
+        }
+    
+        .row3{
+            padding-top: 3rem;
+            padding-left: 0%;
+            .content{
+                width: 50%;
+                padding-top: 4rem;
+                margin-left: 17%;
+                p{
+                    width: 100%;
+                }
+            }
+
+            .img{
+                width: 35%;
+                margin-left: 11%;
+                padding-top: 2rem;
+                margin-right: 0%;
+            }
+        }
+    
+        .row4{
+            width: 80%;
+            padding-top: 3rem;
+    
+            p{
+                text-align: center;
+            }
+        }
+    }
+    
+    .benefits{
+        padding-top: 4rem;
+        .content-heading{
+            font-size: 30px;
+            padding-left: 10%;
+        }
+        .filter{
+            width: 80%;
+            padding-left: 10%;
+            .section-head{
+                padding: 0.8rem;
+                .img{
+                    padding-right: 0rem;
+                    img{
+                        width: 75%;
+                    }
+                }
+            }
+            p{
+                text-align: center;
+            }
+        }
+        .row-section{
+            padding-top: 3rem;
+    
+            .left-col{
+                width: 48%;
+                padding-left: 3%;
+    
+                .benefit-row{
+                    padding-bottom: 2rem;
+                }
+
+                .hiring{
+                    width: 110%;
+                }
+            }
+            .content{
+                padding-left: 1%;
+            }
+    
+            .benefits-img{
+                padding-top: 10rem;
+                width: 33%;
+    
+                img{
+                    width: 95%;
+                }
+            }
+        }   
+    }
+    .benefits-icon{
+        width: 40%;
+        padding-top: 1dvw;
+        img{
+            width: 70%;
+        }
+    }
+    
+    .charge{
+        padding-top: 5rem;
+        .content{
+            p{
+                padding-top: 0;
+                width: 80%;
+            }
+        }
+    
+        .cards{
+            width: 78%;
+            padding-top: 3rem;
+            .card{
+                width: 31%;
+                padding: 15px;
+            }
+        }
+    }
+    
+    .inner-card{
+        .content{
+            font-size: calc(1vw + 4px) !important;
+            line-height: 125%;
+        }
+    }
+    .form{
+        height: 550px;
+        margin-top: 4rem;
+        margin-left: 12%;
+        width: 85%;
+        .form-content{
+            padding-top: 1rem;
+        }
+
+        .content{
+            width: 54%;
+            padding-top: 2rem;
+        }
+        
+        .rows{
+            margin-top: 3rem;
+            .left-col{
+                width: 65%;
+                margin-left: 0;
+                margin-right: 0;
+                padding-left: 4%;
+                .input{
+                    height: 22px;
+                    font-size: 12px;
+                    padding: 15px;
+                    margin-bottom: 7px;
+                }
+                .email-container{
+                    .form-button{
+                        height: 22px;
+                    }
+                }
+                .verify{
+                    .input{
+                        height: 30px;
+                    }
+                    button{
+                        font-size: 12px;
+                        padding: 6px 30px;
+                        margin-left: 5%;
+                    }
+
+                }
+                .input-area{
+                    height: 75px;
+                    border-radius: 12px;
+                }
+            }
+            .img{
+                width: 50%;
+                padding-top: 7rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .form-button{
+                font-size: 12px;
+                padding: 6px 30px;
+                margin-left: 5%;
+            }
+        }
+        .input.ng-invalid.ng-touched {
+            border: 1px solid red;
+          }
+    }
+
+  
+
+}
+
+
+
+@media (max-width: 480px) {
+
+    .para{
+        font-size: 12px;
+        line-height: 135%;
+    }
+
+    .content-paragraph{
+        line-height: 125%;
+        font-size: 11px;
+    }
+
+    .head1{
+        padding-right: .5rem;
+    }
+
+    .head2{
+        font-size: 13px;
+    }
+
+    // .content-heading{
+    //     font-size: 30px !important;
+    // }
+
+    .section-head{
+        // font-size: 25px;
+        line-height: 140%;
+        padding-bottom: 0.3rem;
+        font-size: 13px;
+    }
+    .side-timeline-lg {
+        display: none;
+    }
+
+    
+    .side-timeline-md {
+        display: none;
+        
+    }
+    
+    .side-timeline-sm {
+
+        display: block;
+        img {
+            width: calc(225px + 5vw);
+            // width: calc(198px + 6.5vw);
+            width: 106px;
+        }
+    }
+
+    .timeline{
+        display: none;
+    }
+
+    .timeline-md{
+        display: block;
+        img{
+            width: calc(5vw + 11px);
+        }
+    }
+
+    .timeline{
+        display: none;
+    }
+
+    .timeline-md{
+        display: none;
+    }
+
+    .timeline-sm{
+        display: block;
+        padding-right: 3%;
+        img{
+            width: 90%;
+        }
+    }
+
+    .top-header-bg {
+        width: 261px;
+
+        img{
+            width: 80%;
+        }
+    }
+
+    .gradient{
+        img{
+            width: 80%;
+        }
+    }
+
+    .gradient-right4{
+        display: block;
+        top: 50px;
+    }
+
+    .gradient-right1, .gradient-right2, .gradient-right3, .gradient-right4{
+        img{
+            margin-left: 20%;
+        }
+    }
+    .gradient-right1{
+        opacity: 60%;
+        img{
+            opacity: 100%;
+        }
+    }
+
+    .gradient-right2{
+        top: 270px;
+    }
+
+    .gradient-right3{
+        top: 250px;
+    }
+
+    .gradient-img{
+        // display: none;
+        opacity: 35%;
+        // display: none;
+        img{
+            width: 50%;
+    
+        }
+    }
+
+    .intro{
+        padding-top: 2.5rem;
+        width: 92%;
+        flex-direction: column-reverse;
+
+        .content{
+            width: 92%;
+            padding-left: 12%;
+            padding-top: 1rem;
+            text-align: center;
+            p{
+                padding-top: 1rem;
+                text-align: center;
+                line-height: 140%;
+            }
+            .content-heading{
+                font-size: 30px;
+            }
+        }
+        .img{
+            width: 85%;
+            margin-left: 7%;
+            img{
+                width: 100%;
+            }
+        }
+        
+    }
+    
+    .works{
+        padding-top: 3rem;
+        .column{
+            width: 96%;
+            margin: 0;
+            padding-left: 13%;
+            align-items: center;
+            .content-heading{
+                font-size: 20px !important;
+            }
+        }
+    
+        .works-row{
+            
+    
+            .img{
+                width:40%;
+                img{
+                    width: 100%;
+                }
+            }
+            .content{
+                width: 40%;
+            }
+        }
+    
+        .row1{
+            padding-top: 1rem;
+    
+            .img{
+                padding-top: 1rem;
+                margin-left: 4%;
+                width: 36%;
+            }
+    
+            .content{
+                padding-top: 1rem;
+                width: 44%;
+                margin-left: 16%;
+                p{
+                    width: 100%;
+                }
+            }
+        }
+    
+        .row2{
+            padding-top: 0rem;
+            
+            .content{
+                padding-top: 0rem;
+                margin-left: -3%;
+                width: 46%;
+                p{
+                    width: 90%;
+                }
+            }
+            .img{
+                width: 35%;
+                margin-right: 3%;
+            }
+        }
+    
+        .row3{
+            padding-top: 0rem;
+            padding-left: 0%;
+            .content{
+                width: 50%;
+                padding-top: 0rem;
+                margin-left: 17%;
+                margin-top: -5%;
+                p{
+                    width: 100%;
+                }
+            }
+
+            .img{
+                width: 38%;
+                margin-left: 8%;
+                padding-top: 0rem;
+                margin-right: 0%;
+            }
+        }
+    
+        .row4{
+            width: 100%;
+            padding-top: 1rem;
+            margin-top: 2rem;
+            p{
+                text-align: center;
+                width: 90%;
+            }
+            .row-heading{
+                font-size: 15px;
+            }
+        }
+    }
+    
+    .benefits{
+        padding-top: 1rem;
+        width: 90%;
+        margin-left: 10%;
+        .content-heading{
+            font-size: 20px;
+        }
+        .filter{
+            .section-head{
+                padding: 0.8rem;
+                .img{
+                    padding-right: 0rem;
+                   
+                    img{
+                        width: 55%;
+                        margin-left: 25%;
+                    }
+                }
+            }
+            p{
+                text-align: center;
+            }
+        }
+        .row-section{
+            padding-top: 0.5rem;
+    
+            .left-col{
+                width: 90%;
+                margin: auto;
+    
+                .benefit-row{
+                    padding-bottom: 0rem;
+                }
+
+                .hiring{
+                    width: 110%;
+                }
+            }
+            .content{
+                padding-left: 5%;
+            }
+    
+            .benefits-img{
+                display: none;
+            }
+            .benefits-img-sm{
+                display: block;
+                width: 70%;
+                margin: auto;
+                padding-bottom: 1.5rem;
+                img{
+                    width: 100%;
+                }
+            }
+        }   
+    }
+
+    .benefits-icon{
+        width: 55%;
+        padding-top: 1rem;
+        img{
+            width: 90%;
+        }
+    }
+    
+    .charge{
+        padding-top: 3rem;
+        .content{
+            width: 100%;
+            padding-left: 11%;
+            .content-heading{
+                font-size: 20px;
+            }
+            p{
+                padding-top: 0.5rem;
+                width: 85%;
+                margin-left: 3%;
+            }
+        }
+    
+        .cards{
+            padding-top: 1rem;
+            flex-direction: column;
+
+            .card{
+                margin: 0 auto 1.5rem;
+                width: 90%;
+                padding: 20px;
+
+                .inner-card{
+                    .content{
+                        font-size: 13px;
+                        width: 90%;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+        }
+    }
+    
+    .form{
+        height: 665px;
+        margin-top: 0rem;
+        padding-top: 0rem;
+        width: 77%;
+        .form-content{
+            padding-top: 3rem;
+            .content-heading{
+                padding-bottom: 0;
+                padding-top: 1rem;
+                font-size: 15px;
+            }
+        }
+
+        .form-lg{
+            display: none;
+        }
+        .form-sm{
+            display: block;
+        }
+
+        .content{
+            width: 75%;
+            .para{
+                padding-top: 0.5rem;
+                font-size: 11px;
+            }
+        }
+        
+        .rows{
+            flex-direction: column-reverse;
+            align-items: center;
+            margin-top: 0.5rem;
+            .left-col{
+                width: 80%;
+                margin: auto;
+                .input{
+                    width: 100%;
+                    height: 15px;
+                    font-size: 10px;
+                    padding: 13px;
+                    margin-bottom: 6px;
+                }
+                .email-container{
+                    width: 100%;
+                    .form-button{
+                        height: 28px;
+                    }
+                }
+                .verify{
+                    width: 100%;
+                    .input{
+                        height: 25px;
+                        width: 60px;
+                    }
+                    button{
+                        font-size: 11px;
+                        padding: 5px 15px;
+                        margin-left: 5px;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                }
+                .input-area{
+                    height: 75px;
+                    border-radius: 12px;
+                }
+            }
+            .img{
+                width: 50%;
+                padding-top: 0rem;
+                img{
+                    width: 100%;
+                }
+            }
+            .form-button{
+                font-size: 11px;
+                padding: 5px 20px;
+                margin-left: 0;
+            }
+          
+        }
+        .input.ng-invalid.ng-touched {
+            border: 1px solid red;
+          }
+    }
+
+}
+
+// @media (min-width: 1750px){
+
+//     .timeline{
+//         padding-right: 10%;
+//         img{
+//             width: calc(1.5vw + 56px);
+//         }
+//     }
+
+
+//     .works{
+//         max-width: 1700px;
+//         margin: auto;
+//     }
+
+//     .timeline{
+//         left: 7.5%;
+//         margin-top: 5px;
+//         img{
+//             width: calc(225px + 5vw);
+//             width: calc(172px + 8vw);
+//         }
+//     }
+
+//     .reviews-section{
+//         max-width: 2200px;
+//         margin: 2.5rem auto;
+//     }
+
+//     .candidate-col{
+//         max-width: 1100px;
+//     }
+
+// }
+
+.message-card{
+    background: #0A1E36;
+  
+  }
+  
+
+@media (min-width: 1750px){
+    .side-timeline{
+        img{
+            width: calc(207px + 6vw);
+        }
+    }
+
+}
