@@ -311,7 +311,7 @@
                         Let Us Help You Find the Perfect Talent for Your Team
                     </div>
                 </div>
-                <!-- <form  (ngSubmit)="corporate.form.valid && createCorporate(form)" #corporate="ngForm" novalidate>
+                <form  (ngSubmit)="corporate.form.valid && createCorporate(form)" #corporate="ngForm" novalidate>
                 <div class="rows d-flex">
                     <div class="left-col" >
                         <input class="input" type="text" placeholder="Name*" #name="ngModel" pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" 
@@ -366,11 +366,11 @@
                       ">Send Message</button>
                     </div>
                     <div class="img">
-                        <img src="assets/corporate-images/talk-img.png">
+                        <img src="assets/images/talk-img.png" alt="Corporate Image">
                     </div>
                 </div>
-                </form> -->
-                <form novalidate>
+                </form>
+                <!-- <form novalidate>
                     <div class="rows d-flex">
                         <div class="left-col">
                             <input class="input" type="text" placeholder="Name*" pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" name="name" id="name" required>
@@ -400,7 +400,7 @@
                             <img src="assets/images/talk-img.png" alt="Corporate Image">
                         </div>
                     </div>
-                </form>
+                </form> -->
 
             </div>
         
@@ -411,7 +411,7 @@
     </div>
     <app-footer></app-footer>
 </div>
-<!-- 
+
 <app-modal [theme]="'theme-k'" [centered]="true" [showHeader]="showModal === modalType.MESSAGE"
 [showClose]="false" [modalSize]="'md'"
   [showFooter]="showModal === modalType.MESSAGE" [title]="modalTitle" [message]="modalMessage"
@@ -443,7 +443,7 @@
             <p>We apologize for any delay as we're currently experiencing high demand.</p>
             <p>Rest assured, our team is working to get back to you soon.</p>
             <p>For urgent inquiries, reach out to us at 
-                <a href="mailto:p2phiring@worko.ai">p2phiring@worko.ai</a>
+                <a href="mailto:p2phiring@worko.ai">p2phiring&#64;worko.ai</a>
             </p>
             <p>Thank you for your patience!</p>
           </div>
@@ -461,4 +461,4 @@
 </ng-container>
 
 
-</app-modal> -->
+</app-modal>

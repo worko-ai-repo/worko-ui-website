@@ -36,6 +36,27 @@ export class IndexComponent {
     this.giveReferral = temp;
   }
 
+  openGetReferral() {
+    // if (this.userLoggedIn) {
+    //   this.redirectToEmployeeReferral();
+    // } else {
+    //   this.userType = "employee";
+    //   this.openModal(ModalType.LOGIN_SIGNUP);
+    // }
+
+    window.location.href = 'https://app.worko.ai//employee/Referral';
+  }
+
+  async redirectToCompanyListing() {
+    // this.router.navigateByUrl('/company-listing');
+
+    window.location.href = 'https://app.worko.ai/company-listing';
+  }
+
+  async redirectToEmployeeReferral() {
+    window.location.href = 'https://app.worko.ai//employee/Referral';
+  }
+
   //  Reviews section: carousel code starts
   reviews = [
     {
@@ -159,7 +180,7 @@ export class IndexComponent {
     this.marginLeftmd = -66 - this.currentIndex * 80 - this.currentIndex;
     this.marginLeftsm = -78 - this.currentIndex * 86 - this.currentIndex;
   }
-
+  
  // Reviews carousel section ends
 
  async getCompanyDetails() {

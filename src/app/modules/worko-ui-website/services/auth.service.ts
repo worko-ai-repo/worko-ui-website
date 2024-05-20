@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { CognitoService } from './cognito.service';
+import { HttpClient } from '@angular/common/http';
 import { HttpHeaders } from '@angular/common/http';
 
 @Injectable({
@@ -7,7 +7,9 @@ import { HttpHeaders } from '@angular/common/http';
 })
 export class AuthService {
 
-  constructor(private cognitoService: CognitoService) { }
+  constructor(private http: HttpClient) { 
+    console.log('auth ExampleComponent initialized');
+  }
 
 
   /**
@@ -20,13 +22,12 @@ export class AuthService {
   getHttpOptions(authorization: boolean = true, params: any = {}): any {
     let headers: any = {  };
     if(!params){
-
      headers={'Content-Type': 'application/json'}
     }
-  
 
     if (authorization) {
-      headers.Authorization = `Bearer ${this.cognitoService.getAccessToken()}`;
+    //   headers.Authorization = `Bearer ${this.cognitoService.getAccessToken()}`;
+    headers.Authorization = "Bearer ";
       if (headers.Authorization == "Bearer ") {
         headers.Authorization = 'Bearer dummyTokenWeArePassing';
       }
@@ -60,5 +61,9 @@ export class AuthService {
     // }
 
     return httpOptions;
+  }
+
+  uploadFileOnS3Bucket(file: File, signedUrl: string, awsS3Tag: string): Promise<any> {
+    return this.http.put(signedUrl, file, this.getHttpOptions(false, { awsS3Tag: awsS3Tag, "fileType": file.type  })).toPromise()
   }
 }

@@ -302,7 +302,7 @@
                 collaboration thrive, and where your professional growth is a priority. Join us in 
                 shaping the future of hiring.            
             </p>
-            <!-- <form class="w-100" (ngSubmit)="aboutUs.form.valid && createAboutUs(form)" #aboutUs="ngForm" novalidate>
+            <form class="w-100" (ngSubmit)="aboutUs.form.valid && createAboutUs(form)" #aboutUs="ngForm" novalidate>
                 <div class="input-row flex-wrap d-flex justify-content-between">
                     <input type="text" class="input " placeholder="Name*" required #name="ngModel"
                     pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" [(ngModel)]="aboutUsForm.name"
@@ -329,7 +329,7 @@
                             <span  *ngIf="!fileErr && !fileName" class="button-style" style="background-color: white;color: gray; padding-left:5px" > Upload your CV*</span>
                            
                       
-                        <img class="button-style" src="/assets/about-images-KA/cv-icon.png" alt="cv-icon">
+                            <img class="button-style" src="/assets/images/cv-icon.png" alt="cv-icon">
                         <input type="file" id="cvInput" class="input cv-button" style="display: none;" (change)="handleFileInput($event)" >
                             <div class="error text-danger py-2" style="font-size: 14px;" *ngIf="fileErr">
                             {{ fileErr }}
@@ -358,10 +358,10 @@
                             Send Message
                         </button>
                     </div>            
-                </form> -->
+                </form>
     
 
-                <form class="w-100" novalidate>
+                <!-- <form class="w-100" novalidate>
                     <div class="input-row flex-wrap d-flex justify-content-between">
                         <input type="text" class="input" placeholder="Name*" required
                                pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" name="name" id="name">
@@ -388,7 +388,7 @@
                             Send Message
                         </button>
                     </div>
-                </form>
+                </form> -->
                 <div class="gradient gradient-right4 position-absolute">
                     <img class="gradient-img" src="assets/images/gradient-right4.png" alt="Gradient Right 4">
                 </div>
@@ -398,7 +398,7 @@
         </div>
     
     </div>
-    <!-- <app-modal [theme]="'theme-k'" [centered]="true" [showHeader]="showModal === modalType.MESSAGE"
+    <app-modal [theme]="'theme-k'" [centered]="true" [showHeader]="showModal === modalType.MESSAGE"
     [showClose]="false" [modalSize]="'md'"
       [showFooter]="showModal === modalType.MESSAGE" [title]="modalTitle" [message]="modalMessage"
       [bodyClass]="modalMessage ? 'p-4' : 'p-0'" [modalSize]="'md'">
@@ -437,4 +437,4 @@
     
     
     
-    </app-modal> -->
+    </app-modal>

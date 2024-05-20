@@ -12,6 +12,16 @@ import { FaqComponent } from './components/faq/faq.component';
 import { AboutUsComponent } from './components/about-us/about-us.component';
 import { CorporateComponent } from './components/corporate/corporate.component';
 import { IndexComponent } from './components/index/index.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { MatCardModule } from '@angular/material/card';
+import { MatDividerModule } from '@angular/material/divider';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 export const routes: Routes = [
   {
@@ -66,11 +76,21 @@ export const routes: Routes = [
     FaqComponent,
     AboutUsComponent,
     CorporateComponent,
-    IndexComponent
+    IndexComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    FormsModule,
+    ReactiveFormsModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatTooltipModule,
+    MatCardModule,
+    MatDividerModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
   ]
 })
 export class WorkoUiWebsiteModule { }

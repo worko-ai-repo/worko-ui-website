@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../../../../environment/environment';
-import { AuthService } from '../services/auth.service';
+// import { AuthService } from '../services/auth.service';
 import { HttpClient } from '@angular/common/http';
-
+import { AuthService } from './auth.service';
 const API_URL = environment.apiUrl;
 
 @Injectable({
@@ -11,7 +11,9 @@ const API_URL = environment.apiUrl;
 
 export class CompanyListingService {
 
-  constructor(private http: HttpClient, private authService: AuthService) { }
+  constructor(private http: HttpClient, private authService: AuthService) {
+    console.log(' com ExampleComponent initialized');
+   }
   
   /**
   * Get Company Listing.

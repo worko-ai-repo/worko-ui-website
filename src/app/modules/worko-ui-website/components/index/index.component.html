@@ -70,8 +70,8 @@
                         <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
                     </div> -->
                     <div class="buttons">
-                        <button  class="left-btn btn btn-light font-inria"> Get Referral </button>
-                        <button  class="btn btn-dark font-inria"> Give Referral </button>
+                        <button  class="left-btn btn btn-light font-inria"  (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
                     </div>
                 </div>
                 <div class="intro-image">
@@ -233,7 +233,7 @@
             </div>
 
             <div class="button-container text-center" >
-                <!-- <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View More...</button> -->
+                <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View More...</button>
             </div>
         </div>
 
