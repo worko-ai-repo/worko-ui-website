@@ -180,7 +180,7 @@
                 <div class="title">Join Our Platform And Work</div>
                 <div class="para">Alongside Employees At Top Companies</div>
             </div>
-            <div class="slide-container">
+            <!-- <div class="slide-container">
                 <div class="company-slides d-flex">
                     <div class="company company1" tabindex="0">
                         <img src="assets/company-logo/logo1.png" class="company-img" alt="Company Name 1">
@@ -203,8 +203,35 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> -->
             
+            <div class="slide-container">
+                <div class="company-slides d-flex">
+    
+                    <div class="company company1" tabindex="0"  *ngFor="let item of companyList">
+
+                        <img src="assets/company-logo/{{item.logo}}" class="company-img" alt="{{item.name}}">
+                        <div class="hover hover1">
+                            <div class="logo-container">
+                                <img src="assets/company-logo/{{item.logo}}" alt="{{item.name}}">
+                            </div>
+                            <button class="referral button"  (click)="openReferralPage(item)">Request Referral</button>
+                            <button class="referral button"  (click)="openGudiancePage(item)" >Request Guidance</button>
+                        </div>
+                    </div>
+                </div> 
+                <div class="company-slides d-flex">
+                    <div class="company company1" tabindex="0"  *ngFor="let item of companyList">
+                        <img src="assets/company-logo/{{item.logo}}" class="company-img" alt="{{item.name}}">
+                        <div class="hover hover1">
+                            <img src="assets/company-logo/{{item.logo}}" style="color: black;" alt="{{item.name}}">
+                            <button class="referral button"  (click)="openReferralPage(item)">Request Referral</button>
+                            <button class="referral button"  (click)="openGudiancePage(item)" >Request Guidance</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="button-container text-center" >
                 <!-- <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View More...</button> -->
             </div>

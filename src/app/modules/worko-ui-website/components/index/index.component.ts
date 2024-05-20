@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { CompanyListingService } from '../../services/company-listing.service';
 
 @Component({
   selector: 'app-index',
@@ -6,16 +7,28 @@ import { Component } from '@angular/core';
   styleUrl: './index.component.scss'
 })
 export class IndexComponent {
+  companyList: any[] = [];
+  pageSize = 50;
+  lastKey: string | undefined = undefined;
+  loadedOnce: boolean = true;
+  filterData: any = {
+    teamSize: "",
+    industryType: "",
+    companyName: ""
+  }
   getReferral: boolean = true;
   giveReferral: boolean = false;
 
   // For swapping Get referrals and give referrals buttons:
 
   async ngOnInit(): Promise<void> {
+    this.getCompanyDetails();
     setInterval(() => {
       this.swapValues();
     }, 3000);  
   }
+
+  constructor(private companyListing: CompanyListingService){}
 
   swapValues() {
     const temp = this.getReferral;
@@ -149,6 +162,50 @@ export class IndexComponent {
 
  // Reviews carousel section ends
 
+ async getCompanyDetails() {
+   
+     
+  await this.companyListing.getCompanyListing(this.pageSize, this.lastKey, this.filterData.teamSize, this.filterData.industryType, this.filterData.companyName).then(async (response) => {
+    if (response) {
+      console.log("Helo11");
+      //this.spinner.hide();
+      // if (this.loadedOnce) {
+      //   this.companyList = [];
+      // }
+      this.companyList = this.companyList.concat(response.data);
+      this.lastKey = response.pagination.lastKey;
+      this.loadedOnce = false;
+      console.log(this.companyList)
+      //  this.filterCompanies(); // Filter companies after updating companyList
+    }
+  })
+    .catch(error => {
+      console.error('Display Company Listing Error:', error);
+      //this.spinner.hide();
+    });
+}
+
+
+openReferralPage(item: any) {
+  // Trigger the event when referral is requested
+  // this.companyListing.setReferralData(item);
+  //this.companyListing.setrequestReferralData(event,item);
+  // this.router.navigateByUrl('/company-listing');
+
+  window.location.href = 'https://app.worko.ai/company-listing';
+}
+
+openGudiancePage(item:any){
+      
+  if(item){
+    // this.triggerGudianceValue=!this.triggerGudianceValue
+    // console.log(this.triggerGudianceValue)
+    // this.companyListing.setGuidanceData(this.triggerGudianceValue);
+    // this.router.navigateByUrl('/company-listing');
+
+    window.location.href = 'https://app.worko.ai/company-listing';
+  }
+}
 //  List of purposes in purpose section:
   purposeList = [
     {
