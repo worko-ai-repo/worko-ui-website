@@ -1,0 +1,20 @@
+import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+@Component({
+  selector: 'app-navbar',
+  templateUrl: './navbar.component.html',
+  styleUrl: './navbar.component.scss'
+})
+export class NavbarComponent {
+  constructor(private router: Router){}
+
+  navigateToApp() {
+    window.location.href = 'https://app.worko.ai';
+  }
+
+  isMenuOpen: boolean = false;
+
+  toggleMenu(event: any) {
+    this.isMenuOpen = event.target.checked;
+  }
+}

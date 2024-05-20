@@ -1,0 +1,19 @@
+.upper-background-image{
+    position: absolute;
+    right: 0;
+    top: -80px;
+    width: 250px;
+}
+.upper-background-image img{
+    max-width:100%;
+}
+
+.lower-background-image{
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    width: 180px;
+}
+.lower-background-image img{
+    max-width:100%;
+}

@@ -1,0 +1,38 @@
+<header>
+    <nav class="navbar">
+      <div class="navbar-container container" [ngClass]="{'expanded': isMenuOpen}">
+        <input type="checkbox" name="" id="" (change)="toggleMenu($event)">
+          <div class="hamburger-lines">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+          <ul class="menu-items">
+            <li><a href="/about-us">About Us</a></li>
+            <li>
+                <a href="/faq">FAQ's</a>
+            </li>
+            <li><a href="/corporate">Corporate</a></li>
+            <li class="icon-lg">
+                <div class="d-flex -pointer user-icon-container"  (click)="navigateToApp()">
+                    <img class="user-icon" alt="" src="assets/images/iconamoonprofilecirclefill.svg">
+                </div>
+            </li>
+            <li class="text-sm">
+                <a style="cursor: pointer;">Dashboard</a>
+            </li>
+            <!-- <li class="text-sm">
+                <a style="cursor: pointer;">Logout</a>
+            </li> -->
+            <li class="text-sm">
+                <a style="cursor: pointer;">Signin</a>
+            </li>
+          </ul>
+            <a class="navbar-brand" href="/"><img class="worko-logo-ai-2-icon" alt=""
+                src="assets/images/worko_logo.png" />
+            </a>
+          </div>
+        </nav>
+      
+      
+      </header>

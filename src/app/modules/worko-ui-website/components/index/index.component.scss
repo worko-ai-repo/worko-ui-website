@@ -1,0 +1,1386 @@
+
+.all-sections{
+    overflow: hidden;
+}
+.purpose-section{
+    padding-top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 15%;
+    .purpose-header{
+        .purpose-title{
+            padding-bottom: 1rem;
+        }
+        .purpose-content{
+            line-height: 140%;
+            padding-bottom: 2rem;
+            width: 80%; 
+            margin: auto;
+        }
+    }
+    .purpose-cards{
+        width: 29%;
+        margin: 2rem 1.5%;
+    }
+
+    .purpose-card{
+        height: 505px;
+        border: 1px solid #57e1ff;
+
+        .purpose-image{
+            display: flex;
+            justify-content: center;
+            padding: 2.6rem 0 1rem;
+        }
+
+        .purpose-title{
+            font-size: calc(1.5vw + 5px);
+            font-weight: 600;
+            text-align: center;
+            line-height: 120%;
+
+            width: 90%;
+            margin: auto;
+            font-size: 1.5rem;
+        }
+        .purpose-text{
+            width: 90%;
+            // font-size: calc(1vw + 5px);
+            text-align: center;
+            margin: auto;
+            line-height: 130%;
+            font-size: 1rem;
+        }
+    }
+    
+}
+
+.referee-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 3%;
+    .referee-card{
+        padding: 20px;
+        margin: 1rem 1%;
+        // border: solid;
+        // border-color: #50D5FF;
+        width: 31%;
+    }
+
+}
+.referee-text{
+    font-size: calc(1vw + 9px);
+    width: 95%;
+    padding-top: 2rem;
+    line-height: 140%;
+}
+.referee-image{
+    display: flex;
+    justify-content: center;
+    img{
+        width: 65%;
+    }
+}
+.right-border {
+    border-right: 1px solid rgba(255, 255, 255, 0.354);
+    position: absolute;
+    height: 250px;
+    top: 50px;
+    right: -2%;
+}
+
+.section-border{
+    border-bottom: 1px solid rgba(255, 255, 255, 0.354) ;
+    width: 85%;
+    margin: auto;
+    padding-top: 4rem;
+}
+.candidate-section{
+    padding-left: 12%;
+}
+.candidate-text{
+    width: 97%;
+}
+
+.benefits-section{
+    padding-top: 7rem;
+    padding-left: 12%;
+    .benefits-title{
+        font-size: calc(2vw + 25px);
+        padding-bottom: 2rem;
+    }
+    .referee-section{
+        padding-top: 3rem;
+    }
+}
+
+.referee-title{
+    letter-spacing: 30px;
+    font-size: calc(3vw + 29px);
+    opacity: 60%;
+}
+
+.referee-subtitle{
+    font-size: calc(1.5vw + 8px);
+    letter-spacing: 5px;
+    opacity: 70%;
+    font-weight: 600;
+    padding-top: 2rem;
+}
+.candidate-section{
+    padding-top: 5rem;
+    .candidate-title{
+        letter-spacing: 20px;
+    }
+}
+
+.candidate-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .bcandidate-card{
+        padding: 20px 20px 0;
+        margin: 1rem 1.5% 0;
+
+        width: 30%;
+    }
+}
+
+// ----------------companies section animation-------------------
+
+@keyframes slide{
+    from {
+        transform: translateX(0)
+    }
+    to{
+        transform: translateX(-100%)
+    }
+}
+
+.companies-section{
+    flex-wrap: nowrap;
+    position: relative;
+}
+
+.slide-container{
+    display: flex;
+    // width: 252%;
+    margin-top: 9rem;
+}
+
+.company-slides{
+    margin-left: 0 !important;
+    animation: 150s slide infinite linear;
+    // animation-play-state: paused;
+    
+}
+
+.slide-container:hover .company-slides{
+    animation-play-state: paused;
+}
+
+// -------------End of css for company slides animation-------------
+
+.stats-section {
+    // justify-content: space-between;
+    padding-top: 10 mnrem;
+    padding-left: 22%;
+    width: 100%;
+    .line-right{
+        height: 100px;
+    }
+    .line-right1{
+        padding-left: 19%;
+        position: absolute;
+        padding-top: 3rem;
+        margin-top: 1rem;
+    }
+    .line-right2{
+        margin-top: -0.5rem;
+        margin-right: 1.5rem;
+    }
+}
+
+.stat {
+
+    align-items: start;
+    flex-direction: column;
+}
+
+// ---------------Responsive for ipads---------------
+
+@media (max-width: 1025px) and (min-width: 480px){
+    .side-timeline{
+        padding-top: 2rem;
+    }
+    
+    .side-timeline-lg{
+        display: none;
+    }
+    
+    .side-timeline-md{
+        display: block;
+        left: 4%;
+        margin-top: 2rem;
+        img{
+            width: calc(170px + 3vw);
+            max-width: 207px;
+            // min-width: 182px;
+        }
+    }
+    
+    .side-timeline-sm{
+        display: none;
+    }
+    
+    .top-header-bg{
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .para{
+        // font-size: calc(13px + 1vw);
+        font-size: calc(1vw + 8px);
+    }
+    
+    
+    .title{
+        font-size: calc(9.4px + 2vw);
+    }
+
+
+    .para2{
+        font-size: calc(8px + 1vw);
+    }
+    
+    hr{
+        height: 2px; width: 100%; background-color: #09111C; border: none;
+    }
+    
+    .head1{
+        font-weight: 400;
+    }
+    
+    .btn-dark{
+        background-color: rgb(87, 225, 225);
+        color: #182b45;
+        font-size: calc(1vw + 6px);
+        border: 1px solid rgb(87, 225, 255);
+        padding: 0.5rem 6%;
+        border-radius: 8px;
+    }
+    .btn-light{
+        font-size: calc(1vw + 6px);
+        padding: 0.5rem 6%;
+        margin-left: 0px;
+        border: 1px solid rgb(87, 225, 255);
+        border-radius: 8px;
+    }
+
+    .grad{
+        display: block;
+        width: 75%;
+        opacity: 50%;
+        margin-right: 1px;
+        img{
+            width: 100%;
+        }
+    }
+
+    .grad-right2{
+        top: 0;
+    }
+
+    .grad-right4{
+        display: none;
+    }
+    
+    .intro{
+        height: 474px;
+        .content{
+            width: 65%;
+            padding-top: 9rem;
+        }
+    }
+    
+    .intro-image{
+        position: absolute;
+        right: 0;
+        width: 28.2%;
+        img{
+            width: 100%;
+        }
+    }
+    
+    .intro-ul{
+        padding: 1rem 5%;
+        width: 115%;
+        margin-bottom: 0;
+    }
+
+    .stats-section {
+        // justify-content: space-between;
+        padding-top: 8rem;
+        padding-left: 21%;
+        width: 102%;
+        .line-right1{
+            padding-left: 21%;
+            position: absolute;
+            padding-top: 3rem;
+            margin-top: 0.5rem;
+        }
+        .line-right2{
+            margin-top: -1.5rem;
+            margin-right: 1.5rem;
+        }
+    }
+
+    .stat {
+        align-items: start;
+        flex-direction: column;
+        // align-items: start;
+        .stat-title {
+            font-size: calc(4vw + 17px);
+            // font-weight: 700;
+        }
+        .stat-content {
+            padding-top: 0rem;
+            // text-align: start;
+            font-size: calc(1vw + 11px);
+            // padding-left: 7%;
+        }
+    }
+
+    
+    .purpose-section{
+        padding-top: 7rem;
+        // display: flex;
+        // flex-wrap: wrap;
+        padding-left: 12%;
+        .purpose-header{
+            .purpose-title{
+                // padding-bottom: 1rem;
+                font-size: calc(2vw + 22px);
+                padding-bottom: 0.5rem;
+            }
+            .purpose-content{
+                line-height: 160%;
+                padding-bottom: 3rem;
+                width: 80%; 
+                margin: auto;
+                font-size: calc(1vw + 11px);
+            }
+        }
+        .purpose-cards{
+            width: 29%;
+            margin: 1rem 1.5%;
+        }
+
+        .purpose-card{
+            // height: 312px;
+            height: 102%;
+
+            .purpose-image{
+                padding: 1.6rem 0 1rem;
+                img{
+                    width: 43%;
+                }
+            }
+
+            .purpose-title{
+                padding-bottom: 0.5rem;
+                width: 90%;
+                // margin: auto;
+                font-size: 1rem;
+            }
+            .purpose-text{
+                width: 92%;
+                font-size: calc(1vw + 5px);
+                // font-size: 13px;
+                text-align: center;
+                margin: auto;
+                line-height: 130%;
+                font-size: 0.875rem;
+            }
+        }
+        
+    }
+
+    .referee-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding-left: 3%;
+        .referee-card{
+            padding: 20px;
+            margin: 1rem 1%;
+            // border: solid;
+            // border-color: #50D5FF;
+            width: 31%;
+        }
+
+    }
+    .referee-text{
+        font-size: calc(1vw + 8px);
+        // font-size: 17px;
+        width: 95%;
+        padding-top: 1.5rem;
+        line-height: 125%;
+    }
+    .referee-image{
+        // display: flex;
+        // justify-content: center;
+        img{
+            width: 67%;
+        }
+    }
+    .right-border {
+        // border-right: 1px solid rgba(255, 255, 255, 0.354);
+        // position: absolute;
+        height: 225px;
+        top: 20px;
+        right: -2%;
+    }
+
+    .section-border{
+        // border-bottom: 1px solid rgba(255, 255, 255, 0.354) ;
+        // width: 85%;
+        // margin: auto;
+        padding-top: 4rem;
+    }
+    .candidate-section{
+        padding-left: 12%;
+    }
+    .candidate-text{
+        width: 97%;
+    }
+
+    .benefits-section{
+        .benefits-title{
+            font-size: calc(2vw + 25px);
+            padding-bottom: 0.5rem;
+        }
+        .benefits-content{
+            font-size: 20px;
+            font-size: calc(1vw + 11px);
+            width: 82% !important;
+        }
+        padding-top: 10rem;
+        padding-left: 12%;
+        .referee-section{
+            padding-top: 3rem;
+        }
+    }
+
+    .referee-title{
+        // letter-spacing: 30px;
+        
+        font-size: 60px;
+        font-size: calc(3vw + 25px);
+        opacity: 70%;
+    }
+
+    .referee-subtitle{
+        font-size: calc(1.5vw + 8px);
+        font-size: 25px;
+        // letter-spacing: 5px;
+        // opacity: 70%;
+        // font-weight: 600;
+        padding-top: 0.5rem;
+    }
+    .candidate-section{
+        padding-top: 5rem;
+        .candidate-title{
+            letter-spacing: 20px;
+        }
+    }
+
+    .candidate-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .bcandidate-card{
+            padding: 20px 20px 0;
+            margin: 1rem 1.5% 0;
+            // border: solid;
+            // border-color: #50D5FF;
+            width: 30%;
+        }
+    }
+
+    .companies-section{
+        padding-top: 5rem;
+
+        .company-content{
+            .title, .para{
+                font-size: calc(1.5vw + 10px);
+            }
+            
+        }
+
+        .company-slides{
+            height: calc(7vw + 25px);
+            height: 120px;
+            // width: 126%;
+            margin-left: 50px;
+            .company{
+                // width: 12%;
+                margin-right: 100px;
+                img{
+                    // padding: 7% 1.61%;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .hover{
+            width: 200px !important;
+            height: 200px !important;
+        }
+
+        .slide-container:hover .company-slides{
+            animation-play-state: paused;
+        }
+
+        .company1:focus .hover1 {
+            display: block !important;
+        }
+        
+        .company2:focus .hover2 {
+            display: block !important;
+        }
+        
+        .company3:focus .hover3 {
+            display: block !important;
+        }
+        
+        .company4:focus .hover4 {
+            display: block !important;
+        }
+        
+        .company5:focus .hover5 {
+            display: block !important;
+        }
+        
+        .company6:focus .hover6 {
+            display: block !important;
+        }
+        
+        .company7:focus .hover7 {
+            display: block !important;
+        }
+
+        button{
+            // padding: 0.5rem 10%;
+            margin-top: 7rem;
+            // width: 63%;
+            // font-size: calc(1.2vw + 7px);
+            // margin-left: 18%;
+        }
+    }
+
+    .index-section .companies-section .company-slides .company .hover .button {
+        width: 145px;
+        font-size: 0.75rem;
+    }
+    // .company:focus .company-slides{
+    //     animation-play-state: paused;
+    // }
+
+    .info-section{
+        padding-top: 3rem;
+
+        .video-img{
+            width: 50%;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .video-img-md{
+        display: block;
+    }    
+
+    .video-img-lg{
+        display: none;
+    }
+
+    .info{
+        padding-left: 2%;
+    }
+
+    .info-title{
+        font-size: calc(1vw + 10px);
+        font-weight: 700;
+    }
+
+    .info-subtitle{
+        padding: 2%;
+    }
+
+    .info{
+        font-size: calc(1vw + 6px);
+        padding-bottom: 2%;
+    }
+
+    .reviews-section{
+        position: relative;
+        background-color: #E7F4FC;
+        color: #182B45;
+        margin-top: 3rem;
+        width: 93%;
+        margin-left: 3%;
+        border-radius: 30px;
+        padding-bottom: 2rem;
+        margin-bottom: 2.5rem;
+        .review-img{
+            width: 27%;
+            img{
+                width: 125%;
+            }
+        }
+        overflow: hidden;
+    }
+
+    .reviews-content{
+        width: 65%;
+        padding-left: 11%;
+        padding-top: 4rem;
+        
+        .title{
+            font-size: calc(2vw + 7px);
+        }
+
+        .sub-title{
+            font-size: calc(3vw + 20px);
+            line-height: 120%;
+        }
+
+        .text{
+            width: 100%;
+            margin: 0;
+            padding: 4rem 0;
+        }
+
+        
+    }
+
+    .review-img{
+        padding-top: 3rem;
+        margin-left: 5%;
+        width: 35%;
+    }
+
+    .review-cards{
+        width: 900vw;
+        padding-top: 4rem;
+        margin-left: -66%;
+    }
+
+    .review-card{
+        background-color: #fff;
+        border-radius: 33px;
+        margin-right: 0.5%;
+        width: 68%;
+        padding: 4rem 1% 0;
+    }
+    .reviews-section-lg{
+        display: none;
+    }
+
+    .reviews-section-sm{
+        display: none;
+    }
+
+    .review-cards-lg{
+        display: none;
+    }
+
+    .review-cards-md{
+        display: flex;
+        transition: margin-left 1s ease; 
+    }
+  
+}
+
+@media (max-width: 760px) and (min-width: 480px){
+
+    .purpose-section{
+        padding-left: 13%;
+        padding-top: 2rem;
+
+        .purpose-header{
+            width: 95%;
+            .purpose-title{
+                padding-bottom: 0.5rem;
+                // font-size: 16px;
+                font-size: 1rem;
+            }
+            .purpose-content{
+                padding-top: 0rem;
+                // text-align: left;
+                // font-size: calc(2vw + 6.5px);
+                // font-size: 10px;
+                padding-bottom: 1rem;
+                width: 83%;
+                font-size: 0.75rem;
+            }
+        }
+
+        .purpose-rows{
+            padding-right: 1%;
+        }
+        .purpose-cards{
+            width: 43%;
+            margin: 0.8rem 2.5%;
+    
+            .purpose-card{
+                height: 220px;
+                border-radius: 5px;
+                height: 104%;
+                .purpose-image{
+                    // display: flex;
+                    // justify-content: center;
+                    padding: 0.7rem 0 0.5rem;
+                    img{
+                        width: 42%;
+                    }
+                }
+                
+                .last-card{
+                    padding-top: 1rem;
+                    
+                }
+                .last-card-content{
+                    width: 80% !important;
+                }
+
+                .purpose-title{
+                    font-size: calc(1vw + 7px);
+                    padding-bottom: 0.5rem;
+                    font-size: 1rem;
+                }
+                .purpose-text{
+                    width: 90%;
+                    font-size: calc(1.5vw + 5px);
+                    line-height: 110%;
+                    font-size: 0.875rem;
+                }
+            }
+        }
+    
+    }
+
+}
+// ---------------Responsive for Mobile---------------
+
+@media (max-width: 480px) {
+
+.side-timeline{
+    display: none;
+}
+
+.side-timeline-md{
+    display: none;
+}
+
+.side-timeline-sm{
+    display: block;
+    left: 5.5%;
+    margin-top: 2rem;
+    
+    img{
+        width: 95.5px;
+        // width: calc(6vw + 71.5px);
+        width: calc(3vw + 83px);
+        min-width: 95px;
+    }
+}
+    
+    .top-header-bg{
+        width: 50%;
+        img {
+            width: 100%;
+        }
+    }
+
+    .para{
+        // font-size: calc(13px + 1vw);
+        font-size: calc(2vw + 6.5px);
+        line-height: 140%;
+        font-size: 12px;
+    }
+    
+    
+    .title{
+        font-size: calc(8.5px + 2vw);
+    }
+
+
+    .para2{
+        font-size: calc(8px + 1vw);
+    }
+    
+    hr{
+        height: 2px; width: 100%; background-color: #09111C; border: none;
+    }
+    .about-section{
+        position: relative;
+        background-color: #000000;
+    }
+    
+    .head1{
+        font-weight: 400;
+    }
+    
+    .btn-dark{
+        background-color: rgb(87, 225, 225);
+        color: #182b45;
+        font-size: calc(1vw + 6px);
+        border: 1px solid rgb(87, 225, 255);
+        padding: 0.5rem 6%;
+        border-radius: 8px;
+    }
+    .btn-light{
+        font-size: calc(1vw + 6px);
+        padding: 0.5rem 6%;
+        margin-left: 0px;
+        border: 1px solid rgb(87, 225, 255);
+        border-radius: 8px;
+    }
+
+    .left-btn{
+        margin-left: 3%;
+        margin-right: 10px;
+    }
+
+    .grad{
+        opacity: 40%;
+        width: 70%;
+        img{
+            width: 100%;
+        }
+    }
+
+    .grad-right2, .grad-right3{
+        right: -1%;
+    }
+
+
+    .rows{
+        padding-left: 14%;
+        overflow: hidden;
+    }
+    
+    .intro{
+
+        padding-top: 3rem;
+        height: 320px;
+        .content{
+            width: 68%;
+            padding-top: 3.5rem;
+        }
+        .give-content{
+            width: 69.75%;
+        }
+    }
+    
+    .content2{
+        width: 115%;
+    }
+    .intro-image{
+        position: absolute;
+        right: 0;
+        width: 25%;
+        img{
+            width: 100%;
+        }
+    }
+    
+    .intro-ul{
+        padding: 0.4rem 0 0.7rem;
+        // padding-left: 2%;
+        width: 126%;
+        margin-bottom: 0;
+        margin-left: 5%;
+    }
+
+
+    .stats-section{
+        justify-content: flex-start;
+        padding: 3.3rem 0 0 2%;
+    }
+     
+    .stat{
+        width: 30%;
+        text-align: center;
+    
+        .stat-title{
+            font-size: calc(10.5px + 2vw);
+            font-weight: 700;
+        }
+        .stat-content{
+            padding-top: 0rem;
+            text-align: center;
+            font-size: calc(6.5px + 2vw);
+        }
+    }
+    
+    .title2{
+        font-weight: 700;
+        font-size: calc(6.5px + 2vw);
+
+    }
+    
+    .purpose-section{
+        padding-left: 13%;
+        padding-top: 2rem;
+
+        .purpose-header{
+            width: 95%;
+            .purpose-title{
+                padding-bottom: 0.5rem;
+                // font-size: 16px;
+                font-size: 1rem;
+            }
+            .purpose-content{
+                padding-top: 0rem;
+                // text-align: left;
+                // font-size: calc(2vw + 6.5px);
+                // font-size: 10px;
+                padding-bottom: 1rem;
+                width: 83%;
+                font-size: 0.75rem;
+            }
+        }
+
+        .purpose-rows{
+            padding-right: 1%;
+        }
+        .purpose-cards{
+            width: 43%;
+            margin: 0.8rem 2.5%;
+    
+            .purpose-card{
+                height: 220px;
+                border-radius: 5px;
+                height: 104%;
+                .purpose-image{
+                    // display: flex;
+                    // justify-content: center;
+                    padding: 0.7rem 0 0.5rem;
+                    img{
+                        width: 42%;
+                    }
+                }
+                
+                .last-card{
+                    padding-top: 1rem;
+                    
+                }
+                .last-card-content{
+                    width: 80% !important;
+                }
+
+                .purpose-title{
+                    font-size: calc(1vw + 7px);
+                    padding-bottom: 0.5rem;
+                    font-size: 0.875rem;
+                }
+                .purpose-text{
+                    width: 90%;
+                    font-size: calc(1.5vw + 5px);
+                    line-height: 110%;
+                    font-size: 0.75rem;
+                }
+            }
+        }
+    
+    }
+    
+    .benefits-section{
+        padding-top: 4rem;
+        padding-left: 9%;
+        .benefits-title{
+            font-size: 18px;
+            padding-bottom: 0.5rem;
+        }
+        .benefits-content{
+            font-size: 12px;
+            width: 85% !important;
+        }
+        .referee-section{
+            padding-top: 1.5rem;
+            .referee-title{
+                letter-spacing: 10px;
+                font-size: 30px;
+            }
+            .referee-subtitle{
+                font-size: 15px;
+                letter-spacing: 5px;
+                padding: 0;
+            }
+        }
+    }
+
+    .referee-cards{
+        padding-top: 0.5rem;
+        padding-left: 0%;
+        .referee-card{
+            padding: 0;
+            margin: 1rem 4% 0.5rem;
+            // border: solid;
+            // border-color: #50D5FF;
+            width: 42%; 
+        }
+
+    }
+    .referee-text{
+        font-size: 13px;
+        font-size: calc(1.5vw + 7px);
+        width: 100%;
+        padding-top: 1rem;
+        line-height: 115%;
+    }
+    .referee-image{
+        // display: flex;
+        // justify-content: center;
+        img{
+            width: 84%;
+        }
+    }
+    .right-border {
+        display: none;
+    }
+
+    .section-border{
+        padding-top: 3rem;
+    }
+    
+    .candidate-section{
+        padding-top: 2rem;
+        padding-left: 10%;
+        .candidate-title{
+            letter-spacing: 5px;
+            font-size: 30px;
+        }
+        .candidate-subtitle{
+            letter-spacing: 1px;
+            padding-top: 0;
+            font-size: 15px;
+        }
+    }
+
+    .candidate-cards{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .bcandidate-card{
+            padding: 15px 5px 0;
+            margin: 1rem 2.5% 0;
+            width: 44%;
+            .candidate-text{
+                width: 100%;
+            }
+        }
+    }
+
+    .stats-section {
+        // justify-content: space-between;
+        padding-top: 5rem;
+        padding-left: 19%;
+        width: 104%;
+        justify-content: space-around;
+        // .line-right{
+        //     border-right: 1px solid #fff;
+        //     height: 75px;
+        //     opacity: 50%;
+        // }
+        .line-right{
+            height: 50px;
+        }
+        .line-right1{
+            padding-left: 23%;
+            position: absolute;
+            padding-top: 0.5rem;
+            margin-top: 0rem;
+        }
+        .line-right2{
+            margin-top: -0.75rem;
+            margin-right: 0rem;
+        }
+    }
+
+    .stat {
+        width: 27%;
+        // display: flex;
+        // align-items: center;
+        flex-direction: column;
+        // align-items: start;
+
+        .stat-title {
+            // color: black;
+            // -webkit-text-stroke: 2px #57E1FF;
+            // background: none;
+            font-size: 28px;
+            font-size: calc(11px + 4vw);
+            // font-weight: 700;
+            font-size: 1.5rem;
+        }
+        .stat-content {
+            padding-top: 0rem;
+            // text-align: start;
+            font-size: 12px;
+            font-size: calc(1.5vw + 6px);
+            // padding-left: 7%;
+        }
+    }
+
+    .companies-section{
+        padding-top: 4rem;
+
+        .company-content{
+            padding-left: 10%;
+            .title, .para{
+                font-size: 14px;
+            }
+        }
+
+        .company-slides{
+            height: calc(7vw + 25px);
+            height: 120px;
+            // width: 126%;
+            margin-left: 50px;
+            .company{
+                // width: 12%;
+                margin-right: 100px;
+                img{
+                    // padding: 7% 1.61%;
+                    width: 60px;
+                    height: 60px;
+                }
+            }
+        }
+
+        .hover{
+            width: 200px !important;
+            height: 200px !important;
+            img{
+                width: 70px;
+                height: 70px;
+            }
+        }
+
+        button{
+            // padding: 0.5rem 10%;
+            margin-top: 4rem;
+            // width: 145px;
+            font-size: 0.875rem;
+            // margin-left: 18%;
+        }
+    }
+
+    .index-section .companies-section .company-slides .company .hover .button {
+        width: 145px;
+        font-size: 0.75rem;
+    }
+
+    .slide-container:hover .company-slides{
+        animation-play-state: paused;
+    }
+
+    .company1:focus .hover1 {
+        display: block !important;
+        
+    }
+
+    .company-slides{
+        animation: 250s slide infinite linear;
+    }
+
+    .info-section{
+        padding-top: 3rem;
+        
+        .video-img{
+            width: 50%;
+        }
+    }
+
+    .video-img-md{
+        display: block;
+    }    
+
+    .video-img-lg{
+        display: none;
+    }
+
+
+    .info-title{
+        font-size: calc(1vw + 10px);
+        font-weight: 700;
+    }
+
+    .info-subtitle{
+        padding: 2%;
+    }
+
+    .info{
+        font-size: calc(1vw + 6px);
+        padding-bottom: 2%;
+        .info{
+            padding-left: 2%;
+        }
+    
+    }
+
+    .reviews-section{
+        .review-img{
+            img{
+                width: 125%;
+            }
+        }
+    }
+
+    .reviews-content{
+        width: 65%;
+        padding-left: 11%;
+        padding-top: 4rem;
+        
+        .title{
+            font-size: calc(2vw + 7px);
+            font-size: 16px;
+        }
+
+        .sub-title{
+            font-size: calc(3vw + 20px);
+            font-size: 22px;
+            line-height: 120%;
+        }
+
+        .text{
+            width: 165%;
+            margin: 0;
+            padding: 5rem 0 2rem;
+            font-size: 0.875rem;
+            margin-left: -12%;
+        }
+
+        
+    }
+
+    .review-img{
+        padding-top: 3rem;
+        margin-left: 5%;
+        width: 35%;
+    }
+
+    .review-cards{
+        
+        width: 970vw;
+        padding-top: 4rem;
+        margin-left: -68%;
+    }
+
+    .review-card{
+        border-radius: 33px;
+        margin-right: 0.5%;
+        width: 68%;
+        padding: 4rem 1% 0.5rem;
+        .card-content{
+            font-size: 0.875rem;
+            text-align: center;
+        }
+        
+    }
+
+    .reviewer{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        .name{
+            font-weight: 700;
+            font-size: 1rem;
+            padding-top: 1.5rem;
+        }
+
+        .role{
+            font-size: 0.875rem;
+        }
+    }
+
+    .review-button{
+        display: flex;
+        width: 100%;
+    }
+
+    .arrow-button{
+        border-radius: 50%;
+        background-color: #000;
+        margin-top: 2rem;
+        padding: 0.5rem 0.8rem;
+    }
+
+    .left{
+        margin-left: 38%;
+    }
+    .right{
+        margin-left: 6%;
+    }
+
+    .review-cards-lg{
+        display: none;
+    }
+    .review-cards-md{
+        display: none;
+    }
+    .review-cards-sm{
+        transition: margin-left 1s ease; 
+        display: flex;
+    }
+}
+
+@media (min-width: 1750px){
+    .side-timeline{
+        left: 7.5%;
+        margin-top: 5px;
+        img{
+            width: calc(168px + 8vw);
+        }
+    }
+
+    .reviews-section{
+        max-width: 3200px;
+        margin: 2.5rem auto;
+    }
+
+    .candidate-col{
+        max-width: 1100px;
+    }
+
+    .purpose-section{
+        max-width: 1540px;
+        margin: auto;
+    }
+    .purpose-section .purpose-card {
+        .purpose-title{
+            font-size: 1.75rem;
+        }
+
+        .purpose-text {
+            font-size: 1rem;
+            // line-height: 1.px;
+        }
+    }
+
+    .review-cards{
+        width: 565vw;
+    }
+    
+}
