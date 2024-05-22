@@ -414,7 +414,14 @@ footer {
     color: #182b45 !important;
     font-size: calc(1vw + 14px);
     padding: 0.8rem 6%;
+    border: 5px solid rgba(87, 225, 255, 1) !important;
 }
+
+.index-section .btn-dark:hover {
+    // color: rgb(87, 225, 255) !important;
+    // background-color: transparent !important;
+    border-color: rgb(69, 185, 210) !important;
+  }
 
 .index-section .btn-light {
     font-size: calc(1vw + 14px);

@@ -6,10 +6,11 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.component.scss'
 })
 export class NavbarComponent {
+  showOptions = false; 
   constructor(private router: Router){}
 
   navigateToApp() {
-    window.location.href = 'https://app.worko.ai';
+    window.location.href = 'https://app.worko.ai/login';
   }
 
   isMenuOpen: boolean = false;

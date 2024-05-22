@@ -332,12 +332,13 @@ li{
 .option {
     position: absolute;
     top: calc(100% + 5px);
-    right: 0; /* Align to the right edge of the circle */
+    // right: 0; /* Align to the right edge of the circle */
     background-color: #182b45;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     color: white;
+    left: 0;
   }
   
   .dropdown-item {
@@ -355,7 +356,7 @@ li{
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: #0076B2;
+    // background-color: #0076B2;
     display: flex;
     justify-content: center;
     align-items: center;

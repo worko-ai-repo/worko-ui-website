@@ -6,6 +6,9 @@
         <div class="grad grad-right1">
             <img src="assets/images/gradient-right1.png" alt="">
         </div>
+        <div class="grad grad-left1">
+            <img src="assets/images/gradient-left1.png" alt="">
+        </div>
         <div class="top-header-bg">
             <img src="assets/images/logo_bg.png" alt="">
         </div>
@@ -42,13 +45,10 @@
                             process
                         </li>
                     </ul>
-                    <!-- <div class="buttons">
+
+                    <div class="buttons">
                         <button  class="left-btn btn btn-dark font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
                         <button class="btn btn-light font-inria" (click)="openGetReferral()" > Give Referral </button>
-                    </div> -->
-                    <div class="buttons">
-                        <button  class="left-btn btn btn-dark font-inria"> Get Referral </button>
-                        <button class="btn btn-light font-inria"> Give Referral </button>
                     </div>
                 </div>
 
@@ -224,7 +224,9 @@
                     <div class="company company1" tabindex="0"  *ngFor="let item of companyList">
                         <img src="assets/company-logo/{{item.logo}}" class="company-img" alt="{{item.name}}">
                         <div class="hover hover1">
-                            <img src="assets/company-logo/{{item.logo}}" style="color: black;" alt="{{item.name}}">
+                            <div class="logo-container">
+                                <img src="assets/company-logo/{{item.logo}}" style="color: black;" alt="{{item.name}}">
+                            </div>
                             <button class="referral button"  (click)="openReferralPage(item)">Request Referral</button>
                             <button class="referral button"  (click)="openGudiancePage(item)" >Request Guidance</button>
                         </div>

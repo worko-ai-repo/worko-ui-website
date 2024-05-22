@@ -135,7 +135,7 @@ export class IndexComponent {
 
   marginLeft: number = -25; 
   marginLeftmd: number = -66;
-  marginLeftsm: number = -78;
+  marginLeftsm: number = -74;
   currentIndex: number = 0;
   prevButtonDisabled: boolean = false;
   nextButtonDisabled: boolean = false;
@@ -178,7 +178,7 @@ export class IndexComponent {
   adjustMarginLeft() {
     this.marginLeft = -27 -this.currentIndex * 51 - this.currentIndex; 
     this.marginLeftmd = -66 - this.currentIndex * 80 - this.currentIndex;
-    this.marginLeftsm = -78 - this.currentIndex * 86 - this.currentIndex;
+    this.marginLeftsm = -74- this.currentIndex * 86 - this.currentIndex;
   }
   
  // Reviews carousel section ends

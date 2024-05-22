@@ -14,16 +14,31 @@
             </li>
             <li><a href="/corporate">Corporate</a></li>
             <li class="icon-lg">
-                <div class="d-flex -pointer user-icon-container"  (click)="navigateToApp()">
+                <!-- <div class="d-flex -pointer user-icon-container" (mouseover)="showOptions = true" >
                     <img class="user-icon" alt="" src="assets/images/iconamoonprofilecirclefill.svg">
-                </div>
+                    <div *ngIf="showOptions" class="option" (mouseleave)="showOptions = false" (mouseover)="showOptions = true">
+                      <button class="dropdown-item d-flex justify-content-right " type="button" (click)="navigateToApp()">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                          <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                          <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                        </svg>
+                    &nbsp;  Login</button>
+                      
+                    </div>
+                </div> -->
+                <div class="circle" (mouseover)="showOptions = true" >
+                  <img class="user-icon" alt="" src="assets/images/iconamoonprofilecirclefill.svg">
+                  <div *ngIf="showOptions" class="option" (mouseleave)="showOptions = false" (mouseover)="showOptions = true">
+                    <button class="dropdown-item d-flex justify-content-right"  (click)="navigateToApp()" type="button">
+                      
+                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+                      </svg>
+                  &nbsp;Login</button>
+                  </div>
+                  </div>
             </li>
-            <li class="text-sm">
-                <a style="cursor: pointer;">Dashboard</a>
-            </li>
-            <!-- <li class="text-sm">
-                <a style="cursor: pointer;">Logout</a>
-            </li> -->
             <li class="text-sm">
                 <a style="cursor: pointer;">Signin</a>
             </li>
