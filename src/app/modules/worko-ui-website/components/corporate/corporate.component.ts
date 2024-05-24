@@ -20,6 +20,9 @@ export class CorporateComponent {
   showModal: ModalType | undefined;
   invalidCode:boolean= false;
   isVerified:boolean=true;
+  isOtpSent:boolean=true;
+  isResentOtp:boolean=true;
+  isContactNumberVerified:boolean=false
   corporateForm = {
     name: '',
     email: "",
@@ -27,7 +30,7 @@ export class CorporateComponent {
     description: "",
     companyName: "",
     designation: "",
-   // paymentCode: ""
+   paymentCode: ""
   }
   form: any;
   corporateData: any;
@@ -38,7 +41,7 @@ export class CorporateComponent {
         userFullName: this.corporateForm.name,
         userEmail: this.corporateForm.email,
         contactNumber: this.corporateForm.contactNumber,
-        isContactNumberVerified: false,
+        isContactNumberVerified:this.isContactNumberVerified,
         companyName: this.corporateForm.companyName,
         userDesignation: this.corporateForm.designation,
         userMessage: this.corporateForm.description
@@ -66,13 +69,83 @@ export class CorporateComponent {
     }
 
   }
-  verifyOTP(){
-    this.isVerified=!this.isVerified
-  }
-  openOtpModal(){
 
+/*api to send request for otp*/
+  async sendEmail(){
+    try{
+  let response= await this.careerService.corporateEmailVerification(this.corporateForm.email,this.corporateForm.name);
+  if(response.id){
+    console.log(response.id)
+    console.log("success");
+    this.isOtpSent=!this.isOtpSent
+    this.successmessage= "We have sent a code by email to "+this.corporateForm.email
+    this.successtitle="Verify E-MAIL"
+    this.openModal(ModalType.SUCCESS_MESSAGE)
+    
+  }else{
+    this.successmessage= "Something went wrong. Please try again after sometime"
+    this.successtitle="Error"
+    this.openModal(ModalType.SUCCESS_MESSAGE)
+  }
+}catch(error){
+  this.successmessage= "Something went wrong. Please try again after sometime"
+  this.successtitle="Error"
+  this.openModal(ModalType.SUCCESS_MESSAGE)
+}
   }
 
+  /*api to verify otp */
+  async verifyOTP(){
+    try{
+      debugger
+    let response= await this.careerService.corporateverifyOtp(this.corporateForm.email,this.corporateForm.paymentCode);
+    console.log(response.verificationStatus)
+    if(response.verificationStatus==true){
+     
+      this.isResentOtp=!this.isResentOtp
+      this.isVerified=!this.isVerified;
+      this.isContactNumberVerified=true;
+      this.successmessage= "OTP is verified successfully"
+      this.successtitle="Success!"
+      this.openModal(ModalType.SUCCESS_MESSAGE)
+      
+    }else{
+      this.corporateForm.paymentCode="";
+      this.successmessage= "OTP is incorrect.Please try again with resend"
+      this.successtitle="Error"
+      this.openModal(ModalType.SUCCESS_MESSAGE)
+    }
+  }catch(error){
+    this.successmessage= "Something went wrong. Please try again after sometime"
+    this.successtitle="Error"
+    this.openModal(ModalType.SUCCESS_MESSAGE)
+  }
+   
+  }
+
+  async verifyResentOTP(){
+    try{
+      let response= await this.careerService.corporateEmailVerification(this.corporateForm.email,this.corporateForm.name);
+      if(response.id){
+        console.log(response.id)
+        console.log("success");
+        this.successmessage= "We have sent a code by email to "+this.corporateForm.email
+        this.successtitle="Verify E-MAIL"
+        this.openModal(ModalType.SUCCESS_MESSAGE)
+       
+        //this.isOtpSent=!this.isOtpSent
+        
+      }else{
+        this.successmessage= "Something went wrong. Please try again after sometime"
+        this.successtitle="Error"
+        this.openModal(ModalType.SUCCESS_MESSAGE)
+      }
+    }catch(error){
+      this.successmessage= "Something went wrong. Please try again after sometime"
+      this.successtitle="Error"
+      this.openModal(ModalType.SUCCESS_MESSAGE)
+    }
+  }
   modelOpen(){
   debugger
     //this.successmessage="Thank you for expressing interest in Worko.ai! Our team will reach out to you shortly to discuss how we can help streamline your hiring process and promote P2P hiring within your organization. Stay tuned!";
@@ -83,7 +156,9 @@ export class CorporateComponent {
   cancel(){
   
     this.closeModal();
-    window.location.reload();
+    this.successmessage="";
+    this.successtitle=""
+    //window.location.reload();
   }
 
 

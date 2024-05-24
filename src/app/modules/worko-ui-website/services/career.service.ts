@@ -29,7 +29,7 @@ export class CareerService {
     return this.http.post(API_URL + `file/gsu2u/CAREER_RESUME`, documentDetails, this.authService.getHttpOptions())
       .toPromise()
       .then(response => response as ArrayBuffer)
-      .catch(this.handleError);
+      //.catch(this.handleError);
   }
 
   // uploadFileOnS3Bucket(file: File, signedUrl: string, awsS3Tag: string): Promise<any> {
@@ -52,7 +52,7 @@ export class CareerService {
   createUser(userInfo: userInfo): Promise<any> {
     return this.http.post(API_URL + `career`, userInfo, this.authService.getHttpOptions())
       .toPromise()
-      .catch(this.handleError);
+      
   }
 
   /**
@@ -64,17 +64,27 @@ export class CareerService {
   createCorporateUser(corporateInfo: corporateInfo): Promise<any> {
     return this.http.post(API_URL + `corporate`, corporateInfo, this.authService.getHttpOptions())
       .toPromise()
-      .catch(this.handleError);
+      
   }
 
-  /**
-   * Handle HTTP error.
-   *
-   * @param {any} error
-   * @returns {Promise<any>}
-   */
-  private handleError(error: any): Promise<any> {
-    console.error('An error occurred', error); // for demo purposes only
-    return Promise.reject(error.message || error);
-  }
+
+     /**
+     * request otp for particular email
+     */
+
+     corporateEmailVerification(emailAddress:string,name:string):Promise<any>{
+      return this.http.post(API_URL+`corporate/${emailAddress}/request-otp`,{fullName:name},this.authService.getHttpOptions()).toPromise();
+  
+    }
+  
+    /**
+       * verify otp for particular email
+       */
+  
+    corporateverifyOtp(emailAddress:any,otp:any):Promise<any>{
+      return this.http.post(API_URL+`corporate/${emailAddress}/verify-otp`,{otp:otp},this.authService.getHttpOptions()).toPromise();
+      
+    }
+
+ 
 }

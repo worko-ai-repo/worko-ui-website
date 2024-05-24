@@ -4,6 +4,7 @@ import { ModalComponent } from '../modal/modal.component';
 import { ModalType } from '../../interfaces/shared.interface';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { CareerService } from '../../services/career.service';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-about-us',
@@ -19,7 +20,7 @@ export class AboutUsComponent {
   fileErr: string = "";
   uploadedCvName: string = "";
   CvCloudFileName:string="";
-  form:any
+  form!: NgForm;
 aboutUsForm={
   name:'',
   email:"",
@@ -36,9 +37,9 @@ successmessage: string='';
 successtitle: string='';
 uploadedCvCloudName:any='';
 docResult:any;
-constructor(private careerService: CareerService,private spinner: NgxSpinnerService, private authService: AuthService){}
+constructor(private careerService:CareerService,private spinner: NgxSpinnerService, private authService: AuthService){}
 
-  createAboutUs(form:any){
+  createAboutUs(form:NgForm){
     debugger
     this.uploadCv()
   
@@ -56,16 +57,27 @@ async aboutUs(){
 
    }
    console.log(this.aboutUsData)
-   await this.careerService.createUser(this.aboutUsData)
-   this.uploadCVonS3Bucket(this.docResult)
-  //  this.spinner.hide();
-  //  this.modelOpen()
-  }catch(error){
-    console.log(error)
+   debugger
+   let response=await this.careerService.createUser(this.aboutUsData)
+  // this.uploadCVonS3Bucket(this.docResult)
+  if(response){
+   this.spinner.hide();
+   this.modelOpen()
+  }
+  }catch(error:any){
     this.spinner.hide();
+    console.log(error)
+    console.log(error.status)
+    if(error.status==409){
+      this.successtitle="Error"
+      this.openModal(ModalType.SUCCESS_MESSAGE)
+    }
+    else{
+   
     this.successmessage="Something went wrong. Please try again after sometime"
     this.successtitle="Error"
     this.openModal(ModalType.SUCCESS_MESSAGE)
+    }
   }
 }
 
@@ -92,6 +104,8 @@ async aboutUs(){
       this.successtitle="Error"
       this.openModal(ModalType.SUCCESS_MESSAGE)
     }
+ 
+
 }
 uploadCVonS3Bucket(docResult: any) {
   debugger
@@ -102,8 +116,7 @@ uploadCVonS3Bucket(docResult: any) {
        
         //try {
            //this.CvCloudFileName = await this.authService.linkResumewithUser(this.aboutUsForm.email, this.uploadedCvCloudName);
-        this.spinner.hide();
-        this.modelOpen()
+      
         
             //this.aboutUs()
         
@@ -123,7 +136,7 @@ uploadCVonS3Bucket(docResult: any) {
         // }
 
       })
-      .catch((error: any) => {
+      .catch(error => {
         this.spinner.hide();
         console.error('File upload error:', error);
         this.successmessage="Something went wrong. Please try again after sometime"
@@ -170,9 +183,9 @@ handleFileInput(event: Event): void {
         // Optionally, you can reset the input to clear the invalid selection
         inputElement.value = '';
         this.fileToUpload = null;
-        this.successmessage="Something went wrong. Please try again after sometime"
-        this.successtitle="Error"
-        this.openModal(ModalType.SUCCESS_MESSAGE)
+        // this.successmessage="Something went wrong. Please try again after sometime"
+        // this.successtitle="Error"
+        // this.openModal(ModalType.SUCCESS_MESSAGE)
       }
     }
   }
@@ -189,7 +202,21 @@ modelOpen(){
 cancel(){
 
   this.closeModal();
-  window.location.reload();
+  this.successmessage="";
+  this.successtitle=""
+  //this.fileName="",
+
+// this.aboutUsForm={
+//   name:'',
+//   email:"",
+//   contactNumber:"",
+//  description:"",
+
+// }
+console.log(this.form)
+    this.form.reset(this.aboutUsForm.name)
+  
+  //window.location.reload();
 
 }
 

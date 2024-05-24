@@ -312,59 +312,84 @@
                     </div>
                 </div>
                 <form  (ngSubmit)="corporate.form.valid && createCorporate(form)" #corporate="ngForm" novalidate>
-                <div class="rows d-flex">
-                    <div class="left-col" >
-                        <input class="input" type="text" placeholder="Name*" #name="ngModel" pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" 
-                        [(ngModel)]="corporateForm.name" required
-                        [ngClass]="{ 'is-invalid': name.invalid && (name.dirty || name.touched) }"
-                        name="name" id="name">
-
-                        <input class="input" type="text" placeholder="Designation*" id="designation" name="designation"  required
-                        [(ngModel)]="corporateForm.designation" #designation="ngModel"
-                        pattern="^[A-Za-z0-9\s()/.-]+$" minlength="4" maxlength="30"
-                       
-                        required 
-                        [ngClass]="{ 'is-invalid': designation.invalid && (designation.dirty || designation.touched) }">
-                        
-                        <input class="input" type="text" placeholder="Phone(+91XXXXXXXXXX)*" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" maxlength="17" #phoneNo="ngModel"
-                        [(ngModel)]="corporateForm.contactNumber" name="phoneNo" required
-                        [ngClass]="{ 'is-invalid': phoneNo.invalid && (phoneNo.dirty || phoneNo.touched) }"
-                        id="phoneNo">
-                        
-                      
-                        
-                        <input class="input" type="text" placeholder="Company Name*" name="companyName" id="companyName" 
-                        #companyName="ngModel" [(ngModel)]="corporateForm.companyName"  required minlength="3"
-                        [ngClass]="{ 'is-invalid': companyName.invalid && (companyName.dirty || companyName.touched) }">
-                        
-                        <div class="email-container">
-                            <input class="input email-input" type="text" placeholder="Email*"name="email"
-                            id="email" [(ngModel)]="corporateForm.email" required
-                            pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
-                           [ngClass]="{ 'is-invalid': email.invalid && (email.dirty || email.touched) }" #email="ngModel" >    
-                           <button  class="form-button">Verify</button>
+                    <div class="rows d-flex">
+                        <!-- <div class="background">
+                            <img src="assets/corporate-images/form-bg.png">
+                        </div> -->
+                        <div class="left-col" >
+                            <input class="input" type="text" placeholder="Name*" #name="ngModel" pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" 
+                            [(ngModel)]="corporateForm.name" required
+                            [ngClass]="{ 'is-invalid': name.invalid && (name.dirty || name.touched) }"
+                            name="name" id="name">
+    
+                            <input class="input" type="text" placeholder="Designation*" id="designation" name="designation"  required
+                            [(ngModel)]="corporateForm.designation" #designation="ngModel"
+                            pattern="^[A-Za-z0-9\s()/.-]+$" minlength="4" maxlength="30"
+                           
+                            required 
+                            [ngClass]="{ 'is-invalid': designation.invalid && (designation.dirty || designation.touched) }">
+                            
+                            <input class="input" type="text" placeholder="Phone(+91XXXXXXXXXX)*" pattern="^\+(?:[0-9] ?){6,14}[0-9]$" maxlength="17" #phoneNo="ngModel"
+                            [(ngModel)]="corporateForm.contactNumber" name="phoneNo" required
+                            [ngClass]="{ 'is-invalid': phoneNo.invalid && (phoneNo.dirty || phoneNo.touched) }"
+                            id="phoneNo">
+                            
+                          
+                            
+                            <input class="input" type="text" placeholder="Company Name*" name="companyName" id="companyName" 
+                            #companyName="ngModel" [(ngModel)]="corporateForm.companyName"  required minlength="3"
+                            [ngClass]="{ 'is-invalid': companyName.invalid && (companyName.dirty || companyName.touched) }">
+                            
+                            <div class="email-container">
+                                <input class="input email-input" type="text" placeholder="Email*"name="email"
+                                id="email" [(ngModel)]="corporateForm.email" required
+                                pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$"
+                               [ngClass]="{ 'is-invalid': email.invalid && (email.dirty || email.touched) }" #email="ngModel"  >    
+                               <button  class="form-button" (click)="sendEmail()" *ngIf="isOtpSent" >Verify</button>
+                            </div>
+                           <div class="verify d-flex" *ngIf="isVerified">
+                            <input class="input form-control form-input" placeholder="__ _ _ __ _"  type="text"
+                             [class.is-invalid]="
+                              paymentCode.invalid &&
+                              (paymentCode.dirty || paymentCode.touched)
+                            "
+                            id="input-paymentCode"
+                            name="paymentCode"
+                            #paymentCode="ngModel"
+                            [(ngModel)]="corporateForm.paymentCode"
+                            required/>
+                            <div
+                            *ngIf="invalidCode"
+                              [class.d-block]="invalidCode"
+                              class="invalid-feedback"
+                            >
+                              Please enter a valid code
+                            </div>
+                            <button  class="form-button"(click)="verifyOTP()" >Verify</button>
+                            <a  class="resend"  (click)="verifyResentOTP()" *ngIf="isResentOtp">Resend</a>
                         </div>
-                    <div class="verify d-flex" *ngIf="isVerified">
-                    <input class="input form-control form-input" placeholder="__ _ _ __ _"  type="text"/>
-                    <button  class="form-button"(click)="verifyOTP()">Submit</button>
-                    <a href="" class="resend">Resend</a>
-                </div>
-                        
-                       <textarea class="input input-area" type="text" name="description" id="description"placeholder="How we can assist you in finding the perfect candidates for your team. *" #desc="ngModel" 
-                        [(ngModel)]="corporateForm.description" [ngClass]="{ 'is-invalid': desc.invalid && (desc.dirty || desc.touched) }"
-                        required minlength="5"></textarea>
-                        
-                        <button class="form-button" type="submit" [disabled]="
-                        !corporate.form.valid ||
-                        !corporateForm.name ||
-                        !corporateForm.email ||
-                        !corporateForm.contactNumber ||
-                        !corporateForm.designation ||
-                        !corporateForm.description ||
-                        !corporateForm.companyName 
-                      
-                      ">Send Message</button>
-                    </div>
+                        <!-- <div class="verify d-flex" *ngIf="isVerified">
+                        <input class="input form-control form-input" placeholder="__ _ _ __ _"  type="text"/>
+                        <button  class="form-button"(click)="verifyOTP()">Submit</button>
+                        <a href="" class="resend">Resend</a>
+                    </div> -->
+                            
+                           <textarea class="input input-area" type="text" name="description" id="description"placeholder="How we can assist you in finding the perfect candidates for your team. *" #desc="ngModel" 
+                            [(ngModel)]="corporateForm.description" [ngClass]="{ 'is-invalid': desc.invalid && (desc.dirty || desc.touched) }"
+                            required minlength="5"></textarea>
+                            
+                            <button class="form-button" type="submit" [disabled]="
+                            !corporate.form.valid ||
+                            !corporateForm.name ||
+                            !corporateForm.email ||
+                            !corporateForm.contactNumber ||
+                            !corporateForm.designation ||
+                            !corporateForm.description ||
+                            !corporateForm.companyName ||
+                            !isContactNumberVerified 
+                          
+                          ">Send Message</button>
+                        </div>
                     <div class="img">
                         <img src="assets/images/talk-img.png" alt="Corporate Image">
                     </div>
@@ -422,7 +447,7 @@
     <div class="row message-card px-sm-3 p-4">
         <div class="d-flex justify-content-center" *ngIf="successtitle === 'Congratulations!'">
         
-                  <div class="text-center mb-4">
+                  <div class="text-center mb-4" >
                     <p>Thank you for expressing interest in <a href="https://worko.ai/" target="_blank">Worko.ai</a></p>
                     <p>Our team will reach out to you shortly to discuss how we can help streamline your hiring process and promote P2P hiring within your organization.</p>
                     <p>Stay tuned!</p>
@@ -430,14 +455,17 @@
                 
                 
                   </div>
-                  <div class="d-flex justify-content-center" > 
-                    <button class="btn btn-next"  (click)="cancel()" *ngIf="successtitle === 'Congratulations!'"> OK</button>
-                    </div>
+                  
                
                 
-                
+                    <div class="font-weight-bold text-color-red mb-3 d-flex justify-content-center" style="color: #e40707; font-size: medium;" *ngIf="successtitle === 'Error' && successmessage">
+                        {{successtitle}}
+                    </div>    
+                    <div class="font-weight-bold text-color-red mb-3 d-flex justify-content-center" style="font-size: medium;" *ngIf="successtitle === 'Verify E-MAIL'  || successtitle==='Success!'&& successmessage">
+                        {{successtitle}}
+                    </div>            
  
-    <div class="d-flex justify-content-center"  *ngIf="successtitle === 'Error'">
+    <div class="d-flex justify-content-center"  *ngIf="successtitle === 'Error' ">
         <div class="text-center mb-4" *ngIf="!successmessage">
             <p> Hello! It seems you've already expressed interest in partnering with us to transform your hiring process.</p>
             <p>We apologize for any delay as we're currently experiencing high demand.</p>
@@ -450,12 +478,15 @@
          </div>
          <div class="d-flex justify-content-center" *ngIf="successmessage"><span>{{successmessage}}</span> </div>
       
-      
+         <div class="  mt-3  d-flex justify-content-center" > 
+            <button class="btn btn-next"  (click)="cancel()" *ngIf="successtitle === 'Congratulations!' || successtitle === 'Verify E-MAIL' || successtitle==='Success!' "> OK</button>
+            </div>
         <div class=" mt-3 d-flex justify-content-center" > 
           <button class="btn btn-next"  (click)="cancel()" *ngIf="successtitle === 'Error'"> Close</button>
           
       </div>
       </div>
+     
     
 
 </ng-container>

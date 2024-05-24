@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { CompanyListingService } from '../../services/company-listing.service';
+import { SharedDataService } from '../../services/shared-data.service';
+import { environment } from '../../../../../environment/environment';
 
 @Component({
   selector: 'app-index',
@@ -25,10 +27,13 @@ export class IndexComponent {
     this.getCompanyDetails();
     setInterval(() => {
       this.swapValues();
-    }, 3000);  
+    }, 3000); 
+    localStorage.removeItem('companyid')
+    localStorage.removeItem('openGudianceTrigger')
+
   }
 
-  constructor(private companyListing: CompanyListingService){}
+  constructor(private companyListing: CompanyListingService,private sharedDataServices:SharedDataService){}
 
   swapValues() {
     const temp = this.getReferral;
@@ -43,18 +48,25 @@ export class IndexComponent {
     //   this.userType = "employee";
     //   this.openModal(ModalType.LOGIN_SIGNUP);
     // }
-
-    window.location.href = 'https://app.worko.ai//employee/Referral';
+    localStorage.setItem("userType",'employee')
+    const iframe = document.createElement('IFRAME');
+    iframe.id = 'admin-ifr';
+    iframe.style.display = "none";
+    (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
+    document.body.appendChild(iframe);
+    this.postAdminData(environment.crossOriginUrl, 'admin');
+    window.location.href = environment.crossOriginUrl+'/login'
+    //window.location.href = 'https://app.worko.ai//employee/Referral';
   }
 
   async redirectToCompanyListing() {
     // this.router.navigateByUrl('/company-listing');
 
-    window.location.href = 'https://app.worko.ai/company-listing';
+    window.location.href = environment.crossOriginUrl+'/company-listing';
   }
 
   async redirectToEmployeeReferral() {
-    window.location.href = 'https://app.worko.ai//employee/Referral';
+    window.location.href = environment.crossOriginUrl+'/login'
   }
 
   //  Reviews section: carousel code starts
@@ -207,25 +219,60 @@ export class IndexComponent {
 }
 
 
-openReferralPage(item: any) {
+  async openReferralPage(item: any) {
+ 
+  //debugger
+  localStorage.setItem('companyid',item.toString())
   // Trigger the event when referral is requested
   // this.companyListing.setReferralData(item);
   //this.companyListing.setrequestReferralData(event,item);
   // this.router.navigateByUrl('/company-listing');
-
-  window.location.href = 'https://app.worko.ai/company-listing';
+ 
+  const iframe = document.createElement('IFRAME');
+  iframe.id = 'admin-ifr';
+  iframe.style.display = "none";
+  (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
+  document.body.appendChild(iframe);
+ const response:any=await this.postAdminData(environment.crossOriginUrl, 'admin');
+//  if(response){
+  window.location.href = environment.crossOriginUrl+'/company-listing';
+//  }
+}
+  async postAdminData(linkURL: string, portal: string) {
+     
+ await this.sharedDataServices.postCrossDomainMessage(linkURL, portal);
+  //window.location.href = 'http://localhost:4200/company-listing';
 }
 
-openGudiancePage(item:any){
-      
-  if(item){
-    // this.triggerGudianceValue=!this.triggerGudianceValue
-    // console.log(this.triggerGudianceValue)
-    // this.companyListing.setGuidanceData(this.triggerGudianceValue);
-    // this.router.navigateByUrl('/company-listing');
 
-    window.location.href = 'https://app.worko.ai/company-listing';
-  }
+
+
+
+
+openGudiancePage(item:any){
+
+console.log(item)
+  localStorage.setItem('openGudianceTrigger','true')
+  // Trigger the event when referral is requested
+  // this.companyListing.setReferralData(item);
+  //this.companyListing.setrequestReferralData(event,item);
+  // this.router.navigateByUrl('/company-listing');
+ 
+  const iframe = document.createElement('IFRAME');
+  iframe.id = 'admin-ifr';
+  iframe.style.display = "none";
+  (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
+  document.body.appendChild(iframe);
+  this.postAdminData(environment.crossOriginUrl, 'admin');
+  window.location.href = environment.crossOriginUrl+'/company-listing';
+  // if(item){
+  //   // this.triggerGudianceValue=!this.triggerGudianceValue
+  //   // console.log(this.triggerGudianceValue)
+  //   // this.companyListing.setGuidanceData(this.triggerGudianceValue);
+  //   // this.router.navigateByUrl('/company-listing');
+
+  //   window.location.href = 'https://app.worko.ai/company-listing';
+  // }
 }
 //  List of purposes in purpose section:
   purposeList = [
@@ -288,3 +335,4 @@ openGudiancePage(item:any){
   ]
 
 }
+

@@ -989,3 +989,15 @@ footer {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.btn-next, .btn-secondary, .btn-secondary:hover, .btn-next:hover  {
+    background-color: #36D0FF;
+    width: 108px;
+    height: 35px;
+    border-radius: 9px;
+    border: unset;
+    text-align: center;
+    color:#000
+}
+
