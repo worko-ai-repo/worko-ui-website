@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { environment } from '../../../../../environment/environment';
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -10,7 +11,7 @@ export class NavbarComponent {
   constructor(private router: Router){}
 
   navigateToApp() {
-    window.location.href = 'https://app.worko.ai/login';
+    window.location.href = environment.crossOriginUrl+'/login';
   }
 
   isMenuOpen: boolean = false;
