@@ -121,6 +121,18 @@ li{
 
 }
 
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.html{
+    font-size: 62.5%;
+}
+
 .navbar input[type="checkbox"],
 .navbar .hamburger-lines{
     display: none;
@@ -366,3 +378,8 @@ li{
   .letter {
     font-weight: bold;
   }
+
+  .header {
+    position: relative;
+    z-index: 2;
+}

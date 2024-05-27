@@ -210,11 +210,21 @@
     
                     <div class="company company1" tabindex="0"  *ngFor="let item of companyList">
 
-                        <img src="assets/company-logo/{{item.logo}}" class="company-img" alt="{{item.name}}">
+                        <!-- <img src="assets/company-logo/{{item.logo}}" class="company-img" alt="{{item.name}}"> -->
+                        <img *ngIf="assetLogos.includes(item.logo)"  
+                        src="assets/company-logo/{{item.logo }}" class="company-name" alt="{{item.name}}">
+                    <img *ngIf="!assetLogos.includes(item.logo)"
+                        src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}">
                         <div class="hover hover1">
                             <div class="logo-container">
-                                <img src="assets/company-logo/{{item.logo}}" alt="{{item.name}}">
+                                <!-- <img src="assets/company-logo/{{item.logo}}" alt="{{item.name}}"> -->
+                                <img *ngIf="assetLogos.includes(item.logo)"  
+                                src="assets/company-logo/{{item.logo }}" class="company-name" alt="{{item.name}}">
+                            <img *ngIf="!assetLogos.includes(item.logo)"
+                                src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}">
                             </div>
+                           
+                               
                             <button class="referral button"  (click)="openReferralPage(item.SK)">Request Referral</button>
                             <button class="referral button"  (click)="openGudiancePage(item)" >Request Guidance</button>
                         </div>
