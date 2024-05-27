@@ -47,8 +47,14 @@
                     </ul>
 
                     <div class="buttons">
-                        <button  class="left-btn btn btn-dark font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
-                        <button class="btn btn-light font-inria" (click)="openGetReferral()" > Give Referral </button>
+                        <!-- <button  class="left-btn btn btn-dark font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button class="btn btn-light font-inria" (click)="openGetReferral()" > Give Referral </button> -->
+                        <div class="buttons">
+                            <button  class="left-btn btn btn-dark font-inria" (mouseenter)="stopSwapping()" 
+                            (mouseleave)="resumeSwapping()"(click)="redirectToCompanyListing()"> Get Referral </button>
+                            <button class="btn btn-light font-inria" (mouseenter)="stopSwapping()" 
+                            (mouseleave)="resumeSwapping()"(click)="openGetReferral()" > Give Referral </button>
+                        </div>
                     </div>
                 </div>
 
@@ -70,8 +76,12 @@
                         <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
                     </div> -->
                     <div class="buttons">
-                        <button  class="left-btn btn btn-light font-inria"  (click)="redirectToCompanyListing()"> Get Referral </button>
-                        <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
+                        <!-- <button  class="left-btn btn btn-light font-inria"  (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button> -->
+                        <button  class="left-btn btn btn-light font-inria" (mouseenter)="stopSwapping()" 
+                        (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <button  class="btn btn-dark font-inria" (mouseenter)="stopSwapping()" 
+                        (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> Give Referral </button>
                     </div>
                 </div>
                 <div class="intro-image">

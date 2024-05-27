@@ -21,17 +21,21 @@ export class IndexComponent {
   getReferral: boolean = true;
   giveReferral: boolean = false;
   assetLogos: string[]=[];
+  intervalId: any;
 
   // For swapping Get referrals and give referrals buttons:
 
   async ngOnInit(): Promise<void> {
     this.getCompanyDetails();
-    setInterval(() => {
-      this.swapValues();
-    }, 3000); 
+    // setInterval(() => {
+    //   this.swapValues();
+    // }, 3000); 
+    this.intervalId = setInterval(() => {
+            this.swapValues();
+        }, 3000);
     localStorage.removeItem('companyid')
     localStorage.removeItem('openGudianceTrigger')
-
+    localStorage.removeItem('userType')
     const excludedNumbers = [83,87,90,101,103,108,110,140,147,150,158,161,177,179,217,218,224,231,243,256,289,291,298,301,308,317,323,328,334,337,354,359,362,382,403,405,431,442,452,457,477,489,503,513,520,521,525,528,531,536,540,563,566,567,579,583,585,631,634,636,638,659,660,677,689,697,704,716,720,738,757,770,796,798,809,823,828,837,843,850,852,932,935,947,949,954,971,983,984,986,992,1024,1040];
 
     this.assetLogos = await this.generateLogoFilenames(1, 1045, excludedNumbers);
@@ -45,6 +49,18 @@ export class IndexComponent {
     this.getReferral = this.giveReferral;
     this.giveReferral = temp;
   }
+ // Function to stop swapping when user hover on button
+    stopSwapping() {
+
+    clearInterval(this.intervalId);
+}
+
+// Function to resume swapping when user hover on button
+resumeSwapping() {
+    this.intervalId = setInterval(() => {
+        this.swapValues();
+    }, 3000);
+}
 
   openGetReferral() {
     // if (this.userLoggedIn) {
