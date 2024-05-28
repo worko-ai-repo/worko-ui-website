@@ -26,10 +26,10 @@
                       
                     </div>
                 </div> -->
-                <div class="circle" (mouseover)="showOptions = true" >
+                <div class="circle" (mouseover)="showOptions = true"   (mouseleave)="showOptions = false">
                   <img class="user-icon" alt="" src="assets/images/iconamoonprofilecirclefill.svg">
-                  <div *ngIf="showOptions" class="option" (mouseleave)="showOptions = false" (mouseover)="showOptions = true">
-                    <button class="dropdown-item d-flex justify-content-right"  (click)="navigateToApp()" type="button">
+                  <div *ngIf="showOptions" class="option"  (mouseover)="showOptions = true">
+                    <button class="dropdown-item d-flex justify-content-right"  (click)="navigateToApp()"   (mouseleave)="showOptions = false" type="button">
                       
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
