@@ -687,7 +687,8 @@ textarea{
  
         img{
             width: 10%;
-            left: 60%;
+            left: 80%;
+            position:absolute;
         }
     }
 
@@ -1190,9 +1191,10 @@ textarea{
         width: 100%;
         line-height: 12px;
         img{
-            left: 60%;
+            left: 80%;
             top: 25%;
             width: 8%;
+            position: absolute;
         }
     }
 

@@ -3,6 +3,7 @@ import { CareerService } from '../../services/career.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ModalComponent } from '../modal/modal.component';
 import { ModalType } from '../../interfaces/shared.interface';
+import { NgForm } from '@angular/forms';
 @Component({
   selector: 'app-corporate',
   templateUrl: './corporate.component.html',
@@ -11,8 +12,12 @@ import { ModalType } from '../../interfaces/shared.interface';
 export class CorporateComponent {
   successmessage: string="";
   successtitle: string="";
+  isResendDisabled: boolean=false;
+  countdown!: number;
 
   constructor(private careerService: CareerService, private spinner: NgxSpinnerService) { }
+  @ViewChild('corporate')
+  corporateFormDirective!: NgForm;
   @ViewChild(ModalComponent) modal!: ModalComponent;
   modalType = ModalType;
   modalMessage: string = "";
@@ -22,7 +27,9 @@ export class CorporateComponent {
   isVerified:boolean=true;
   isOtpSent:boolean=true;
   isResentOtp:boolean=true;
-  isContactNumberVerified:boolean=false
+  isContactNumberVerified:boolean=false;
+  minutes!: string;
+  seconds!: string;
   corporateForm = {
     name: '',
     email: "",
@@ -32,9 +39,9 @@ export class CorporateComponent {
     designation: "",
    paymentCode: ""
   }
-  form: any;
+  form!: NgForm;
   corporateData: any;
-  async createCorporate(form: any) {
+  async createCorporate(form: NgForm) {
     this.spinner.show();
     try {
       this.corporateData = {
@@ -51,6 +58,7 @@ export class CorporateComponent {
       let response = await this.careerService.createCorporateUser(this.corporateData)
       if(response){
         this.spinner.hide();
+        this.corporateFormDirective.resetForm()
       this.modelOpen()
       }
 
@@ -60,9 +68,11 @@ export class CorporateComponent {
       //this.successmessage="Something went wrong. Please try again after sometime"
       if(error.status==409){
       this.successtitle="Error"
+      this.corporateFormDirective.resetForm()
       this.openModal(ModalType.SUCCESS_MESSAGE)
       }else{
         this.successmessage= "Something went wrong. Please try again after sometime"
+        this.corporateFormDirective.resetForm()
         this.successtitle="Error"
         this.openModal(ModalType.SUCCESS_MESSAGE)
       }
@@ -81,6 +91,7 @@ export class CorporateComponent {
     this.successmessage= "We have sent a code by email to "+this.corporateForm.email
     this.successtitle="Verify E-MAIL"
     this.openModal(ModalType.SUCCESS_MESSAGE)
+    this.startResendCountdown();
     
   }else{
     this.successmessage= "Something went wrong. Please try again after sometime"
@@ -132,6 +143,7 @@ export class CorporateComponent {
         this.successmessage= "We have sent a code by email to "+this.corporateForm.email
         this.successtitle="Verify E-MAIL"
         this.openModal(ModalType.SUCCESS_MESSAGE)
+        this.startResendCountdown();
        
         //this.isOtpSent=!this.isOtpSent
         
@@ -146,6 +158,38 @@ export class CorporateComponent {
       this.openModal(ModalType.SUCCESS_MESSAGE)
     }
   }
+  // startResendCountdown() {
+  //   this.isResendDisabled = true;
+  //   this.countdown = 90;
+  //   const interval = setInterval(() => {
+  //     this.countdown--;
+  //     if (this.countdown <= 0) {
+  //       clearInterval(interval);
+  //       this.isResendDisabled = false;
+  //     }
+  //   }, 1000);
+  // }
+
+  startResendCountdown() {
+    this.isResendDisabled = true;
+    this.countdown = 90; // 1 minute 30 seconds
+    this.updateCountdownDisplay();
+    const interval = setInterval(() => {
+      this.countdown--;
+      this.updateCountdownDisplay();
+      if (this.countdown <= 0) {
+        clearInterval(interval);
+        this.isResendDisabled = false;
+      }
+    }, 1000);
+  }
+
+  updateCountdownDisplay() {
+    this.minutes = String(Math.floor(this.countdown / 60)).padStart(2, '0');
+    this.seconds = String(this.countdown % 60).padStart(2, '0');
+  }
+
+
   modelOpen(){
   debugger
     //this.successmessage="Thank you for expressing interest in Worko.ai! Our team will reach out to you shortly to discuss how we can help streamline your hiring process and promote P2P hiring within your organization. Stay tuned!";
@@ -159,6 +203,7 @@ export class CorporateComponent {
     this.successmessage="";
     this.successtitle=""
     //window.location.reload();
+  
   }
 
 

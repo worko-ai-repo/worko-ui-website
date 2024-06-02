@@ -9,7 +9,7 @@
     <div class="section position-relative">
         <div class="tabs position-absolute">
             <button class="tab-link" (click)="selectTab('tab1')" [ngClass]="{'active': activeTab === 'tab1'}">Candidates</button>
-            <button class="tab-link" (click)="selectTab('tab2')" [ngClass]="{'active': activeTab === 'tab2'}">Referees</button>
+            <button class="tab-link" (click)="selectTab('tab2')" [ngClass]="{'active': activeTab === 'tab2'}">Employee</button>
         </div>
         
         <div class="tab-content" *ngIf="activeTab === 'tab1'">

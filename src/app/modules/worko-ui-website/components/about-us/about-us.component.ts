@@ -13,6 +13,8 @@ import { NgForm } from '@angular/forms';
 })
 export class AboutUsComponent {
 
+  @ViewChild('aboutUs')
+  aboutUsFormDirective!: NgForm;
   fileToUpload: File | null = null;
   fileString: string = "";
   fileName: string = "";
@@ -41,6 +43,7 @@ constructor(private careerService:CareerService,private spinner: NgxSpinnerServi
 
   createAboutUs(form:NgForm){
     debugger
+  
     this.uploadCv()
   
   }
@@ -62,6 +65,7 @@ async aboutUs(){
   // this.uploadCVonS3Bucket(this.docResult)
   if(response){
    this.spinner.hide();
+   
    this.modelOpen()
   }
   }catch(error:any){
@@ -199,12 +203,14 @@ modelOpen(){
   this.openModal(ModalType.SUCCESS_MESSAGE)
 }
 
-cancel(){
 
+cancel(){
+  
   this.closeModal();
   this.successmessage="";
   this.successtitle=""
-  //this.fileName="",
+  this.aboutUsFormDirective.resetForm()
+ this.fileName="",
 
 // this.aboutUsForm={
 //   name:'',

@@ -1366,3 +1366,17 @@
     text-align: center;
     color:#000
 }
+
+
+.resend {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+  
+    &.disabled {
+      color: gray;
+      cursor: not-allowed;
+      text-decoration: none;
+    }
+  }
+  

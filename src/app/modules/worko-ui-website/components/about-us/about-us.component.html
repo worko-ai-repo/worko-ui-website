@@ -302,7 +302,8 @@
                 collaboration thrive, and where your professional growth is a priority. Join us in 
                 shaping the future of hiring.            
             </p>
-            <form class="w-100" (ngSubmit)="aboutUs.form.valid && createAboutUs(form)" #aboutUs="ngForm" novalidate>
+            <!-- <form class="w-100" (ngSubmit)="aboutUs.form.valid && createAboutUs(form)" #aboutUs="ngForm" novalidate> -->
+                <form class="w-100" (ngSubmit)="aboutUs.form.valid && createAboutUs(aboutUs)" #aboutUs="ngForm" novalidate>
                 <div class="input-row flex-wrap d-flex justify-content-between">
                     <input type="text" class="input " placeholder="Name*" required #name="ngModel"
                     pattern="^([ \u00c0-\u01ffa-zA-Z'.])+$" [(ngModel)]="aboutUsForm.name"
