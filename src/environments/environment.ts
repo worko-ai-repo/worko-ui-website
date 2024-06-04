@@ -8,13 +8,17 @@ export const environment = {
       userPoolId: 'ap-south-1_tAj7HAKZh',
       userPoolWebClientId: '5evf019rrkaijtnjf2j1vvdf33',
     },
-    localUrl:"https://dev.worko.work",
-    crossOriginUrl:'https://app.dev.worko.work',
-    apiUrl: "https://api.worko.ai/",
+    // workoUIDomain=local4200
+    localUrl:"http://localhost:4300",
+    crossOriginUrl:'http://localhost:4200',
+    apiUrl: 'https://api.dev.worko.work/',
     saveUserInfoApi:"https://w6zitv6ryk.execute-api.us-east-1.amazonaws.com/dev/adduserinfo",
     linkedInRedirection: 
     window.location.origin + "/auth/checkRedirection",
-    linkedInLogout:  window.location.origin+"/auth/logout"
+  //"http://localhost:4200/auth/checkRedirection",
+    linkedInLogout: 
+    window.location.origin+"/auth/logout"
+    //"http://localhost:4200"
   };
   
   /*

@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CompanyListingService } from '../../services/company-listing.service';
 import { SharedDataService } from '../../services/shared-data.service';
-import { environment } from '../../../../../environment/environment';
+import { environment } from '../../../../../environments/environment';
 
 @Component({
   selector: 'app-index',
@@ -254,13 +254,7 @@ resumeSwapping() {
 
   async openReferralPage(item: any) {
  
-  //debugger
-  localStorage.setItem('companyid',item.toString())
-  // Trigger the event when referral is requested
-  // this.companyListing.setReferralData(item);
-  //this.companyListing.setrequestReferralData(event,item);
-  // this.router.navigateByUrl('/company-listing');
- 
+  localStorage.setItem('companyid',item.toString());
   const iframe = document.createElement('IFRAME');
   iframe.id = 'admin-ifr';
   iframe.style.display = "none";
