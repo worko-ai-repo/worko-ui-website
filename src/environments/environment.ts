@@ -9,7 +9,7 @@ export const environment = {
       userPoolWebClientId: '5evf019rrkaijtnjf2j1vvdf33',
     },
     // workoUIDomain=local4200
-    localUrl:"http://localhost:4300",
+    localUrl:"http://localhost:4400",
     crossOriginUrl:'http://localhost:4200',
     apiUrl: 'https://api.dev.worko.work/',
     saveUserInfoApi:"https://w6zitv6ryk.execute-api.us-east-1.amazonaws.com/dev/adduserinfo",

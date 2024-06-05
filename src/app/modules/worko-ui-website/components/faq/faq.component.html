@@ -182,16 +182,16 @@
                 <img class="gradient-img" src="assets/about-images-KA/gradient-right1.png" alt="Gradient Right 1">
             </div> -->
             <h1>
-                FAQ’s for Referees
+                FAQ’s for Employee
             </h1>
             <div class="text position-relative">
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(1)" [class.open]="activeIndex === 1">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(1)" [class.open]="activeIndexForEmployee === 1">
                         <span class="heading-content">1. How does privacy work?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[1]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[1]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 1">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 1">
                         <li>We do not share your data with anyone externally.</li>
                         <li>Your information is not shared with candidates you decline.</li>
                     </ul>
@@ -200,11 +200,11 @@
 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(2)" [class.open]="activeIndex === 2">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(2)" [class.open]="activeIndexForEmployee === 2">
                         <span class="heading-content">2. Why did we collect your official mail ID?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[2]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[2]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 2">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 2">
                         <li>To authorise your role as a Referee for the company you are joining, we utilise your work email. Please note that this is a one-time process, and we do not use your work email for any communication.</li>
                     </ul>
                     
@@ -212,11 +212,11 @@
                 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(3)" [class.open]="activeIndex === 3">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(3)" [class.open]="activeIndexForEmployee === 3">
                         <span class="heading-content">3. Do I have to refer everyone?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[3]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[3]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 3">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 3">
                         <li>Worko utilises a powerful AI algorithm to assess candidates, assigning a matching score for quick and informed referral decision.</li>
                         <li>Please only refer individuals whom you genuinely believe would be well-suited for the role.</li>
                     </ul>
@@ -225,11 +225,11 @@
 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(4)" [class.open]="activeIndex === 4">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(4)" [class.open]="activeIndexForEmployee === 4">
                         <span class="heading-content">4. What other benefits do I get as a Referee?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[4]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[4]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 4">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 4">
                         <li>Make the most of the rewards offered for Employee Referrals within your organisation.</li>
                         <li>Earn reward points or coupons by introducing individuals from your network to Worko as Referees. T&C apply</li>
                         <li>As a Referee, you are not subject to any charges when you seek referrals through Worko.</li>
@@ -239,11 +239,11 @@
                 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(5)" [class.open]="activeIndex === 5">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(5)" [class.open]="activeIndexForEmployee === 5">
                         <span class="heading-content">5. Who can be a Referee?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[5]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[5]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 5">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 5">
                         <li>At Worko, we value the importance of industry expertise and believe in connecting job seekers with experienced professionals who can make well-informed decisions. To ensure the highest level of credibility and relevant insights, we have designed our platform to exclusively onboard employees who have 2+ years of overall experience.</li>
                     </ul>
                     
@@ -252,11 +252,11 @@
                 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(6)" [class.open]="activeIndex === 6">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(6)" [class.open]="activeIndexForEmployee === 6">
                         <span class="heading-content">6. How will I get paid for the Career Guidance / Mock Interview / Interview Consultation?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[6]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[6]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 6">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 6">
                         <li>If a candidate chooses to opt for any of the above services, then you will get paid as per pre-decided consulting fee post the successful completion of the process.</li>
                     </ul>
                     
@@ -265,11 +265,11 @@
                 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(7)" [class.open]="activeIndex === 7">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(7)" [class.open]="activeIndexForEmployee === 7">
                         <span class="heading-content">7. What are the services/expertise I can offer through Worko & how will I get paid for it?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[7]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[7]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 7">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 7">
                         <li>On Worko, provide diverse counselling services, including resume writing, career guidance, interview handholding, mock interviews and many more.</li>
                         <li>At Worko, set your own professional fee for services and get paid post-completion.</li>
                     </ul>
@@ -279,22 +279,22 @@
                 
                 <div class="position-relative faq">
                     
-                    <div class="section-head title2" (click)="toggleAccordion(8)" [class.open]="activeIndex === 8">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(8)" [class.open]="activeIndexForEmployee === 8">
                         <span class="heading-content">8. I have some unpublished jobs in my company, how can I notify Worko for the same to find a good referral?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[8]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[8]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 8">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 8">
                         <li>We are launching this feature soon to help you find the best referral for internal openings, till then, please write to us at findreferral&#64;worko.ai & we will help you.</li>
                     </ul>
                     
                 </div>
                 
                 <div class="position-relative faq">
-                    <div class="section-head title2" (click)="toggleAccordion(9)" [class.open]="activeIndex === 9">
+                    <div class="section-head title2" (click)="toggleAccordionForEmployee(9)" [class.open]="activeIndexForEmployee === 9">
                         <span class="heading-content">9. My company doesn't have a referral policy. How can I benefit by referring candidates?</span>
-                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbols[9]" src="assets/images/down-caret.png" alt=""></span>
+                        <span><img class="toggle-symbol" [class.expanded]="toggleSymbolsForEmployee[9]" src="assets/images/down-caret.png" alt=""></span>
                     </div>
-                    <ul class="accordion-content" [class.open]="activeIndex === 9">
+                    <ul class="accordion-content" [class.open]="activeIndexForEmployee === 9">
                         <li>Collaborate on a referral strategy for mutual benefits! Connect us with your HR head, and we'll reciprocate by offering benefits for candidate referrals and rewarding you when your company joins us.</li>
                         <li>Create a profile, share/offer your expertise on our platform, help others, and earn extra income.</li>
                     </ul>
