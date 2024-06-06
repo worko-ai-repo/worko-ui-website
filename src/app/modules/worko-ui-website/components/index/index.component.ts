@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CompanyListingService } from '../../services/company-listing.service';
-import { SharedDataService } from '../../services/shared-data.service';
 import { environment } from '../../../../../environments/environment';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-index',
@@ -20,7 +20,7 @@ export class IndexComponent {
   }
   getReferral: boolean = true;
   giveReferral: boolean = false;
-  assetLogos: string[]=[];
+  assetLogos: string[] = [];
   intervalId: any;
 
   // For swapping Get referrals and give referrals buttons:
@@ -31,36 +31,36 @@ export class IndexComponent {
     //   this.swapValues();
     // }, 3000); 
     this.intervalId = setInterval(() => {
-            this.swapValues();
-        }, 3000);
+      this.swapValues();
+    }, 3000);
     localStorage.removeItem('companyid')
     localStorage.removeItem('openGudianceTrigger')
     localStorage.removeItem('userType')
-    const excludedNumbers = [83,87,90,101,103,108,110,140,147,150,158,161,177,179,217,218,224,231,243,256,289,291,298,301,308,317,323,328,334,337,354,359,362,382,403,405,431,442,452,457,477,489,503,513,520,521,525,528,531,536,540,563,566,567,579,583,585,631,634,636,638,659,660,677,689,697,704,716,720,738,757,770,796,798,809,823,828,837,843,850,852,932,935,947,949,954,971,983,984,986,992,1024,1040];
+    const excludedNumbers = [83, 87, 90, 101, 103, 108, 110, 140, 147, 150, 158, 161, 177, 179, 217, 218, 224, 231, 243, 256, 289, 291, 298, 301, 308, 317, 323, 328, 334, 337, 354, 359, 362, 382, 403, 405, 431, 442, 452, 457, 477, 489, 503, 513, 520, 521, 525, 528, 531, 536, 540, 563, 566, 567, 579, 583, 585, 631, 634, 636, 638, 659, 660, 677, 689, 697, 704, 716, 720, 738, 757, 770, 796, 798, 809, 823, 828, 837, 843, 850, 852, 932, 935, 947, 949, 954, 971, 983, 984, 986, 992, 1024, 1040];
 
     this.assetLogos = await this.generateLogoFilenames(1, 1045, excludedNumbers);
 
   }
 
-  constructor(private companyListing: CompanyListingService,private sharedDataServices:SharedDataService){}
+  constructor(private companyListing: CompanyListingService, private router: Router) { }
 
   swapValues() {
     const temp = this.getReferral;
     this.getReferral = this.giveReferral;
     this.giveReferral = temp;
   }
- // Function to stop swapping when user hover on button
-    stopSwapping() {
+  // Function to stop swapping when user hover on button
+  stopSwapping() {
 
     clearInterval(this.intervalId);
-}
+  }
 
-// Function to resume swapping when user hover on button
-resumeSwapping() {
+  // Function to resume swapping when user hover on button
+  resumeSwapping() {
     this.intervalId = setInterval(() => {
-        this.swapValues();
+      this.swapValues();
     }, 3000);
-}
+  }
 
   openGetReferral() {
     // if (this.userLoggedIn) {
@@ -69,25 +69,25 @@ resumeSwapping() {
     //   this.userType = "employee";
     //   this.openModal(ModalType.LOGIN_SIGNUP);
     // }
-    localStorage.setItem("userType",'employee')
-    const iframe = document.createElement('IFRAME');
-    iframe.id = 'admin-ifr';
-    iframe.style.display = "none";
-    (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
-    document.body.appendChild(iframe);
-    this.postAdminData(environment.crossOriginUrl, 'admin');
-    window.location.href = environment.crossOriginUrl+'/login'
+    // localStorage.setItem("userType",'employee')
+    // const iframe = document.createElement('IFRAME');
+    // iframe.id = 'admin-ifr';
+    // iframe.style.display = "none";
+    // (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
+    // document.body.appendChild(iframe);
+    // this.postAdminData(environment.crossOriginUrl, 'admin');
+    window.location.href = environment.crossOriginUrl + '/login?userType=Employee';
     //window.location.href = 'https://app.worko.ai//employee/Referral';
   }
 
   async redirectToCompanyListing() {
     // this.router.navigateByUrl('/company-listing');
 
-    window.location.href = environment.crossOriginUrl+'/company-listing';
+    window.location.href = environment.crossOriginUrl + '/company-listing';
   }
 
   async redirectToEmployeeReferral() {
-    window.location.href = environment.crossOriginUrl+'/login'
+    window.location.href = environment.crossOriginUrl + '/login'
   }
 
   //  Reviews section: carousel code starts
@@ -166,7 +166,7 @@ resumeSwapping() {
     }
   ]
 
-  marginLeft: number = -25; 
+  marginLeft: number = -25;
   marginLeftmd: number = -66;
   marginLeftsm: number = -74;
   currentIndex: number = 0;
@@ -179,16 +179,16 @@ resumeSwapping() {
       this.currentIndex--;
       this.nextButtonDisabled = false;
       this.adjustMarginLeft();
-    }else {
-        
-        this.prevButtonDisabled = true;
-        this.marginLeft = 3;
-        this.marginLeftmd = 3;
-        this.marginLeftsm = 6;
-        // const lastReview = this.reviews.pop()!;
-        // this.reviews.unshift(lastReview);
-      }
-      // this.adjustMarginLeft();
+    } else {
+
+      this.prevButtonDisabled = true;
+      this.marginLeft = 3;
+      this.marginLeftmd = 3;
+      this.marginLeftsm = 6;
+      // const lastReview = this.reviews.pop()!;
+      // this.reviews.unshift(lastReview);
+    }
+    // this.adjustMarginLeft();
   }
 
   nextReview() {
@@ -197,111 +197,88 @@ resumeSwapping() {
       this.prevButtonDisabled = false;
       this.adjustMarginLeft();
     } else {
-      
+
       this.nextButtonDisabled = true;
       // const lastReview = this.reviews.pop()!;
       // this.reviews.unshift(lastReview);
-      this.marginLeft = -15 -(this.currentIndex) * 50 -55;
-      this.marginLeftmd =  -(this.currentIndex + 1) * 80 - 70;
+      this.marginLeft = -15 - (this.currentIndex) * 50 - 55;
+      this.marginLeftmd = -(this.currentIndex + 1) * 80 - 70;
       this.marginLeftsm = -(this.currentIndex + 1) * 80 - 140;
     }
     // this.adjustMarginLeft();
   }
 
   adjustMarginLeft() {
-    this.marginLeft = -27 -this.currentIndex * 51 - this.currentIndex; 
+    this.marginLeft = -27 - this.currentIndex * 51 - this.currentIndex;
     this.marginLeftmd = -66 - this.currentIndex * 80 - this.currentIndex;
-    this.marginLeftsm = -74- this.currentIndex * 86 - this.currentIndex;
+    this.marginLeftsm = -74 - this.currentIndex * 86 - this.currentIndex;
   }
-  
- // Reviews carousel section ends
 
- async getCompanyDetails() {
-   
-     
-  await this.companyListing.getCompanyListing(this.pageSize, this.lastKey, this.filterData.teamSize, this.filterData.industryType, this.filterData.companyName).then(async (response) => {
-    if (response) {
-      console.log("Helo11");
-      //this.spinner.hide();
-      // if (this.loadedOnce) {
-      //   this.companyList = [];
-      // }
-      this.companyList = this.companyList.concat(response.data);
-      this.lastKey = response.pagination.lastKey;
-      this.loadedOnce = false;
-      console.log(this.companyList)
-      //  this.filterCompanies(); // Filter companies after updating companyList
-    }
-  })
-    .catch(error => {
-      console.error('Display Company Listing Error:', error);
-      //this.spinner.hide();
-    });
-}
+  // Reviews carousel section ends
+
+  async getCompanyDetails() {
+
+
+    await this.companyListing.getCompanyListing(this.pageSize, this.lastKey, this.filterData.teamSize, this.filterData.industryType, this.filterData.companyName).then(async (response) => {
+      if (response) {
+        console.log("Helo11");
+        //this.spinner.hide();
+        // if (this.loadedOnce) {
+        //   this.companyList = [];
+        // }
+        this.companyList = this.companyList.concat(response.data);
+        this.lastKey = response.pagination.lastKey;
+        this.loadedOnce = false;
+        console.log(this.companyList)
+        //  this.filterCompanies(); // Filter companies after updating companyList
+      }
+    })
+      .catch(error => {
+        console.error('Display Company Listing Error:', error);
+        //this.spinner.hide();
+      });
+  }
 
   //logic to show assest image 
-  generateLogoFilenames(start: number, end: number, excludedNumbers:any[]) {
+  generateLogoFilenames(start: number, end: number, excludedNumbers: any[]) {
     const logos = [];
     for (let i = start; i <= end; i++) {
-        if (!excludedNumbers.includes(i)) {
-            logos.push(`${i}.jpg`);
-        }
+      if (!excludedNumbers.includes(i)) {
+        logos.push(`${i}.jpg`);
+      }
     }
-   // logos.push('1.jpg','10.jpg','15.jpg','25.jpg','30.jpg','47.jpg')
+   
     return logos;
   }
 
-
+//sending data through url
   async openReferralPage(item: any) {
- 
-  localStorage.setItem('companyid',item.toString());
-  const iframe = document.createElement('IFRAME');
-  iframe.id = 'admin-ifr';
-  iframe.style.display = "none";
-  (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
-  document.body.appendChild(iframe);
- const response:any=await this.postAdminData(environment.crossOriginUrl, 'admin');
-//  if(response){
-  window.location.href = environment.crossOriginUrl+'/company-listing';
-//  }
-}
-  async postAdminData(linkURL: string, portal: string) {
-     
- await this.sharedDataServices.postCrossDomainMessage(linkURL, portal);
-  //window.location.href = 'http://localhost:4200/company-listing';
-}
 
 
 
+    const companySk = item.replace(/^ID#/, '');
+    const Type = "referral";
+
+    const url = `${environment.crossOriginUrl}/company-listing?companyID=${companySk}&Type=${Type}`;
+    window.location.href = url;
+  }
 
 
+//sending data through url
+  openGudiancePage(item: any) {
 
-openGudiancePage(item:any){
 
-console.log(item)
-  localStorage.setItem('openGudianceTrigger','true')
-  // Trigger the event when referral is requested
-  // this.companyListing.setReferralData(item);
-  //this.companyListing.setrequestReferralData(event,item);
-  // this.router.navigateByUrl('/company-listing');
- 
-  const iframe = document.createElement('IFRAME');
-  iframe.id = 'admin-ifr';
-  iframe.style.display = "none";
-  (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
-  document.body.appendChild(iframe);
-  this.postAdminData(environment.crossOriginUrl, 'admin');
-  window.location.href = environment.crossOriginUrl+'/company-listing';
-  // if(item){
-  //   // this.triggerGudianceValue=!this.triggerGudianceValue
-  //   // console.log(this.triggerGudianceValue)
-  //   // this.companyListing.setGuidanceData(this.triggerGudianceValue);
-  //   // this.router.navigateByUrl('/company-listing');
+    const companySk = item.replace(/^ID#/, '');
+    console.log(companySk)
 
-  //   window.location.href = 'https://app.worko.ai/company-listing';
-  // }
-}
-//  List of purposes in purpose section:
+    const Type = "guidance";
+
+    const url = `${environment.crossOriginUrl}/company-listing?companyID=${companySk}&Type=${Type}`;
+
+    window.location.href = url;
+
+  }
+  //  List of purposes in purpose section:
   purposeList = [
     {
       image: '/assets/images/purpose1.png', title: "Peer-to-Peer Hiring", text: "We facilitate connections between candidates and employees, helping candidates secure referrals and employees maximise referral bonuses."
