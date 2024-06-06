@@ -108,7 +108,7 @@ export class CorporateComponent {
   /*api to verify otp */
   async verifyOTP(){
     try{
-      debugger
+     // debugger
     let response= await this.careerService.corporateverifyOtp(this.corporateForm.email,this.corporateForm.paymentCode);
     console.log(response.verificationStatus)
     if(response.verificationStatus==true){
@@ -191,7 +191,7 @@ export class CorporateComponent {
 
 
   modelOpen(){
-  debugger
+//  debugger
     //this.successmessage="Thank you for expressing interest in Worko.ai! Our team will reach out to you shortly to discuss how we can help streamline your hiring process and promote P2P hiring within your organization. Stay tuned!";
     this.successtitle="Congratulations!";
     this.openModal(ModalType.SUCCESS_MESSAGE)
@@ -203,6 +203,7 @@ export class CorporateComponent {
     this.successmessage="";
     this.successtitle=""
     //window.location.reload();
+  
   
   }
 

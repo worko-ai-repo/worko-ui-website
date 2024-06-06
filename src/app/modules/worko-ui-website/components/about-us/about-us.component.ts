@@ -42,7 +42,7 @@ docResult:any;
 constructor(private careerService:CareerService,private spinner: NgxSpinnerService, private authService: AuthService){}
 
   createAboutUs(form:NgForm){
-    debugger
+    //debugger
   
     this.uploadCv()
   
@@ -60,7 +60,7 @@ async aboutUs(){
 
    }
    console.log(this.aboutUsData)
-   debugger
+   //debugger
    let response=await this.careerService.createUser(this.aboutUsData)
   // this.uploadCVonS3Bucket(this.docResult)
   if(response){
@@ -112,7 +112,7 @@ async aboutUs(){
 
 }
 uploadCVonS3Bucket(docResult: any) {
-  debugger
+ // debugger
   try {
     this.authService.uploadFileOnS3Bucket(this.fileToUpload!, docResult.awsS3SignedUrl, docResult.awsS3Tag)
       .then(async () => {
