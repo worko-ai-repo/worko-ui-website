@@ -221,18 +221,18 @@
     
                     <div class="company company1" tabindex="0"  *ngFor="let item of companyList">
 
-                        <img src="{{ item.logoUrl }}" class="company-img" alt="{{item.name}}">
-                        <!-- <img *ngIf="assetLogos.includes(item.logo)"  
+                        <!-- <img src="{{ item.logoUrl }}" class="company-img" alt="{{item.name}}"> -->
+                        <img *ngIf="assetLogos.includes(item.logo)"  
                         src="assets/company-logo/{{item.logo }}" class="company-name" alt="{{item.name}}">
                     <img *ngIf="!assetLogos.includes(item.logo)"
-                        src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}"> -->
+                        src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}">
                         <div class="hover hover1">
                             <div class="logo-container">
-                                <img src="{{ item.logoUrl }}" alt="{{item.name}}">
-                                <!-- <img *ngIf="assetLogos.includes(item.logo)"  
+                                <!-- <img src="{{ item.logoUrl }}" alt="{{item.name}}"> -->
+                                <img *ngIf="assetLogos.includes(item.logo)"  
                                 src="assets/company-logo/{{item.logo }}" class="company-name" alt="{{item.name}}">
                             <img *ngIf="!assetLogos.includes(item.logo)"
-                                src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}"> -->
+                                src="{{ item.logoUrl }}" class="company-name" alt="{{item.name}}">
                             </div>
                            
                                
@@ -260,7 +260,7 @@
             </div>
         </div>
 
-        <div class="info-section d-flex">
+        <!-- <div class="info-section d-flex">
             <div class="video-img video-img-lg" style="z-index: 100;">
                 <img src="/assets/images/video-area.png" alt="">
             </div>
@@ -284,7 +284,7 @@
                 </ul>
             </div>
 
-        </div>
+        </div> -->
 
 <!-- Review Section for the carousel -->
 
