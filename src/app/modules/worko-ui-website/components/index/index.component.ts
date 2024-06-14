@@ -76,7 +76,7 @@ export class IndexComponent {
     // (<HTMLIFrameElement>iframe).src = environment.crossOriginUrl;
     // document.body.appendChild(iframe);
     // this.postAdminData(environment.crossOriginUrl, 'admin');
-    window.location.href = environment.crossOriginUrl + '/login?userType=Employee';
+    window.location.href = environment.crossOriginUrl + '/login?userType=employee';
     //window.location.href = 'https://app.worko.ai//employee/Referral';
   }
 
