@@ -83,7 +83,7 @@ export class IndexComponent {
   async redirectToCompanyListing() {
     // this.router.navigateByUrl('/company-listing');
 
-    window.location.href = environment.crossOriginUrl + '/company-listing';
+    window.location.href = environment.crossOriginUrl + '/companies';
   }
 
   async redirectToEmployeeReferral() {
@@ -259,7 +259,7 @@ export class IndexComponent {
     const companySk = item.replace(/^ID#/, '');
     const Type = "referral";
 
-    const url = `${environment.crossOriginUrl}/company-listing?companyID=${companySk}&Type=${Type}`;
+    const url = `${environment.crossOriginUrl}/companies?companyID=${companySk}&Type=${Type}`;
     window.location.href = url;
   }
 
@@ -273,7 +273,7 @@ export class IndexComponent {
 
     const Type = "guidance";
 
-    const url = `${environment.crossOriginUrl}/company-listing?companyID=${companySk}&Type=${Type}`;
+    const url = `${environment.crossOriginUrl}/companies?companyID=${companySk}&Type=${Type}`;
 
     window.location.href = url;
 
