@@ -1,7 +1,9 @@
 User-agent: *
-Disallow: /
+Allow: /
 Disallow: //api.worko.ai/
-Allow: /$
-Allow: /faq
-Allow: /corporate
-Allow: /about-us
+Disallow: /login
+Disallow: /signup
+Disallow: /forget
+Disallow: /terms-of-service
+Disallow: /privacy-policy
+Disallow: /refund-policy

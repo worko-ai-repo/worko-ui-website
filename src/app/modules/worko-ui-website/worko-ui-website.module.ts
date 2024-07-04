@@ -54,7 +54,12 @@ export const routes: Routes = [
       },
       {
         path : 'corporate',
-        component: CorporateComponent
+        component: CorporateComponent,
+        data: {
+          title: 'Enhance Your Hiring with Peer-to-Peer Referrals',
+          description: 'Join Worko’s Peer-to-Peer Referral Network to streamline your hiring process. Connect with top talent through verified referrals and boost your recruitment efficiency.',
+          tags: 'Worko.ai, Peer-to-Peer Referrals, Recruitment Solutions, Employee Referrals, Talent Acquisition, Hiring Network, Worko Corporate Services, Streamlined Recruitment, Verified Referrals'
+        }
       },
       {
         path : 'about-us',
