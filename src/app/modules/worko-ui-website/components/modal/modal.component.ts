@@ -40,7 +40,7 @@ export class ModalComponent {
 
   ngOnInit(): void {
    
-    console.log(this.showHeader);
+    // console.log(this.showHeader);
   }
 
   /**

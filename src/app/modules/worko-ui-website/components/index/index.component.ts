@@ -174,7 +174,7 @@ export class IndexComponent {
   nextButtonDisabled: boolean = false;
 
   previousReview() {
-    console.log(this.currentIndex);
+    // console.log(this.currentIndex);
     if (this.currentIndex > 0) {
       this.currentIndex--;
       this.nextButtonDisabled = false;
@@ -221,7 +221,7 @@ export class IndexComponent {
 
     await this.companyListing.getCompanyListing(this.pageSize, this.lastKey, this.filterData.teamSize, this.filterData.industryType, this.filterData.companyName).then(async (response) => {
       if (response) {
-        console.log("Helo11");
+        // console.log("Helo11");
         //this.spinner.hide();
         // if (this.loadedOnce) {
         //   this.companyList = [];
@@ -229,7 +229,7 @@ export class IndexComponent {
         this.companyList = this.companyList.concat(response.data);
         this.lastKey = response.pagination.lastKey;
         this.loadedOnce = false;
-        console.log(this.companyList)
+        // console.log(this.companyList)
         //  this.filterCompanies(); // Filter companies after updating companyList
       }
     })
@@ -269,7 +269,7 @@ export class IndexComponent {
 
 
     const companySk = item.replace(/^ID#/, '');
-    console.log(companySk)
+    // console.log(companySk)
 
     const Type = "guidance";
 

@@ -12,7 +12,7 @@ const API_URL = environment.apiUrl;
 export class CompanyListingService {
 
   constructor(private http: HttpClient, private authService: AuthService) {
-    console.log(' com ExampleComponent initialized');
+    // console.log(' com ExampleComponent initialized');
    }
   
   /**

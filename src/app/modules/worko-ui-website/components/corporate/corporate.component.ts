@@ -53,7 +53,7 @@ export class CorporateComponent {
         userDesignation: this.corporateForm.designation,
         userMessage: this.corporateForm.description
       }
-      console.log(this.corporateData)
+      // console.log(this.corporateData)
       //debugger
       let response = await this.careerService.createCorporateUser(this.corporateData)
       if(response){
@@ -64,7 +64,7 @@ export class CorporateComponent {
 
     } catch (error:any) {
       this.spinner.hide();
-      console.log(error)
+      // console.log(error)
       //this.successmessage="Something went wrong. Please try again after sometime"
       if(error.status==409){
       this.successtitle="Error"
@@ -85,8 +85,8 @@ export class CorporateComponent {
     try{
   let response= await this.careerService.corporateEmailVerification(this.corporateForm.email,this.corporateForm.name);
   if(response.id){
-    console.log(response.id)
-    console.log("success");
+    // console.log(response.id)
+    // console.log("success");
     this.isOtpSent=!this.isOtpSent
     this.successmessage= "We have sent a code by email to "+this.corporateForm.email
     this.successtitle="Verify E-MAIL"
@@ -110,7 +110,7 @@ export class CorporateComponent {
     try{
      // debugger
     let response= await this.careerService.corporateverifyOtp(this.corporateForm.email,this.corporateForm.paymentCode);
-    console.log(response.verificationStatus)
+    // console.log(response.verificationStatus)
     if(response.verificationStatus==true){
      
       this.isResentOtp=!this.isResentOtp
@@ -138,8 +138,8 @@ export class CorporateComponent {
     try{
       let response= await this.careerService.corporateEmailVerification(this.corporateForm.email,this.corporateForm.name);
       if(response.id){
-        console.log(response.id)
-        console.log("success");
+        // console.log(response.id)
+        // console.log("success");
         this.successmessage= "We have sent a code by email to "+this.corporateForm.email
         this.successtitle="Verify E-MAIL"
         this.openModal(ModalType.SUCCESS_MESSAGE)

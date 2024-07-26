@@ -27,14 +27,14 @@ export class FaqComponent {
         }
       }
     }
-    console.log("Clicked accordion", index);
+    // console.log("Clicked accordion", index);
     if (this.activeIndex === index) {
       this.activeIndex = 0;
     } else {
       this.activeIndex = index;
     }
     this.toggleSymbols[index] = !this.toggleSymbols[index];
-    console.log("active index:", this.activeIndex)
+    // console.log("active index:", this.activeIndex)
   }
   toggleAccordionForEmployee(index: number) {
     for (const key in this.toggleSymbolsForEmployee) {
@@ -45,7 +45,7 @@ export class FaqComponent {
       }
     }
 
-    console.log("Clicked accordion", index);
+    // console.log("Clicked accordion", index);
     if (this.activeIndexForEmployee === index) {
 
       this.activeIndexForEmployee = 0;
@@ -56,7 +56,7 @@ export class FaqComponent {
 
 
     this.toggleSymbolsForEmployee[index] = !this.toggleSymbolsForEmployee[index];
-    console.log("active index:", this.activeIndexForEmployee)
+    // console.log("active index:", this.activeIndexForEmployee)
   }
 
 }

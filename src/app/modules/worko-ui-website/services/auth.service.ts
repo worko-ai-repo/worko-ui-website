@@ -8,7 +8,7 @@ import { HttpHeaders } from '@angular/common/http';
 export class AuthService {
 
   constructor(private http: HttpClient) { 
-    console.log('auth ExampleComponent initialized');
+    // console.log('auth ExampleComponent initialized');
   }
 
 
