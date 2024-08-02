@@ -31,7 +31,7 @@
 }
 .side-timeline-lg img {
     // width: 311px;
-    width: calc(292px + 1vw);
+    width: calc(250px + 1vw);
 }
 
 .side-timeline-md {
@@ -44,13 +44,15 @@
 
 
 .content-heading{
-    font-size: 54px;
+    font-size: 3.2vw;
+    //font-size: 54px;
     // padding-right: 10%;
 }
 
 .para{
     // font-size: calc(13px + 1vw);
-    font-size: calc(1.3vw + 8px);
+   // font-size: calc(1.3vw + 8px);
+    font-size: calc(1vw + 7px);
     font-weight: 400;
     line-height: 160%;
     letter-spacing: 0em;
@@ -60,6 +62,7 @@
 .row-heading{
     // font-size: 40px;
     font-size: calc(1.5vw + 14px);
+   
 }
 .head2{
     font-size: 30px;
@@ -69,8 +72,8 @@
 .timeline{
     padding-right: 10%;
     img{
-        width: calc(1.5vw + 56px);
-        width: 82px;
+        width: calc(1.5vw + 59px);
+        width: 75px;
     }
 }
 
@@ -372,7 +375,7 @@
                 }
 
                 .content{
-                    font-size: calc(1.3vw + 5px);
+                    font-size: calc(1vw + 7px);;
                     width: 95%;
                     padding-left: 0;
                     color: #000;
@@ -429,7 +432,7 @@
         // padding-top: 3rem;
         .content-heading{
             -webkit-text-fill-color: black;
-            font-weight: 700;
+            font-weight: 600;
         }
         .para{
             color: black;
