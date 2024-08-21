@@ -1,35 +1,69 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" />
   <title>Worko.ai</title>
-  <base href="/">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   <!-- Meta Pixel Code -->
- <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1407841126594934');
-  fbq('track', 'PageView');
+  <!-- Meta Pixel Code -->
+  <script>
+    !(function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod
+          ? n.callMethod.apply(n, arguments)
+          : n.queue.push(arguments);
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = "2.0";
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s);
+    })(
+      window,
+      document,
+      "script",
+      "https://connect.facebook.net/en_US/fbevents.js"
+    );
+    fbq("init", "1625511427461268");
+    fbq("track", "PageView");
   </script>
-  <!-- End Meta Pixel Code -->
+
+   <!-- LinkedIn Conversion Tracking Code -->
+   <script type="text/javascript">
+    _linkedin_partner_id = "6381540";
+    window._linkedin_data_partner_ids = window._linkedin_data_partner_ids || [];
+    window._linkedin_data_partner_ids.push(_linkedin_partner_id);
+  </script>
+  <script type="text/javascript">
+    (function (l) {
+      if (!l) {
+        window.lintrk = function (a, b) { window.lintrk.q.push([a, b]) };
+        window.lintrk.q = []
+      }
+      var s = document.getElementsByTagName("script")[0];
+      var b = document.createElement("script");
+      b.type = "text/javascript"; b.async = true;
+      b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+      s.parentNode.insertBefore(b, s);
+    })(window.lintrk);
+  </script>
+
+  <!-- End of LinkedIn Conversion Tracking Code -->
 
   <!-- Canonical URL placeholder -->
-  <link rel="canonical" href="">
-  <script src="https://code.jquery.com/jquery-3.7.1.js" 
-  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" 
-  crossorigin="anonymous">
-  </script>
+  <link rel="canonical" href="" />
+  <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+    crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"
     integrity="sha384-+sLIOodYLS7CIrQpBjl+C7nPvqq+FbNUBDunl/OZv93DB7Ln/533i8e/mZXLi/P+"
     crossorigin="anonymous"></script>
@@ -38,43 +72,53 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-M45M97VENH"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-M45M97VENH');
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+    gtag("js", new Date());
+    gtag("config", "G-M45M97VENH");
   </script>
   <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
   <link rel="icon" type="image/x-icon" href="assets/Favicon1.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 
-
-
-
-  <meta name="description" content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.">
-  <meta property="og:title" content="Find Your Dream Job | Trusted Referrals | Expert Career Guidance | Interview Support | Verified Candidates | Top Profiles | worko.ai">
-  <meta property="og:description" content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.">
-  <meta property="og:image" content="/assets/worko-logo-ai.png">
-  <meta property="og:type" content="website">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta name="keywords" content="job referrals, career guidance, interview support, job search, job opportunities, career advice, professional network, Worko.ai, referral bonuses, job placements">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Find Your Dream Job | Trusted Referrals | Expert Career Guidance | Interview Support | Verified Candidates | Top Profiles | worko.ai">
-  <meta name="twitter:description" content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.">
-  <meta name="twitter:image" content="/assets/worko-logo-ai.png">
-  <meta name="twitter:site" content="@Worko_ai">
-  <meta name="twitter:creator" content="@Worko_ai">
-  <meta name="author" content="Worko.ai">
-  <meta name="publisher" content="Worko.ai">
-
-
+  <meta name="description"
+    content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job." />
+  <meta property="og:title"
+    content="Find Your Dream Job | Trusted Referrals | Expert Career Guidance | Interview Support | Verified Candidates | Top Profiles | worko.ai" />
+  <meta property="og:description"
+    content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job." />
+  <meta property="og:image" content="/assets/worko-logo-ai.png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="keywords"
+    content="job referrals, career guidance, interview support, job search, job opportunities, career advice, professional network, Worko.ai, referral bonuses, job placements" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title"
+    content="Find Your Dream Job | Trusted Referrals | Expert Career Guidance | Interview Support | Verified Candidates | Top Profiles | worko.ai" />
+  <meta name="twitter:description"
+    content="Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job." />
+  <meta name="twitter:image" content="/assets/worko-logo-ai.png" />
+  <meta name="twitter:site" content="@Worko_ai" />
+  <meta name="twitter:creator" content="@Worko_ai" />
+  <meta name="author" content="Worko.ai" />
+  <meta name="publisher" content="Worko.ai" />
 </head>
 
 <body>
   <noscript>
-    <img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1407841126594934&ev=PageView&noscript=1" />
+    <img height="1" width="1" style="display: none" src="https://www.facebook.com/tr?id=1625511427461268&ev=PageView
+    &noscript=1" />
   </noscript>
+
+   <!-- start of LinkedIn Conversion Tracking Code -->
+   <noscript>
+    <img height="1" width="1" style="display:none;" alt=""
+      src="https://px.ads.linkedin.com/collect/?pid=6381540&fmt=gif" />
+  </noscript>
+    <!-- End of LinkedIn Conversion Tracking Code -->
   <app-root></app-root>
 </body>
 
