@@ -1,19 +1,25 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild,OnInit } from '@angular/core';
 import { CareerService } from '../../services/career.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { ModalComponent } from '../modal/modal.component';
 import { ModalType } from '../../interfaces/shared.interface';
 import { NgForm } from '@angular/forms';
+import data from "./corporate-stepper.json"
 @Component({
   selector: 'app-corporate',
   templateUrl: './corporate.component.html',
   styleUrl: './corporate.component.scss'
 })
-export class CorporateComponent {
+export class CorporateComponent implements OnInit {
   successmessage: string="";
   successtitle: string="";
   isResendDisabled: boolean=false;
   countdown!: number;
+  items: any[] = [];
+
+  ngOnInit(): void {
+    this.items = data;
+  }
 
   constructor(private careerService: CareerService, private spinner: NgxSpinnerService) { }
   @ViewChild('corporate')
