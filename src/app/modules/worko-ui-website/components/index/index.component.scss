@@ -2,6 +2,9 @@
 .all-sections{
     overflow: hidden;
 }
+.intro{
+    height: 650px;
+}
 .purpose-section{
     padding-top: 10rem;
     display: flex;
@@ -810,12 +813,6 @@
     margin-top: 20px; /* Adjust as needed */
 }
 
-.req-btn{
-
-    color: white;
-    border-radius: 7.5px;
-background: linear-gradient(90deg, #2F92C7 0%, rgba(47, 146, 199, 0.00) 205.38%);
-}
 
 @media (max-width: 760px) and (min-width: 480px){
 

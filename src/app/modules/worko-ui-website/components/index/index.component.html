@@ -34,16 +34,18 @@
                 <div class="grad grad-left1"><img src="assets/images/gradient-left1.png" alt=""></div>
                 <div class="content get-content" *ngIf="getReferral">
                     <div class="title title1">
-                        Supercharge your job search with Worko - Where Connection leads to Career
+                        <!-- Supercharge your job search with Worko - Where Connection leads to Career -->
+                        Secure your dream job 10X faster with a referral
                     </div>
                     <ul class="intro-ul">
                         <li class="para text">
-                            Stand out as a top candidate with employee referrals.
+                            Stop begging for referrals on LinkedIn—request referral here within minutes!
+                            <!-- Stand out as a top candidate with employee referrals. -->
                         </li>
-                        <li class="para text content2">
+                        <!-- <li class="para text content2">
                             Receive feedback on your candidature and support throughout the interview
                             process
-                        </li>
+                        </li> -->
                     </ul>
 
 
@@ -62,16 +64,18 @@
 
                 <div class="content give-content" *ngIf="giveReferral">
                     <div class="title title1">
-                        Discover success with Worko, where Referrals lead to rewarding outcomes
+                        Earn consistent referral bonuses every month
+                        <!-- Discover success with Worko, where Referrals lead to rewarding outcomes -->
                     </div>
                     <ul class="intro-ul">
                         <li class="para text">
-                            AI-powered P2P hiring platform for flawless matching and thorough
-                            vetting, boosting referral success rate.
+                            Get top matched & Pre-vetted candidates only for referral 
+                            <!-- AI-powered P2P hiring platform for flawless matching and thorough
+                            vetting, boosting referral success rate. -->
                         </li>
-                        <li class="para text content2">
+                        <!-- <li class="para text content2">
                             Help someone land their dream job
-                        </li>
+                        </li> -->
                     </ul>
                     <!-- <div class="buttons">
                         <button  class="left-btn btn btn-light font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
@@ -93,7 +97,64 @@
             </div>
 
         </div>
+        <div class="companies-section">
+            <div class="company-content">
+                <div class="title">Join Our Platform And Work</div>
+                <div class="para">Alongside Employees At Top Companies</div>
+            </div>
 
+            <div class="slide-container">
+                <div class="company-slides d-flex" *ngFor="let lineIndex of [0, 1, 2]">
+                    <ng-container *ngFor="let item of getCompaniesForLine(lineIndex)">
+                        <div class="company company1" tabindex="0">
+                            <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                class="company-name" alt="{{item.name}}">
+                            <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}" class="company-name"
+                                alt="{{item.name}}">
+                            <div class="hover hover1 onHoverClass">
+                                <div class="logo-container">
+                                    <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                        class="company-name" alt="{{item.name}}">
+                                    <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}"
+                                        class="company-name" alt="{{item.name}}">
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <button class="referral button" (click)="openReferralPage(item.SK)">Request
+                                        Referral</button>
+                                    <button class="referral button" (click)="openGudiancePage(item.SK)">Request
+                                        Guidance</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngFor="let item of getCompaniesForLine(lineIndex)">
+                        <div class="company company1" tabindex="0">
+                            <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                class="company-name" alt="{{item.name}}">
+                            <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}" class="company-name"
+                                alt="{{item.name}}">
+                            <div class="hover hover1">
+                                <div class="logo-container">
+                                    <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                        class="company-name" alt="{{item.name}}">
+                                    <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}"
+                                        class="company-name" alt="{{item.name}}">
+                                </div>
+                                <button class="referral button" (click)="openReferralPage(item.SK)">Request
+                                    Referral</button>
+                                <button class="referral button" (click)="openGudiancePage(item.SK)">Request
+                                    Guidance</button>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="button-container text-center">
+                <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View all Companies</button>
+            </div>
+        </div>
      
         <!-- purpose section -->
 
@@ -271,7 +332,7 @@
 
         <!-- Old single line company slide -->
 
-         <div class="companies-section">
+         <!-- <div class="companies-section">
             <div class="company-content">
                 <div class="title">Join Our Platform And Work</div>
                 <div class="para">Alongside Employees At Top Companies</div>
@@ -328,7 +389,7 @@
             <div class="button-container text-center">
                 <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View all Companies</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="info-section d-flex">
             <div class="video-img video-img-lg" style="z-index: 100;">
@@ -423,11 +484,11 @@
                 <div class="arrow-button right" (click)="nextReview()" [class.disabled]="nextButtonDisabled"><img
                         src="/assets/images/right-logo.png" alt="right"></div>
             </div>
-            <!-- <div class="review-button-container text-center"> 
+            <div class="review-button-container text-center"> 
                 <button class="btn btn-dark font-inria" (click)="redirectToCompanyListing()">
                     Request Referral
                 </button>
-                </div> -->
+                </div>
             <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
         </div>
 
