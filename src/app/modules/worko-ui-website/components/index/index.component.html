@@ -94,6 +94,64 @@
 
         </div>
 
+        <div class="companies-section">
+            <div class="company-content">
+                <div class="title">Join Our Platform And Work</div>
+                <div class="para">Alongside Employees At Top Companies</div>
+            </div>
+
+            <div class="slide-container">
+                <div class="company-slides d-flex" *ngFor="let lineIndex of [0, 1, 2]">
+                    <ng-container *ngFor="let item of getCompaniesForLine(lineIndex)">
+                        <div class="company company1" tabindex="0">
+                            <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                class="company-name" alt="{{item.name}}">
+                            <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}" class="company-name"
+                                alt="{{item.name}}">
+                            <div class="hover hover1 onHoverClass">
+                                <div class="logo-container">
+                                    <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                        class="company-name" alt="{{item.name}}">
+                                    <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}"
+                                        class="company-name" alt="{{item.name}}">
+                                </div>
+                                <div style="display: flex; flex-direction: column; align-items: center;">
+                                    <button class="referral button" (click)="openReferralPage(item.SK)">Request
+                                        Referral</button>
+                                    <button class="referral button" (click)="openGudiancePage(item.SK)">Request
+                                        Guidance</button>
+                                </div>
+                            </div>
+                        </div>
+                    </ng-container>
+
+                    <ng-container *ngFor="let item of getCompaniesForLine(lineIndex)">
+                        <div class="company company1" tabindex="0">
+                            <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                class="company-name" alt="{{item.name}}">
+                            <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}" class="company-name"
+                                alt="{{item.name}}">
+                            <div class="hover hover1">
+                                <div class="logo-container">
+                                    <img *ngIf="assetLogos.includes(item.logo)" src="assets/company-logo/{{item.logo }}"
+                                        class="company-name" alt="{{item.name}}">
+                                    <img *ngIf="!assetLogos.includes(item.logo)" src="{{ item.logoUrl }}"
+                                        class="company-name" alt="{{item.name}}">
+                                </div>
+                                <button class="referral button" (click)="openReferralPage(item.SK)">Request
+                                    Referral</button>
+                                <button class="referral button" (click)="openGudiancePage(item.SK)">Request
+                                    Guidance</button>
+                            </div>
+                        </div>
+                    </ng-container>
+                </div>
+            </div>
+
+            <div class="button-container text-center">
+                <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View all Companies</button>
+            </div>
+        </div>
         <!-- purpose section -->
 
         <div class="purpose-section position-relative">
@@ -270,7 +328,7 @@
 
         <!-- Old single line company slide -->
 
-        <div class="companies-section">
+        <!-- <div class="companies-section">
             <div class="company-content">
                 <div class="title">Join Our Platform And Work</div>
                 <div class="para">Alongside Employees At Top Companies</div>
@@ -327,7 +385,7 @@
             <div class="button-container text-center">
                 <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">View all Companies</button>
             </div>
-        </div>
+        </div> -->
 
         <!-- <div class="info-section d-flex">
             <div class="video-img video-img-lg" style="z-index: 100;">
@@ -422,6 +480,14 @@
                 <div class="arrow-button right" (click)="nextReview()" [class.disabled]="nextButtonDisabled"><img
                         src="/assets/images/right-logo.png" alt="right"></div>
             </div>
+            <div class="review-button-container text-center"> 
+                <!-- <button class="btn btn-light font-inria" (click)="redirectToCompanyListing()">
+                    Get Referral
+                </button> -->
+                <button class="btn btn-dark font-inria" (click)="redirectToCompanyListing()">
+                    Request Referral
+                </button>
+                </div>
             <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
         </div>
 

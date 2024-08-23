@@ -19,4 +19,10 @@ export class NavbarComponent {
   toggleMenu(event: any) {
     this.isMenuOpen = event.target.checked;
   }
+
+  async redirectToCompanyListing() {
+    // this.router.navigateByUrl('/company-listing');
+
+    window.location.href = environment.crossOriginUrl + '/companies';
+  }
 }

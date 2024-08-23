@@ -24,7 +24,7 @@
     }
 
     .purpose-card{
-        height: 443px;
+        height: 434px;
         border: 1px solid #57e1ff;
 
         .purpose-image{
@@ -145,7 +145,10 @@
 
         width: 30%;
     }
+
+    
 }
+
 
 // ----------------companies section animation-------------------
 
@@ -194,6 +197,7 @@
     display: flex;
     flex-direction: column;
     margin-top: 9rem;
+   //margin-top: 3rem;
 }
 
 .company-slides {
@@ -737,6 +741,7 @@
             }
         }
         overflow: hidden;
+     
     }
 
     .reviews-content{
@@ -798,6 +803,18 @@
         transition: margin-left 1s ease; 
     }
   
+}
+.review-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.req-btn{
+
+    color: white;
+    border-radius: 7.5px;
+background: linear-gradient(90deg, #2F92C7 0%, rgba(47, 146, 199, 0.00) 205.38%);
 }
 
 @media (max-width: 760px) and (min-width: 480px){

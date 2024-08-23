@@ -27,13 +27,15 @@
 }
 
 .side-timeline {
-    left: 7%;
-    margin-top: 2rem;
+    // left: 7%;
+    // margin-top: 2rem;
+    left: 8.5%;
+    margin-top: 9px;
 }
 .side-timeline-lg img {
     // width: 311px;
     // width: calc(250px + 1vw);
-    width: calc(127px + 9vw);
+    width: calc(134px + 9vw);
 }
 
 .side-timeline-md {
@@ -529,7 +531,7 @@
         display: block;
         img {
             // width: 218px;
-            width: calc(6vw + 168px);
+            width: calc(6vw + 246px);
             min-width: 206px;
         }
     }
@@ -774,15 +776,15 @@
     --row-gap: 2rem;
     --line-w: 0.25rem;
     list-style-type: none;
-    min-width: 100%;
+    min-width: 97%;
     display: grid;
     grid-template-columns: 1fr var(--line-w) 1fr;
     column-gap: var(--col-gap);
     row-gap: var(--row-gap);
     width: min(60rem, 90%);
     margin-inline: auto;
-    padding-inline-start: 1rem;
-    padding-block-start: 5rem;
+    // padding-inline-start: 1rem;
+    // padding-block-start: 5rem;
 }
 /*STEPPER LINE*/
 .column ul::after {
@@ -800,8 +802,8 @@
     color: white !important;
     -webkit-text-fill-color: white;
     position: absolute;
-    width: min(3rem, 8vw);
-    height:  min(3rem, 8vw);
+    width: min(4rem, 8vw);
+    height:  min(4rem, 8vw);
     background: var(--bgColor);
     border: 0.3rem solid var(--bgColor);
     border-radius: 50%;
@@ -830,11 +832,12 @@
   /* For padding on even and odd columns on both the sides */
    .column ul li:nth-child(even) .corporate-stepper-title,
   .column ul li:nth-child(even) .para {
-  padding-left: 80px;
+  padding-left:10%;
   }
    .column ul li:nth-child(odd) .corporate-stepper-title,
   .column ul li:nth-child(odd) .para {
-  padding-right: 30px;
+ // padding-right: 30px;
+ padding-left: 10%;
   }
 .column  ul li:nth-child(odd) .corporate-stepper-title::after {
     transform: translate(-50%, -50%);
@@ -964,9 +967,9 @@ width: 100%;
 
         display: block;
         img {
-            width: calc(225px + 5vw);
+           // width: calc(225px + 5vw);
             // width: calc(198px + 6.5vw);
-            width: 106px;
+            width: 143px;
         }
     }
 

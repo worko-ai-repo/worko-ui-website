@@ -43,6 +43,17 @@ li{
     display: none;
 }
 
+
+.btn-dark{
+    background-color: rgb(87, 225, 225) !important;
+    color: #182b45 !important;
+    font-size: calc(1vw + 14px);
+    width: 100%;
+    padding: 0.2rem 0.5rem;
+    border: 5px solid rgb(87 204 255) !important; 
+    font-weight: 500;
+}
+
 @media (max-width: 1030px) and (min-width: 550px) {
 
     hr {
