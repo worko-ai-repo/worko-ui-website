@@ -149,31 +149,81 @@
 
 // ----------------companies section animation-------------------
 
-@keyframes slide{
-    from {
-        transform: translateX(0)
-    }
-    to{
-        transform: translateX(-100%)
-    }
+@keyframes slide {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
 }
 
-.companies-section{
+//Previous css code start from here
+
+// @keyframes slide{
+//     from {
+//         transform: translateX(0)
+//     }
+//     to{
+//         transform: translateX(-100%)
+//     }
+// }
+
+// .companies-section{
+//     flex-wrap: nowrap;
+//     position: relative;
+// }
+
+// .slide-container{
+//     display: flex;
+//     // width: 252%;
+//     margin-top: 9rem;
+// }
+
+// .company-slides{
+//     margin-left: 0 !important;
+//     animation: 150s slide infinite linear;
+//     // animation-play-state: paused;
+    
+// }
+
+//Previous css code end here
+
+.companies-section {
     flex-wrap: nowrap;
     position: relative;
 }
 
-.slide-container{
+.slide-container {
     display: flex;
-    // width: 252%;
+    flex-direction: column;
     margin-top: 9rem;
 }
 
-.company-slides{
-    margin-left: 0 !important;
-    animation: 150s slide infinite linear;
-    // animation-play-state: paused;
-    
+.company-slides {
+    display: flex;
+    align-items: center;
+    justify-content: space-around; /* Even spacing between logos */
+    animation: 40s slide infinite linear;
+    margin-bottom: 20px;
+    will-change: transform;
+}
+
+.company {
+    flex: 0 0 auto;
+    // width: 100px;  /* Adjust width */
+    // height: 100px; /* Adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.company img {
+    // max-height: 60px; /* Ensure consistent height */
+    // max-width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.companies-section .company-slides .company .hover {
+    background: rgb(87, 225, 225);
+    height: 215px;
 }
 
 .slide-container:hover .company-slides{
@@ -511,75 +561,120 @@
         }
     }
 
-    .companies-section{
+    //old css code starts here
+
+    // .companies-section{
+    //     padding-top: 5rem;
+
+    //     .company-content{
+    //         .title, .para{
+    //             font-size: calc(1.5vw + 10px);
+    //         }
+            
+    //     }
+
+    //     .company-slides{
+    //         height: calc(7vw + 25px);
+    //         height: 120px;
+    //         // width: 126%;
+    //         margin-left: 50px;
+    //         .company{
+    //             // width: 12%;
+    //             margin-right: 100px;
+    //             img{
+    //                 // padding: 7% 1.61%;
+    //                 width: 60px;
+    //                 height: 60px;
+    //             }
+    //         }
+    //     }
+
+    //     .hover{
+    //         width: 200px !important;
+    //         height: 200px !important;
+    //     }
+
+    //     .slide-container:hover .company-slides{
+    //         animation-play-state: paused;
+    //     }
+
+    //     .company1:focus .hover1 {
+    //         display: block !important;
+    //     }
+        
+    //     .company2:focus .hover2 {
+    //         display: block !important;
+    //     }
+        
+    //     .company3:focus .hover3 {
+    //         display: block !important;
+    //     }
+        
+    //     .company4:focus .hover4 {
+    //         display: block !important;
+    //     }
+        
+    //     .company5:focus .hover5 {
+    //         display: block !important;
+    //     }
+        
+    //     .company6:focus .hover6 {
+    //         display: block !important;
+    //     }
+        
+    //     .company7:focus .hover7 {
+    //         display: block !important;
+    //     }
+
+    //     button{
+    //         // padding: 0.5rem 10%;
+    //         margin-top: 7rem;
+    //         // width: 63%;
+    //         // font-size: calc(1.2vw + 7px);
+    //         // margin-left: 18%;
+    //     }
+    // }
+
+    // .index-section .companies-section .company-slides .company .hover .button {
+    //     width: 145px;
+    //     font-size: 0.75rem;
+    // }
+    // .company:focus .company-slides{
+    //     animation-play-state: paused;
+    // }
+
+    //old css code ends here
+
+    //new code starts here
+
+    .companies-section {
         padding-top: 5rem;
 
-        .company-content{
-            .title, .para{
+        .company-content {
+            .title, .para {
                 font-size: calc(1.5vw + 10px);
             }
-            
         }
 
-        .company-slides{
-            height: calc(7vw + 25px);
+        .company-slides {
             height: 120px;
-            // width: 126%;
-            margin-left: 50px;
-            .company{
-                // width: 12%;
+            
+            .company {
                 margin-right: 100px;
-                img{
-                    // padding: 7% 1.61%;
+                img {
                     width: 60px;
                     height: 60px;
                 }
             }
         }
 
-        .hover{
+        .hover {
             width: 200px !important;
             height: 200px !important;
         }
 
-        .slide-container:hover .company-slides{
-            animation-play-state: paused;
-        }
-
-        .company1:focus .hover1 {
-            display: block !important;
-        }
-        
-        .company2:focus .hover2 {
-            display: block !important;
-        }
-        
-        .company3:focus .hover3 {
-            display: block !important;
-        }
-        
-        .company4:focus .hover4 {
-            display: block !important;
-        }
-        
-        .company5:focus .hover5 {
-            display: block !important;
-        }
-        
-        .company6:focus .hover6 {
-            display: block !important;
-        }
-        
-        .company7:focus .hover7 {
-            display: block !important;
-        }
-
-        button{
-            // padding: 0.5rem 10%;
+        button {
             margin-top: 7rem;
-            // width: 63%;
-            // font-size: calc(1.2vw + 7px);
-            // margin-left: 18%;
         }
     }
 
@@ -587,9 +682,6 @@
         width: 145px;
         font-size: 0.75rem;
     }
-    // .company:focus .company-slides{
-    //     animation-play-state: paused;
-    // }
 
     .info-section{
         padding-top: 3rem;
@@ -1141,47 +1233,102 @@
         }
     }
 
-    .companies-section{
+    // .companies-section{
+    //     padding-top: 4rem;
+
+    //     .company-content{
+    //         padding-left: 10%;
+    //         .title, .para{
+    //             font-size: 14px;
+    //         }
+    //     }
+
+    //     .company-slides{
+    //         height: calc(7vw + 25px);
+    //         height: 120px;
+    //         // width: 126%;
+    //         margin-left: 50px;
+    //         .company{
+    //             // width: 12%;
+    //             margin-right: 100px;
+    //             img{
+    //                 // padding: 7% 1.61%;
+    //                 width: 60px;
+    //                 height: 60px;
+    //             }
+    //         }
+    //     }
+
+    //     .hover{
+    //         width: 200px !important;
+    //         height: 200px !important;
+    //         img{
+    //             width: 70px;
+    //             height: 70px;
+    //         }
+    //     }
+
+    //     button{
+    //         // padding: 0.5rem 10%;
+    //         margin-top: 4rem;
+    //         // width: 145px;
+    //         font-size: 0.875rem;
+    //         // margin-left: 18%;
+    //     }
+    // }
+
+    // .index-section .companies-section .company-slides .company .hover .button {
+    //     width: 145px;   
+    //     font-size: 0.75rem;
+    // }
+
+    // .slide-container:hover .company-slides{
+    //     animation-play-state: paused;
+    // }
+
+    // .company1:focus .hover1 {
+    //     display: block !important;
+        
+    // }
+
+    // .company-slides{
+    //     animation: 550s slide infinite linear;
+    // }
+
+    .companies-section {
         padding-top: 4rem;
 
-        .company-content{
+        .company-content {
             padding-left: 10%;
-            .title, .para{
+            .title, .para {
                 font-size: 14px;
             }
         }
 
-        .company-slides{
-            height: calc(7vw + 25px);
+        .company-slides {
             height: 120px;
-            // width: 126%;
-            margin-left: 50px;
-            .company{
-                // width: 12%;
+            
+            .company {
                 margin-right: 100px;
-                img{
-                    // padding: 7% 1.61%;
+                img {
                     width: 60px;
                     height: 60px;
                 }
             }
         }
 
-        .hover{
+        .hover {
             width: 200px !important;
             height: 200px !important;
-            img{
+            img {
                 width: 70px;
                 height: 70px;
             }
         }
 
-        button{
-            // padding: 0.5rem 10%;
+        button {
             margin-top: 4rem;
-            // width: 145px;
             font-size: 0.875rem;
-            // margin-left: 18%;
         }
     }
 
@@ -1190,16 +1337,7 @@
         font-size: 0.75rem;
     }
 
-    .slide-container:hover .company-slides{
-        animation-play-state: paused;
-    }
-
-    .company1:focus .hover1 {
-        display: block !important;
-        
-    }
-
-    .company-slides{
+    .company-slides {
         animation: 550s slide infinite linear;
     }
 

@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class IndexComponent {
   companyList: any[] = [];
-  pageSize = 50;
+  pageSize = 100;
   lastKey: string | undefined = undefined;
   loadedOnce: boolean = true;
   filterData: any = {
@@ -249,6 +249,12 @@ export class IndexComponent {
     }
    
     return logos;
+  }
+
+  getCompaniesForLine(lineIndex: number): any[] {
+    const companiesPerLine = Math.ceil(this.companyList.length / 3);
+    const start = lineIndex * companiesPerLine;
+    return this.companyList.slice(start, start + companiesPerLine);
   }
 
 //sending data through url
