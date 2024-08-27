@@ -32,14 +32,15 @@
         <div class="rows">
             <div class="intro d-flex">
                 <div class="grad grad-left1"><img src="assets/images/gradient-left1.png" alt=""></div>
-                <div class="content get-content" *ngIf="getReferral">
+                <!-- <div class="content get-content" *ngIf="getReferral"> -->
+                    <div class="content get-content">
                     <div class="title title1">
                         <!-- Supercharge your job search with Worko - Where Connection leads to Career -->
                         Secure your dream job 10X faster with a referral
                     </div>
                     <ul class="intro-ul">
                         <li class="para text">
-                            Stop begging for referrals on LinkedIn—request referral here within minutes!
+                            Stop Begging for Referrals on LinkedIn— <br>Get Referral Here Within Minutes!
                             <!-- Stand out as a top candidate with employee referrals. -->
                         </li>
                         <!-- <li class="para text content2">
@@ -47,29 +48,30 @@
                             process
                         </li> -->
                     </ul>
-
+                  
 
                     <div class="buttons">
                         <!-- <button  class="left-btn btn btn-dark font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
                         <button class="btn btn-light font-inria" (click)="openGetReferral()" > Give Referral </button> -->
                         <div class="buttons">
                             <button class="left-btn btn btn-dark font-inria" (mouseenter)="stopSwapping()"
-                                (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Get Referral
+                                (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Request a Referral
                             </button>
-                            <button class="btn btn-light font-inria" (mouseenter)="stopSwapping()"
-                                (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> Give Referral </button>
+                            <!-- <button class="btn btn-light font-inria" (mouseenter)="stopSwapping()"
+                                (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> Give Referral </button> -->
                         </div>
                     </div>
                 </div>
-
-                <div class="content give-content" *ngIf="giveReferral">
+                <div class="divider" style="border-left: 3px solid #f5efef;height: 75%; margin-top: 10%;margin-right: 4%;"></div>
+                <!-- <div class="content give-content" *ngIf="giveReferral"> -->
+                    <div class="content give-content" >
                     <div class="title title1">
                         Earn consistent referral bonuses every month
                         <!-- Discover success with Worko, where Referrals lead to rewarding outcomes -->
                     </div>
-                    <ul class="intro-ul">
+                    <ul class="intro-ul"  style="list-style-type: none; padding-left: 0;">
                         <li class="para text">
-                            Get top matched & Pre-vetted candidates only for referral 
+                            Get Top Matched & Verified <br>Candidates for Referral
                             <!-- AI-powered P2P hiring platform for flawless matching and thorough
                             vetting, boosting referral success rate. -->
                         </li>
@@ -81,27 +83,30 @@
                         <button  class="left-btn btn btn-light font-inria" (click)="redirectToCompanyListing()"> Get Referral </button>
                         <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button>
                     </div> -->
-                    <div class="buttons">
+                    <div class="buttons  ">
                         <!-- <button  class="left-btn btn btn-light font-inria"  (click)="redirectToCompanyListing()"> Get Referral </button>
                         <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button> -->
-                        <button class="left-btn btn btn-light font-inria" (mouseenter)="stopSwapping()"
-                            (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Get Referral </button>
+                        <!-- <button class="left-btn btn btn-light font-inria" (mouseenter)="stopSwapping()"
+                            (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Get Referral </button> -->
                         <button class="btn btn-dark font-inria" (mouseenter)="stopSwapping()"
-                            (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> Give Referral </button>
+                            (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> I Can Refer</button>
                     </div>
                 </div>
-                <div class="intro-image">
+                <!-- <div class="intro-image">
                     <img src="/assets/images/globe-img.png" alt="">
-                </div>
+                </div> -->
+                <!-- <div class="intro-image position-absolute" style="left: 33%; transform: translateX(-50%); top: 50%; transform: translateY(-50%);">
+                    <img src="/assets/images/ellipse.png" alt="">
+                </div> -->
 
             </div>
 
         </div>
         <div class="companies-section">
-            <div class="company-content">
+            <!-- <div class="company-content">
                 <div class="title">Join Our Platform And Work</div>
                 <div class="para">Alongside Employees At Top Companies</div>
-            </div>
+            </div> -->
 
             <div class="slide-container">
                 <div class="company-slides d-flex" *ngFor="let lineIndex of [0, 1, 2]">
@@ -486,7 +491,7 @@
             </div>
             <div class="review-button-container text-center"> 
                 <button class="btn btn-dark font-inria" (click)="redirectToCompanyListing()">
-                    Request Referral
+                    Request a Referral
                 </button>
                 </div>
             <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
