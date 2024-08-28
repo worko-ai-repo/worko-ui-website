@@ -3,8 +3,13 @@
 }
 
 /* INTRO SECTION BY thivya shree*/
+.main-div,.main-div1{
+    margin-left: 5%;
+}
 .intro {
-    height: 650px;
+    height: 530px;
+    display: flex;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 
@@ -15,6 +20,10 @@
 
     .divider {
         margin: 0 20px; /* Adjust spacing as needed */
+       border-left: 3px solid #f5efef;
+       height: 80%;
+        margin-top: 14%;
+        margin-right: 4%;
 
     }
 
@@ -31,11 +40,24 @@
     .para.text {
         line-height: 1.5;
     }
+    .content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between; /* Ensures content is distributed evenly */
+        min-height: 100%; /* Ensures both sections have equal height */
+    }
+ 
+    // .right-btn{
+    //     margin-top: 1.5rem;
+    // }
+
+    
+   
 }
 
 .how-it-works {
     padding-top: 7rem;
-    padding-left: 12%;
+    //padding-left: 12%; removing code for timeline
     // display: flex;
     // flex-direction: column;
     // align-items: center;
@@ -137,7 +159,7 @@
     padding-top: 10rem;
     display: flex;
     flex-wrap: wrap;
-    padding-left: 15%;
+    //padding-left: 15%; removing code for timeline
 
     .purpose-header {
         .purpose-title {
@@ -238,7 +260,7 @@
 }
 
 .candidate-section {
-    padding-left: 12%;
+   // padding-left: 12%; removing code for timeline
 }
 
 .candidate-text {
@@ -247,7 +269,7 @@
 
 .benefits-section {
     padding-top: 7rem;
-    padding-left: 12%;
+   // padding-left: 12%; removing code for timeline
 
     .benefits-title {
         font-size: calc(2vw + 25px);
@@ -392,7 +414,7 @@
 .stats-section {
     // justify-content: space-between;
     padding-top: 10 mnrem;
-    padding-left: 22%;
+   // padding-left: 22%; removing code for timeline
     width: 100%;
 
     .line-right {
@@ -418,9 +440,19 @@
     flex-direction: column;
 }
 
+
+@media(min-width:1251px){
+    .give-content{
+        height: 510px;
+     }
+}
+
 // ---------------Responsive for ipads---------------
 
 @media (max-width: 1025px) and (min-width: 480px) {
+    .main-div1{
+        margin-left: -10%;
+    }
     .side-timeline {
         padding-top: 2rem;
     }
@@ -522,6 +554,9 @@
             width: 65%;
             padding-top: 9rem;
         }
+        // .right-btn{
+        //     margin-top: 0rem;
+        // }
     }
 
     .intro-image {
@@ -532,13 +567,20 @@
         img {
             width: 100%;
         }
+        .divider {
+            height: 75%;
+        }
     }
 
     .intro-ul {
-        padding: 1rem 5%;
-        width: 115%;
+        // padding: 1rem 5%; removing code for timline
+        // width: 50%;
+        width: 90%;
         margin-bottom: 0;
+      
     }
+
+    
 
     .stats-section {
         // justify-content: space-between;
@@ -1278,8 +1320,8 @@
 
 
     .rows {
-        padding-left: 14%;
-        overflow: hidden;
+        //padding-left: 14%; removed code for timeline
+        //overflow: hidden;
     }
 
     .intro {
@@ -1292,9 +1334,19 @@
             padding-top: 3.5rem;
         }
 
-        .give-content {
-            width: 69.75%;
+        .divider{ // added code for timeline
+            height: 90%;
         }
+
+        // .right-btn{ // added code for timeline
+
+        //     margin-top: 1.5rem;
+        // }
+
+        // .give-content {
+        //    // width: 69.75%;
+        //   width: 66.75%; // added code for timeline
+        // }
     }
 
     .content2 {
@@ -1314,9 +1366,11 @@
     .intro-ul {
         padding: 0.4rem 0 0.7rem;
         // padding-left: 2%;
-        width: 126%;
+       
         margin-bottom: 0;
-        margin-left: 5%;
+        // margin-left: 5%; // removed code for timeline
+        // width: 126%;
+        //
     }
 
 
@@ -1335,8 +1389,9 @@
         }
 
         .stat-content {
-            padding-top: 0rem;
-            text-align: center;
+            padding-left: 1px; //added content for timeline
+            // padding-top: 0rem;  //removed  content for timeline
+            // text-align: center;
             font-size: calc(6.5px + 2vw);
         }
     }
@@ -1348,7 +1403,7 @@
     }
 
     .purpose-section {
-        padding-left: 13%;
+       // padding-left: 13%; removed code for timeline
         padding-top: 2rem;
 
         .purpose-header {
@@ -1422,7 +1477,7 @@
 
     .benefits-section {
         padding-top: 4rem;
-        padding-left: 9%;
+       // padding-left: 9%;  removed code for timeline
 
         .benefits-title {
             font-size: 18px;
@@ -1491,7 +1546,7 @@
 
     .candidate-section {
         padding-top: 2rem;
-        padding-left: 10%;
+        //padding-left: 10%;  removed code for timeline
 
         .candidate-title {
             letter-spacing: 5px;
@@ -1524,7 +1579,7 @@
     .stats-section {
         // justify-content: space-between;
         padding-top: 5rem;
-        padding-left: 19%;
+       // padding-left: 19%;  removed code for timeline
         width: 104%;
         justify-content: space-around;
 
@@ -1646,7 +1701,7 @@
 
             .title,
             .para {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
 
@@ -1837,7 +1892,7 @@
     }
 
     .how-it-works {
-        padding-left: 10%;
+       // padding-left: 10%;  removed code for timeline
         padding-top: 4rem;
 
         .how-it-works-header {

@@ -13,7 +13,7 @@
             <img src="assets/images/logo_bg.png" alt="">
         </div>
 
-        <div class="timeline">
+        <!-- <div class="timeline">
             <div class="side-timeline side-timeline-sm position-absolute">
                 <img src="assets/images/index-side-timelinesm.png" alt="">
             </div>
@@ -25,10 +25,10 @@
             <div class="side-timeline side-timeline-lg position-absolute">
                 <img src="assets/images/index-side-timeline.png" alt="">
             </div>
-        </div>
+        </div> -->
 
         <app-navbar></app-navbar>
-
+<div class="main-div">
         <div class="rows">
             <div class="intro d-flex">
                 <div class="grad grad-left1"><img src="assets/images/gradient-left1.png" alt=""></div>
@@ -40,7 +40,7 @@
                     </div>
                     <ul class="intro-ul">
                         <li class="para text">
-                            Stop Begging for Referrals on LinkedIn— <br>Get Referral Here Within Minutes!
+                            Stop Begging for Referrals on LinkedIn—Get Referral Here Within Minutes!
                             <!-- Stand out as a top candidate with employee referrals. -->
                         </li>
                         <!-- <li class="para text content2">
@@ -62,19 +62,21 @@
                         </div>
                     </div>
                 </div>
-                <div class="divider" style="border-left: 3px solid #f5efef;height: 75%; margin-top: 10%;margin-right: 4%;"></div>
+                <div class="divider"></div>
                 <!-- <div class="content give-content" *ngIf="giveReferral"> -->
                     <div class="content give-content" >
                     <div class="title title1">
                         Earn consistent referral bonuses every month
                         <!-- Discover success with Worko, where Referrals lead to rewarding outcomes -->
                     </div>
-                    <ul class="intro-ul"  style="list-style-type: none; padding-left: 0;">
+                    <ul class="intro-ul" >
                         <li class="para text">
-                            Get Top Matched & Verified <br>Candidates for Referral
+                            Get Top Matched & Verified Candidates for Referral
                             <!-- AI-powered P2P hiring platform for flawless matching and thorough
                             vetting, boosting referral success rate. -->
                         </li>
+                        
+                        
                         <!-- <li class="para text content2">
                             Help someone land their dream job
                         </li> -->
@@ -88,7 +90,7 @@
                         <button  class="btn btn-dark font-inria" (click)="openGetReferral()"> Give Referral </button> -->
                         <!-- <button class="left-btn btn btn-light font-inria" (mouseenter)="stopSwapping()"
                             (mouseleave)="resumeSwapping()" (click)="redirectToCompanyListing()"> Get Referral </button> -->
-                        <button class="btn btn-dark font-inria" (mouseenter)="stopSwapping()"
+                        <button class="btn btn-dark font-inria  right-btn" (mouseenter)="stopSwapping()"
                             (mouseleave)="resumeSwapping()" (click)="openGetReferral()"> I Can Refer</button>
                     </div>
                 </div>
@@ -102,11 +104,12 @@
             </div>
 
         </div>
+        </div>
         <div class="companies-section">
-            <!-- <div class="company-content">
+            <div class="company-content">
                 <div class="title">Join Our Platform And Work</div>
                 <div class="para">Alongside Employees At Top Companies</div>
-            </div> -->
+            </div>
 
             <div class="slide-container">
                 <div class="company-slides d-flex" *ngFor="let lineIndex of [0, 1, 2]">
@@ -162,7 +165,7 @@
         </div>
      
         <!-- purpose section -->
-
+<div class="main-div1">
         <div class="purpose-section position-relative">
 
             <div class="purpose-header">
@@ -443,7 +446,7 @@
                 <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">Request a referral</button>
             </div>
         </div>
-        
+       </div> 
 
         <!-- Review Section for the carousel -->
 

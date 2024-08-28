@@ -462,7 +462,8 @@ footer {
 }
 
 .index-section .grad-left2 {
-    left: 0;
+    //left: 0; removed code for timeline
+    left: -3.7rem 
 }
 
 .index-section .grad-right2 {
@@ -518,7 +519,7 @@ footer {
 
 
 .index-section .rows {
-    padding-left: 16%;
+   // padding-left: 16%; removing code for timeline
 }
 
 .index-section .intro {
@@ -542,13 +543,13 @@ footer {
 
 .index-section .intro-ul {
     padding: 2rem 5%;
-    width: 110%;
+   // width: 110%; remove code for timeline
 }
 
 .index-section .stats-section {
     justify-content: space-between;
     padding-top: 10rem;
-    padding-left: 21%;
+   // padding-left: 21%; removing code for timeline
     width: 98%;
     .line-right{
         border-right: 1px solid #fff;
@@ -595,6 +596,7 @@ footer {
     overflow: hidden;
     .slide-container{
         background-color: #fff;
+        margin-top: 5rem; //added code for timeline
     }
     .company-content {
         .title,
