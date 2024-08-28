@@ -23,6 +23,24 @@ export class IndexComponent {
   assetLogos: string[] = [];
   intervalId: any;
 
+  stepsList = [
+    {
+      image: 'assets/images/request-referral.png',
+      title: 'Request a Referral',
+      description: 'Choose the company, provide the job URL, and submit your referral request.'
+    },
+    {
+      image: 'assets/images/referred.png',
+      title: 'Get Accepted and Referred',
+      description: 'Your request will be matched with the best-suited employee from that company, who will then refer you.'
+    },
+    {
+      image: 'assets/images/stay-connected.png',
+      title: 'Stay Connected',
+      description: 'Get referred and receive insider guidance throughout the application process, boosting your chances of success.'
+    }
+  ];
+
   // For swapping Get referrals and give referrals buttons:
 
   async ngOnInit(): Promise<void> {

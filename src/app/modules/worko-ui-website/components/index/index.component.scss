@@ -33,6 +33,105 @@
     }
 }
 
+.how-it-works {
+    padding-top: 7rem;
+    padding-left: 12%;
+    // display: flex;
+    // flex-direction: column;
+    // align-items: center;
+
+    .how-it-works-header {
+        padding-bottom: 3rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        .how-it-works-title {
+            font-size: calc(2vw + 21px);
+            font-weight: 700;
+            line-height: 140%;
+            letter-spacing: 0em;
+            color: #000; 
+            background: -webkit-linear-gradient(270deg, #50D5FF 12.5%, #D1E4FB 76.04%);
+            background-clip: border-box;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+
+    .how-it-works-container {
+        display: flex;
+        justify-content: center; // Center align cards horizontally
+        width: 100%;
+        flex-wrap: wrap; // Ensure cards wrap to the next line on smaller screens
+        // gap: 1.5rem; // Add space between the cards for better spacing
+    }
+
+    .how-it-works-card {
+        flex: 0 1 28%; // Flex-grow: 0, Flex-shrink: 1, Flex-basis: 30%
+        // max-width: 320px; // Ensure the card doesn’t get too wide on larger screens
+        margin: 2rem 1.5%;
+        padding: 2rem 1rem;
+        border: 1px solid #57e1ff;
+        // border-radius: 10px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: translateY(-5px);
+            cursor: pointer;
+        }
+
+        .how-it-works-image {
+            display: flex;
+            justify-content: center;
+            padding: 2.6rem 0 1rem;
+
+            img {
+                max-width: 80px;
+                max-height: 80px;
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        /* Adjusting the size for the second image */
+        .small-image img {
+            max-width: 60px;
+            max-height: 60px;
+        }
+
+        .how-it-works-title {
+            // font-size: calc(1.5vw + 5px);
+            font-weight: 600;
+            line-height: 120%;
+            margin: 1rem auto;
+            font-size: 1.5rem;
+        }
+
+        .how-it-works-text {
+            text-align: center;
+            margin: auto;
+            line-height: 130%;
+            font-size: 1rem;
+        }
+    }
+
+    .how-it-works-button-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 3rem;
+    }
+
+    .how-it-works-button-container button {
+        border-radius: 8px;
+        padding: 0.5rem 50px;
+        font-size: 1.5rem;
+    }
+        
+}
+
 
 .purpose-section {
     padding-top: 10rem;
@@ -899,6 +998,45 @@
         transition: margin-left 1s ease;
     }
 
+    .how-it-works {
+        padding-top: 7rem;
+        padding-left: 12%;
+
+        .how-it-works-header {
+            .how-it-works-title {
+                font-size: calc(2vw + 22px); // title size
+                padding-bottom: 1rem;
+            }
+        }
+
+        .how-it-works-container {
+            flex-wrap: wrap;
+            // gap: 1.5rem;
+        }
+
+        .how-it-works-card {
+            flex: 0 1 43%; // Allow cards to be 2 per row
+            max-width: 48%;
+            margin: 1rem;
+            padding: 1.5rem;
+
+            .how-it-works-title {
+                // font-size: calc(1.25vw + 5px);
+                font-size: 1rem;
+            }
+
+            .how-it-works-text {
+                // font-size: calc(1vw + 5px);
+                font-size: 0.875rem;
+            }
+        }
+
+        .how-it-works-button-container button {
+            padding: 0.5rem 40px;
+            font-size: 1.25rem;
+        }
+    }
+
 }
 
 .review-button-container {
@@ -982,6 +1120,56 @@
             }
         }
 
+    }
+
+    .how-it-works {
+        padding-left: 13%;
+        padding-top: 5rem;
+
+        .how-it-works-header {
+            .how-it-works-title {
+                // font-size: calc(1.5vw + 16px);
+                font-size: 1rem;
+                padding-bottom: 0.5rem;
+            }
+        }
+
+        // .how-it-works-container {
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
+
+        .how-it-works-container {
+            // justify-content: space-around;
+        }
+
+        .how-it-works-card {
+            // width: 45%;
+            // margin-bottom: 2rem; 
+            // padding: 1.5rem;
+
+        width: 43%;
+        margin: 0.8rem 2.5%;
+
+            .how-it-works-image {
+                padding: 1.6rem 0 1rem;
+            }
+
+            .how-it-works-title {
+                // font-size: 1.5rem;
+                font-size: 1rem;
+            }
+
+            .how-it-works-text {
+                // font-size: 1rem;
+                font-size: 0.875rem;
+            }
+        }
+
+        .how-it-works-button-container button {
+            padding: 0.5rem 30px;
+            font-size: 1.125rem;
+        }
     }
 
 }
@@ -1647,6 +1835,51 @@
         transition: margin-left 1s ease;
         display: flex;
     }
+
+    .how-it-works {
+        padding-left: 10%;
+        padding-top: 4rem;
+
+        .how-it-works-header {
+            .how-it-works-title {
+                // font-size: calc(1.5vw + 10px);
+                font-size: 1rem; // Smaller title size
+            }
+        }
+
+        // .how-it-works-container {
+        //     flex-direction: column;
+        //     align-items: center;
+        // }
+
+        .how-it-works-container {
+            flex-direction: row; /* Keep row layout */
+            flex-wrap: wrap;
+            // justify-content: space-around;
+        }
+
+        .how-it-works-card {
+            // margin-bottom: 1.5rem;
+            // padding: 1rem;
+            flex: 0 1 43%;
+            // width: 43%;
+            margin: 0.8rem 2.5%;
+            padding: 0.25rem;
+
+            .how-it-works-title {
+                font-size: 0.875rem;
+            }
+
+            .how-it-works-text {
+                font-size: 0.75rem;
+            }
+        }
+
+        .how-it-works-button-container button {
+            padding: 0.5rem 20px;
+            font-size: 1rem;
+        }
+    }
 }
 
 @media (min-width: 1750px) {
@@ -1686,6 +1919,25 @@
 
     .review-cards {
         width: 565vw;
+    }
+
+    .how-it-works {
+        max-width: 1540px;
+        margin: auto;
+    }
+
+    .how-it-works-container {
+        justify-content: space-between;
+    }
+
+    .how-it-works-card {
+        .how-it-works-title {
+            font-size: 1.75rem;
+        }
+
+        .how-it-works-text {
+            font-size: 1.25rem;
+        }
     }
 
 }

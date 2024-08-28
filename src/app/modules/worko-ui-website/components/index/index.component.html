@@ -422,6 +422,29 @@
 
         </div> -->
 
+        <!-- how it works section  -->
+
+        <div class="how-it-works position-relative">
+            <div class="how-it-works-header text-center">
+                <div class="how-it-works-title title">How It Works</div>
+            </div>
+        
+            <div class="how-it-works-container">
+                <div class="how-it-works-card" *ngFor="let step of stepsList; let i = index">
+                    <div class="how-it-works-image" [ngClass]="{'small-image': i === 1}">
+                        <img [src]="step?.image" alt="">
+                    </div>
+                    <div class="how-it-works-title">{{ step?.title }}</div>
+                    <div class="how-it-works-text">{{ step?.description }}</div>
+                </div>
+            </div>
+        
+            <div class="how-it-works-button-container text-center">
+                <button (click)="redirectToCompanyListing()" class="btn btn-dark font-inria">Request a referral</button>
+            </div>
+        </div>
+        
+
         <!-- Review Section for the carousel -->
 
         <div class="reviews-section  position-relative">
@@ -489,11 +512,6 @@
                 <div class="arrow-button right" (click)="nextReview()" [class.disabled]="nextButtonDisabled"><img
                         src="/assets/images/right-logo.png" alt="right"></div>
             </div>
-            <div class="review-button-container text-center"> 
-                <button class="btn btn-dark font-inria" (click)="redirectToCompanyListing()">
-                    Request a Referral
-                </button>
-                </div>
             <div class="grad grad-right4"><img src="assets/images/gradient-right4.png" alt=""></div>
         </div>
 
