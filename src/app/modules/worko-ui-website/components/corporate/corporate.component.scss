@@ -1,4 +1,6 @@
-
+.main-div{
+    margin-left: 1%;
+}
 .form-button{
     border-radius: 50px;
     background-color: #57E1FF;
@@ -134,7 +136,8 @@
 }
 
 .gradient-right3 {
-    right: -5.6%;
+   // right: -5.6%;
+   right: -17.6% ;//added code for timeline
     top: 0;
 }
 
@@ -162,7 +165,7 @@
     display: flex;
     width: 90%;
     margin: auto;
-    padding-left: 10%;
+  //  padding-left: 10%; remove timeline code
     .content{
         width: 50%;
         padding-left: 2%;
@@ -187,7 +190,7 @@
     .column{
         flex-direction: column;
         
-        margin-left: 13%;
+       // margin-left: 13%; remove timeline code
         align-items: center;
         .content-heading{
             font-size: max( 3.2vw, 30px); 
@@ -257,7 +260,7 @@
             flex: 1;
             width: 46%;
             padding-left: 3%;
-            margin-left: 15%;
+           // margin-left: 15%; removed code for timeline
             grid-template-columns: 1fr 1fr;
                 .corporate-benefit-item{
                     display: grid;
@@ -289,6 +292,8 @@
                 img{
                     width: 100%;
                     height: 100%;
+                    margin-bottom: 58%;  //added code for timeline
+ 
                 }
             }
         }
@@ -303,7 +308,7 @@
         flex-direction: column;
         align-items: center;
         width: 95%;
-        padding-left: 10%;
+       // padding-left: 10%; removed code for timeline
         p{
             padding-top: 1rem;
             width: 85%;
@@ -316,7 +321,8 @@
         display: flex;
         justify-content: space-between;
         width: 75%;
-        margin-left: 17%;
+      //  margin-left: 17%; removed code for timeline
+        margin-left: 12%;
         .card{
             // background-image: url("assets/corporate-images/card-gradient.png");
             background-color: #EEEEEE;
@@ -362,7 +368,8 @@
 /* CHARGE SECTION END */
 
 .form{
-    margin: 9rem 3% 5rem auto;
+   // margin: 9rem 3% 5rem auto;
+   margin: 9rem 3% 5rem 6rem; //added code for timeline
     padding: 2rem 0 1rem;
     width: 80%;
     height: 940px;
@@ -1165,7 +1172,7 @@ width: 100%;
         padding-top: 3rem;
         .content{
             width: 100%;
-            padding-left: 11%;
+           // padding-left: 11%; removed code for timeline
             .content-heading{
                 font-size: 20px;
             }
@@ -1201,8 +1208,14 @@ width: 100%;
         margin-top: 0rem;
         padding-top: 0rem;
         width: 77%;
+      
         .form-content{
             padding-top: 3rem;
+            //added code for timeline
+            padding-right: 5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             .content-heading{
                 padding-bottom: 0;
                 padding-top: 1rem;
@@ -1215,6 +1228,7 @@ width: 100%;
         }
         .form-sm{
             display: block;
+            margin-left: -41px; //added code for timeline
         }
 
         .content{
@@ -1230,7 +1244,7 @@ width: 100%;
             align-items: center;
             margin-top: 0.5rem;
             .left-col{
-                width: 80%;
+                width: 100%;
                 margin: auto;
                 .input{
                     width: 100%;
