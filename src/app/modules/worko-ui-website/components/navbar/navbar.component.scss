@@ -47,9 +47,9 @@ li{
 .btn-dark{
     background-color: rgb(87, 225, 225) !important;
     color: #182b45 !important;
-    font-size: calc(1vw + 14px);
+    //font-size: calc(1vw + 14px);
     width: 100%;
-    padding: 0.2rem 0.5rem;
+    padding: 0.1rem 0.5rem;
     border: 5px solid rgb(87 204 255) !important; 
     font-weight: 500;
 }
@@ -78,6 +78,7 @@ li{
     .user-icon{
         width: 35px;
     }
+   
 }
 
 @media (max-width: 575px) {
@@ -128,6 +129,10 @@ li{
     .navbar-container input[type="checkbox"]{
         
         top: 20px !important;
+    }
+
+    .btn-dark{
+        margin-left: -1rem;
     }
 
 }

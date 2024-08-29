@@ -6,6 +6,14 @@
 .main-div,.main-div1{
     margin-left: 5%;
 }
+
+
+.btn-dark {
+
+    padding: 0.1rem 0.5rem;
+
+}
+
 .intro {
     height: 530px;
     display: flex;
@@ -164,6 +172,7 @@
     .purpose-header {
         .purpose-title {
             padding-bottom: 1rem;
+            margin-right: 2rem;
         }
 
         .purpose-content {
@@ -198,6 +207,7 @@
             width: 90%;
             margin: auto;
             font-size: 1.5rem;
+           
         }
 
         .purpose-text {
@@ -422,7 +432,7 @@
     }
 
     .line-right1 {
-        padding-left: 19%;
+        padding-left: 26%;
         position: absolute;
         padding-top: 3rem;
         margin-top: 1rem;
@@ -436,14 +446,15 @@
 
 .stat {
 
-    align-items: start;
+  //  align-items: start;
+    align-items: center; //added code for timeline
     flex-direction: column;
 }
 
 
 @media(min-width:1251px){
     .give-content{
-        height: 510px;
+        height: 480px;
      }
 }
 
@@ -516,7 +527,7 @@
         color: #182b45;
         font-size: calc(1vw + 6px);
         border: 1px solid rgb(87, 225, 255);
-        padding: 0.5rem 6%;
+        padding: 0.2rem 6%;
         border-radius: 8px;
     }
 
@@ -585,8 +596,10 @@
     .stats-section {
         // justify-content: space-between;
         padding-top: 8rem;
-        padding-left: 21%;
-        width: 102%;
+        // padding-left: 21%; removing code for timline
+        // width: 102%;
+        padding-left: 15%; //added code for timeline
+        width: 97%;
 
         .line-right1 {
             padding-left: 21%;
@@ -602,7 +615,7 @@
     }
 
     .stat {
-        align-items: start;
+        align-items: center;
         flex-direction: column;
 
         // align-items: start;
@@ -631,6 +644,7 @@
                 // padding-bottom: 1rem;
                 font-size: calc(2vw + 22px);
                 padding-bottom: 0.5rem;
+                
             }
 
             .purpose-content {
@@ -1219,6 +1233,9 @@
 // ---------------Responsive for Mobile---------------
 
 @media (max-width: 480px) {
+    .main-div1{
+        margin-left: 5%;
+    }
 
     .side-timeline {
         display: none;
@@ -1287,7 +1304,7 @@
         color: #182b45;
         font-size: calc(1vw + 6px);
         border: 1px solid rgb(87, 225, 255);
-        padding: 0.5rem 6%;
+        padding: 0.2rem 6%;
         border-radius: 8px;
     }
 
@@ -1413,6 +1430,7 @@
                 padding-bottom: 0.5rem;
                 // font-size: 16px;
                 font-size: 1rem;
+                margin-right: 0rem;
             }
 
             .purpose-content {
