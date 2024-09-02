@@ -17,6 +17,7 @@
     background: linear-gradient(to bottom right, #000 30%, #1E2C3F 70%);
 }
 
+
 .top-header-bg{
     position:absolute;
     top: 0;
@@ -63,6 +64,9 @@
     line-height: 160%;
     letter-spacing: 0em;
     text-align: left;
+}
+.title-heads{
+    line-height: 3rem !important;
 }
 
 .row-heading{
@@ -805,9 +809,10 @@
 .column ul::after {
     content: "";
     grid-column: 2;
-    margin-top:70px;
-    grid-row: 1 / 13;
-    border-left:4px dotted white; ;
+    margin-top:71px;
+    grid-row: 1 / 12;
+    border-left:4px dotted white; 
+    height: calc(100% - 6rem); /* Adjust this value to ensure the line ends at the last circle */
  
   }
 /*STEPPER CIRCLE*/

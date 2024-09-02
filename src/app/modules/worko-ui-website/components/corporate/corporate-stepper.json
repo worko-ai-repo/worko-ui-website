@@ -12,9 +12,9 @@
     { "type": "imgcard", "class": "four", "src": "assets/images/corporateimage4.png" },
     
     { "type": "imgcard", "class": "five", "src": "assets/images/corporateimage5.png" },
-    { "type": "datacard", "class": "five", "title": "Rewards for Success:", "content": "Employees receive their referral bonuses after the candidate is successfully hired." ,"step":"5"},
+    { "type": "datacard", "class": "five", "title": "Share the Stars:", "content": "Selected candidates are forwarded to your hiring managers for final consideration." ,"step":"5"},
     
-    { "type": "datacard", "class": "six", "title": "Top-Matched Candidate Requests:", "content": "Best-fit candidates request referrals." ,"step":"6"},
+    { "type": "datacard", "class": "six", "title": "Rewards for Success:", "content": "Employees receive their referral bonuses after the candidate is successfully hired." ,"step":"6"},
     { "type": "imgcard", "class": "six", "src": "assets/images/corporateimage6.png" }
     ]
   
