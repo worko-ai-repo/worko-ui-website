@@ -119,17 +119,18 @@
             padding: 2.6rem 0 1rem;
 
             img {
-                max-width: 80px;
-                max-height: 80px;
-                width: 100%;
+                // max-width: 80px;
+                // max-height: 80px;
+                width: 60%;
                 height: auto;
             }
         }
 
         /* Adjusting the size for the second image */
         .small-image img {
-            max-width: 60px;
-            max-height: 60px;
+            // max-width: 60px;
+            // max-height: 60px;
+            width: 36%;
         }
 
         .how-it-works-title {
@@ -164,7 +165,7 @@
 
 
 .purpose-section {
-    padding-top: 10rem;
+    padding-top: 7rem;
     display: flex;
     flex-wrap: wrap;
     //padding-left: 15%; removing code for timeline
