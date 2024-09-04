@@ -242,8 +242,9 @@ hr{
 
 .apart{
     padding-top: 7rem;
-    padding-left: 7vw;  
-    width: 80%;
+  //  padding-left: 7vw; 
+    padding-left: 1rem; 
+    width: 90%;
 
     .apart-image{
         width: 100%;
@@ -263,8 +264,8 @@ hr{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
-    width: 60%;
-     margin-left: 14%; 
+    width: 90%;
+    // margin-left: 14%; 
 }
 
 .feature-card{
@@ -594,9 +595,9 @@ textarea{
 
     .feature-cards{
         padding-top: 50px;
-        width: 80%; 
+        width: 90%; 
        //margin-left: 13%;  remove timeline code
-       margin-left: 8%;
+       //margin-left: 8%;
     }
 
     .feature-card{
