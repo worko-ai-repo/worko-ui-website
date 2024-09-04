@@ -926,6 +926,15 @@ width: 100%;
 
 @media (max-width: 480px) {
 
+    .grad {
+        opacity: 40%;
+        width: 70%;
+
+        img {
+            width: 100%;
+        }
+    }
+
     .column ul{
         row-gap: 0.25rem;
     }
@@ -944,6 +953,10 @@ width: 100%;
     .content-paragraph{
         line-height: 125%;
         font-size: 11px;
+    }
+
+    .corporate-stepper-imgcard img{
+        width: 85%;
     }
 
     .corporate-benefits{
