@@ -3,7 +3,10 @@
 }
 
 /* INTRO SECTION BY thivya shree*/
-.main-div,.main-div1{
+.main-div{
+    margin: auto 5% auto;
+}
+.main-div1{
     margin-left: 5%;
 }
 
@@ -15,7 +18,9 @@
 }
 
 .intro {
-    height: 530px;
+     height: 480px;
+   
+
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -31,7 +36,6 @@
        border-left: 3px solid #f5efef;
        height: 80%;
         margin-top: 14%;
-        margin-right: 4%;
 
     }
 
@@ -49,10 +53,12 @@
         line-height: 1.5;
     }
     .content {
+        flex: 1;
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Ensures content is distributed evenly */
         min-height: 100%; /* Ensures both sections have equal height */
+        flex-grow: 1;
     }
  
     // .right-btn{
@@ -560,7 +566,7 @@
     }
 
     .intro {
-        height: 474px;
+        height: 405px;
 
         .content {
             width: 65%;
@@ -587,7 +593,7 @@
     .intro-ul {
         // padding: 1rem 5%; removing code for timline
         // width: 50%;
-        width: 90%;
+        width: 95%;
         margin-bottom: 0;
       
     }
@@ -1260,7 +1266,8 @@
     }
 
     .top-header-bg {
-        width: 50%;
+      //  width: 50%; removed code for timeline
+        width: 216px;
 
         img {
             width: 100%;
@@ -1344,7 +1351,7 @@
 
     .intro {
 
-        padding-top: 3rem;
+       // padding-top: 3rem;  removed code for timeline
         height: 320px;
 
         .content {
