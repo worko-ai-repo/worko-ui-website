@@ -35,6 +35,23 @@
 
     }
 
+    .divider-container {
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      height: 100%;
+      position: relative;
+      margin-top: 14%;
+    // margin-right: 4%;
+    }
+  
+  /* Vertical line */
+    .vertical-line {
+      width: 2px; 
+      height: 85%;
+      background-color: #fff;
+    }
+
     .title {
         font-size: calc(9.4px + 2vw);
    
@@ -49,18 +66,18 @@
         line-height: 1.5;
     }
     .content {
+        width: 40%;
         display: flex;
         flex-direction: column;
         justify-content: space-between; /* Ensures content is distributed evenly */
         min-height: 100%; /* Ensures both sections have equal height */
     }
- 
     // .right-btn{
     //     margin-top: 1.5rem;
     // }
 
-    
-   
+
+
 }
 
 .how-it-works {
@@ -563,7 +580,7 @@
         height: 474px;
 
         .content {
-            width: 65%;
+            width: 45%;
             padding-top: 9rem;
         }
         // .right-btn{
@@ -1348,13 +1365,24 @@
         height: 320px;
 
         .content {
-            width: 68%;
+            width: 45%;
             padding-top: 3.5rem;
         }
 
         .divider{ // added code for timeline
             height: 90%;
         }
+
+        .divider-container {
+            margin-top: 14%;
+          // margin-right: 4%;
+          }
+        
+        /* Vertical line */
+          .vertical-line {
+            width: 2px; 
+            height: 90%;
+          }
 
         // .right-btn{ // added code for timeline
 
@@ -1712,6 +1740,19 @@
     //     animation: 550s slide infinite linear;
     // }
 
+    /* Redefine the keyframes specifically for smaller screens */
+    @keyframes slide-small {
+        0% {
+            transform: translateX(0);
+        }
+        // 98% {
+        //     transform: translateX(-250%);
+        // }
+        100% {
+            transform: translateX(-250%);
+        }
+    }
+
     .companies-section {
         padding-top: 4rem;
 
@@ -1758,8 +1799,10 @@
         font-size: 0.75rem;
     }
 
+    /* Applying the animation using the new keyframes */
     .company-slides {
-        animation: 550s slide infinite linear;
+        animation: 40s slide-small infinite linear;
+        // animation-fill-mode: forwards;
     }
 
     .info-section {
