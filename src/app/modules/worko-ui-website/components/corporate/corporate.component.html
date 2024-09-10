@@ -34,9 +34,9 @@
                 <img class="gradient-img" src="assets/images/gradient-left1.png" alt="Gradient Left 1">
             </div> -->
             <div class="content">
-                <div class="content-heading section-head title-head">
+                <h2 class="content-heading section-head title-head">
                     Introduction
-                </div>
+                </h2>
                 <p class="content-paragraph para">
                     Welcome to Worko.ai – where P2P hiring transforms the way you discover
                     talent, streamline your hiring process, and revolutionize your workforce.
@@ -56,9 +56,9 @@
         <div class="works position-relative">
             <div class="grad grad-left2"><img src="assets/images/gradient-left2.png" alt=""></div>
             <div class="column d-flex">
-                <div class="content-heading section-head title-head">
+                <h2 class="content-heading section-head title-head">
                     How it works
-                </div>
+                </h2>
                 <ul>
                     <!-- Conditionally render the component based on the type of the item  parent_class:Corporate-stepper ? datacard:imgcard -->
                     <li *ngFor="let item of items" [ngClass]="{'corporate-stepper-imgcard': item.type === 'imgcard', 'corporate-stepper-datacard': item.type === 'datacard', 'one': item.class === 'one', 'two': item.class === 'two', 'three': item.class === 'three', 'four': item.class === 'four', 'five': item.class === 'five', 'six': item.class === 'six'}">
@@ -68,9 +68,9 @@
                       </div>
                       <!-- datacard -->
                       <div *ngIf="item.type === 'datacard'" class="corporate-stepper-content">
-                        <div class="corporate-stepper-title section-head title-heads" [attr.data-step]="item.step">
+                        <h3 class="corporate-stepper-title section-head title-heads" [attr.data-step]="item.step">
                           {{ item.title }}
-                        </div>
+                        </h3>
                         <p class="para">
                           {{ item.content }}
                         </p>
@@ -85,17 +85,17 @@
         <div class="corporate-benefits">
             <div class="grad grad-left2"><img src="assets/images/gradient-left2.png" alt=""></div>
             <!-- benefits heading -->
-            <div class="content-heading section-head">
+            <h3 class="content-heading section-head">
                 Benefits for Corporate
-            </div>
+            </h3>
             <!-- benefits filter -->
             <div class="benefits-heading-item position-relative">
-                <div class="head2 section-head d-flex">
+                <h4 class="head2 section-head d-flex">
                     <div class="img icons" style="--bg-color: #fb960827;">
                         <img src="assets/icons/filter.png" alt="">
                     </div>
                     Ultra-Filtered CVs:
-                </div>
+                </h4>
                 <p class=" para">
                     Enjoy a three-tier filtering system that ensures every CV reaching your hiring manager
                     has been rigorously vetted by Worko.ai's AI algorithm, undergone background verification,
@@ -115,9 +115,9 @@
                         <div class="img icons" style="--bg-color: #08fb0c27;">
                             <img src="assets/icons/corporate-cv-icon.png" alt="">
                         </div>
-                        <div class="head2 section-head d-flex">
+                        <h4 class="head2 section-head d-flex">
                             Junk CV Elimination:
-                        </div>
+                        </h4>
                         <p class="para">
                             Referees are incentivized to maintain a high referral standard with a limit of six referrals per month, ensuring quality over quantity. Ratings based on referral success further enhance CV quality.
                         </p>
@@ -127,9 +127,9 @@
                         <div class="img icons" style="--bg-color: #0824fb27;">
                             <img src="assets/icons/employee-icon.png" alt="">
                         </div>
-                        <div class="head2 section-head d-flex">
+                        <h4 class="head2 section-head d-flex">
                             Employee Motivation:
-                        </div>
+                        </h4>
                         <p class="para">
                             Boost employee morale with a referral bonus system, fostering active participation and engagement in the hiring process.
                         </p>
@@ -139,9 +139,9 @@
                         <div class="img icons" style="--bg-color: #fbe70827;">
                             <img src="assets/icons/time-icon.png" alt="">
                         </div>
-                        <div class="head2 section-head d-flex">
+                        <h4 class="head2 section-head d-flex">
                             Significant Time Savings:
-                        </div>
+                        </h4>
                         <p class="para">
                             With all roles undergoing three-level filtration, companies can save up to 70% of manhours typically spent on interviewing multiple candidates for a single position.
                         </p>
@@ -151,9 +151,9 @@
                         <div class="img icons" style="--bg-color: rgba(251, 138, 8, 0.176);">
                             <img src="assets/icons/hiring-icon.png" alt="">
                         </div>
-                        <div class="head2 section-head d-flex">
+                        <h4 class="head2 section-head d-flex">
                             Accelerated Hiring Timeline:
-                        </div>
+                        </h4>
                         <p class="para">
                             Benefit from a streamlined process that significantly reduces the hiring timeline without compromising on quality.
                         </p>
@@ -179,9 +179,9 @@
         <div class="charge position-relative">
 
             <div class="content ">
-                <div class="content-heading section-head">
+                <h3 class="content-heading section-head">
                     WE CHARGE
-                </div>
+                </h3>
                 <p class="content-paragraph para">
                     We strive to deliver outstanding results that exceed your expectations.
                     To achieve this, we have developed a results-driven model that focuses on
@@ -242,9 +242,9 @@
             </div>
             <div class="form-content">
                 <div class="content ">
-                    <div class="content-heading section-head">
+                    <h3 class="content-heading section-head">
                         Lets Talk
-                    </div>
+                    </h3>
                     <div class="content-paragraph para">
                         Let Us Help You Find the Perfect Talent for Your Team
                     </div>

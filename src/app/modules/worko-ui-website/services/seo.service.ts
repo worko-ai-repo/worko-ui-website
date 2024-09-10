@@ -25,6 +25,14 @@ export class SeoService {
     this.meta.updateTag({ name: 'robots', content });
   }
 
+  updateMetaDescription(description: string) {
+    this.meta.updateTag({ name: 'description', content: description });
+  }
+
+  updateMetaTitle(title: string) {
+    this.titleService.setTitle(title);
+  }
+
   urlNeedsIndexing(url: string): boolean {
     const indexableUrls = ['', '/', '/faq', '/corporate', '/about-us'];
     return indexableUrls.includes(url);

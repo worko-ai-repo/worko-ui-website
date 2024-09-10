@@ -82,9 +82,29 @@
 //     color: #020c17;
 //   }
   
-  .heading-content{
+  .heading-content {
     font-size: 22px;
+    line-height: 1.4;
+    font-weight: bold;
+    width: 90%;
+    // margin-bottom: 10px;
   }
+
+/* Add list-like styling to p tags for answers */
+.answer {
+  position: relative;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.answer::before {
+  content: '•'; /* Bullet character */
+  position: absolute;
+  left: 0;
+  color: #fff;
+  font-size: 24px;
+  line-height: 24px;
+}
   
   
   // accordion css
@@ -120,11 +140,18 @@
     
   .accordion-content {
     display: none;
-    padding: 10px 30px;
+    padding: 10px 10px;
   }
   
   .accordion-content.open {
     display: block;
+  }
+
+  .accordion-content p {
+    font-size: 18px;
+    line-height: 24px;
+    // margin-bottom: 16px;
+    padding-left: 1.5rem;
   }
   
   .toggle-symbol {
@@ -186,19 +213,27 @@
       padding-top: 2rem;
     }
   
-    .heading-content{
-      font-size: 18px;
-    }
+    // .heading-content{
+    //   font-size: 18px;
+    // }
   
     ul li{
       font-size: 1rem;
     }
   
     .accordion-content{
-      padding: 0 15px;
+      padding: 0 10px;
     }
   
     .title2{
       padding-top: 0.5rem;
+    }
+
+    .heading-content {
+      font-size: 18px; /* For smaller screens */
+    }
+  
+    .accordion-content p {
+      font-size: 1rem; /* Matches previous li styles for smaller screens */
     }
   }

@@ -34,10 +34,10 @@
                 <div class="grad grad-left1"><img src="assets/images/gradient-left1.png" alt=""></div>
                 <!-- <div class="content get-content" *ngIf="getReferral"> -->
                     <div class="content get-content">
-                    <div class="title title1">
+                    <h1 class="title title1">
                         <!-- Supercharge your job search with Worko - Where Connection leads to Career. -->
                         Secure Your Dream Job 10X Faster With a Referral
-                    </div>
+                    </h1>
                     <ul class="intro-ul">
                         <li class="para text">
                             Stop Begging for Referrals on LinkedIn,<br> 
@@ -69,10 +69,10 @@
                 <!-- <div class="divider"></div> -->
                 <!-- <div class="content give-content" *ngIf="giveReferral"> -->
                     <div class="content give-content" >
-                    <div class="title title1">
+                    <h2 class="title title1">
                         Earn Consistent Referral Bonuses Every Month
                         <!-- Discover success with Worko, where Referrals lead to rewarding outcomes -->
-                    </div>
+                    </h2>
                     <ul class="intro-ul" >
                         <li class="para text">
                             Get Top Matched & Verified Candidates to Refer
@@ -111,8 +111,8 @@
         </div>
         <div class="companies-section">
             <div class="company-content">
-                <div class="title">Join Our Platform And Work</div>
-                <div class="para">Alongside Employees At Top Companies</div>
+                <h2 class="title">Join Our Platform And Work</h2>
+                <h3 class="para">Alongside Employees At Top Companies</h3>
             </div>
 
             <div class="slide-container">
@@ -174,7 +174,7 @@
             <div class="grad grad-left2"><img src="assets/images/gradient-left2.png" alt=""></div>
 
             <div class="purpose-header">
-                <div class="purpose-title title text-center">Our Purpose</div>
+                <h2 class="purpose-title title text-center">Our Purpose</h2>
                 <div class="purpose-content para text-center">
                     We empower individuals and businesses by fostering
                     connections, improving the hiring process, and creating
@@ -187,7 +187,7 @@
                     <div class="purpose-image">
                         <img [src]="purpose?.image" alt="">
                     </div>
-                    <div class="purpose-title" [ngClass]="{'last-card': i === 5}">{{ purpose?.title }}</div>
+                    <h3 class="purpose-title" [ngClass]="{'last-card': i === 5}">{{ purpose?.title }}</h3>
                     <div class="purpose-text" [ngClass]="{'last-card-content': i === 5}">{{ purpose?.text }}</div>
                 </div>
             </div>
@@ -197,14 +197,14 @@
 
         <div class="benefits-section position-relative">
             <div class="grad grad-left2"><img src="assets/images/gradient-left2.png" alt=""></div>
-            <div class="benefits-title title text-center">Benefits for You</div>
+            <h3 class="benefits-title title text-center">Benefits for You</h3>
             <div class="benefits-content para para2 text-center" style="width: 65%; margin: auto; line-height: 140%;">
                 Worko is committed to addressing common challenges faced by candidates,
                 ensuring a seamless and empowering job search journey:
             </div>
 
             <div class="referee-section ">
-                <div class="referee-title text-center title">REFEREE</div>
+                <h3 class="referee-title text-center title">REFEREE</h3>
                 <div class="referee-subtitle text-center">I CAN REFER</div>
                 <div class="referee-cards">
                     <div class="referee-card position-relative" *ngFor="let benefit of refereeBenefits; let i = index;">
@@ -225,8 +225,8 @@
 
         <div class="candidate-section position-relative">
 
-            <div class="candidate-title text-center title referee-title">CANDIDATE</div>
-            <div class="candidate-subtitle text-center referee-subtitle">I'M LOOKING FOR JOB!</div>
+            <h3 class="candidate-title text-center title referee-title">CANDIDATE</h3>
+            <h4 class="candidate-subtitle text-center referee-subtitle">I'M LOOKING FOR JOB!</h4>
             <div class="candidate-cards">
                 <div class="bcandidate-card position-relative" *ngFor="let benefit of candidateBenefits; let i=index;">
                     <div class="candidate-img referee-image">
@@ -458,7 +458,7 @@
         <div class="reviews-section  position-relative">
             <div class="reviews-heading d-flex">
                 <div class="reviews-content">
-                    <div class="sub-title">What Our Customer Says?</div>
+                    <h3 class="sub-title">What Our Customer Says?</h3>
                     <div class="text">
                         Discover what our users have to say about their experience with
                         Worko and how Worko has transformed their job-search experiences.

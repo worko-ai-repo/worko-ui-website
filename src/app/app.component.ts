@@ -34,6 +34,8 @@ export class AppComponent implements OnInit {
 
       if (this.seoService.urlNeedsIndexing(event.urlAfterRedirects)) {
         this.seoService.updateRobots('index, follow');
+        this.updateMetaTitleForUrl(event.urlAfterRedirects);
+        this.updateMetaDescriptionForUrl(event.urlAfterRedirects);
       } 
       // else {
       //   this.seoService.updateRobots('noindex, nofollow');
@@ -45,10 +47,38 @@ export class AppComponent implements OnInit {
     this.seoService.updateCanonicalUrl(window.location.href);
     if (this.seoService.urlNeedsIndexing(url)) {
       this.seoService.updateRobots('index, follow');
+      this.updateMetaTitleForUrl(url);
+      this.updateMetaDescriptionForUrl(url);
     } 
     // else {
     //   this.seoService.updateRobots('noindex, nofollow');
     // }
+  }
+
+  private updateMetaTitleForUrl(url: string) {
+    const titleMap: { [key: string]: string } = {
+      '': 'Worko.AI: Smarter Referrals, Better Jobs',
+      '/': 'Worko.AI: Smarter Referrals, Better Jobs',
+      '/about-us': 'Worko.Ai - About Us',
+      '/faq': 'Worko.Ai - FAQs',
+      '/corporate': 'Worko.Ai - Corporate'
+    };
+    
+    const title = titleMap[url] || 'Worko.AI: Smarter Referrals, Better Jobs'; // Fallback title if URL not matched
+    this.seoService.updateMetaTitle(title);
+  }
+
+  private updateMetaDescriptionForUrl(url: string) {
+    const descriptionMap: { [key: string]: string } = {
+      '': 'Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.',
+      '/': 'Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.',
+      '/about-us': 'Worko.Ai is one of the leading platforms offering referral jobs, support for interviews, career guidance, and other support for getting a job in top companies. We help you enhance and maintain your profile for getting jobs in companies.',
+      '/faq': 'Here are some common questions and their answers, asked by candidates/job seekers, employees/referees when they are looking for referral jobs or when hiring a person who comes with the support of a referral.',
+      '/corporate': 'Explore Worko.AI Corporate solutions, designed to streamline talent acquisition through AI-powered job referrals. Partner with us to leverage smart networking, enhance recruitment efficiency, and connect with top talent tailored to your business needs.'
+    };
+    
+    const description = descriptionMap[url] || 'Worko is your trusted platform for job referrals, career guidance, and interview support. Connect with employees from top companies, get vetted referrals, and maximize your chances of landing your dream job.'; // Fallback description if URL not matched
+    this.seoService.updateMetaDescription(description);
   }
 
   // setDefaultMetaData() {
